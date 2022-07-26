@@ -1,6 +1,6 @@
 # Welcome to this repository!
 
-This repository stores the __software development blueprints__ for _Epiverse-TRACE_. Please follow [this link](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) to access the blueprints. 
+This repository stores the [__software development blueprints__](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) for _Epiverse-TRACE_.
 
 __Questions__ and __comments__ on the blueprints are welcome through [github issues](https://github.com/epiverse-trace/blueprints/issues).
 
