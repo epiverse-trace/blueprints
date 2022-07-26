@@ -27,11 +27,23 @@ Anna Carnegie, Rosalind Eggo, Rich FitzJohn, Dawn Foster, Hannah Frick, Cyril Ge
 
 
 
+---------------------------------------------------------------------------------------------
+
 ## Guidelines
 
 The recommendations below aim to cover the most important aspects of the development of Epiverse-TRACE. For simplicity, we distinguish _users_ from _developers_ according to the type of contributions they make to a software project: _developers_ create content (code and documentation), while _users_ advise, test, and provide feedback on content. User-bases will be project-dependent but would typically include field epidemiologists or public health officers.
 
-The mindmap below provides an overview of key aspects of the blueprints. Please refer to the respective sections for details and explanations.
+Our blueprints is defined by 7 key aspects/principles:
+
+* [Software development as co-creation](#software-development-as-co-creation)
+* [Lean and agile collaboration framework](#lean-and-agile-collaboration-framework)
+* [Decentralizing code ownership](#decentralizing-code-ownership)
+* [Code reviews](#code-reviews)
+* [Documentation](#documentation)
+* [Being part of the OSS landscape](#being-part-of-the-oss-landscape)
+* [Community health](#community-health)
+
+The mindmap below provides an overview of the blueprints content. Please refer to the respective sections for details and explanations.
 
 ![Mindmap of the blueprints](https://raw.githubusercontent.com/epiverse-trace/blueprints/main/figures/mindmap.png)
 
