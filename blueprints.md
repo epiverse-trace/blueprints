@@ -26,6 +26,9 @@ Anna Carnegie, Rosalind Eggo, Rich FitzJohn, Dawn Foster, Hannah Frick, Cyril Ge
 * WIP: Work In Progress
 
 
+## Version
+
+The current version of this document is 0.0.1, published on the 26th July 2022.
 
 ---------------------------------------------------------------------------------------------
 
