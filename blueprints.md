@@ -6,7 +6,7 @@
 
 This blueprint document lays out guidelines for the development of *Epiverse-TRACE*, a free, open-source ecosystem of R packages for outbreak analytics. Rather than focussing only on coding aspects, we adopt the view that software development is a wider, more complex experience relying first and foremost on human interactions between and within developer and user groups. For this reason, the present document provides guidelines on coding practices as well as collaboration workflows, documentation, training, and community health monitoring.
 
-This document was originally written as an attempt to summarize group discussions which took place at _R YouReady?_, a workshop co-organized by data.org and the London School of Hygiene and Tropical Medicine (LSHTM), which gathered experts in R package development as well as from the wider open-source software community in London, on the 7th June 2022. The document therefore reflects inputs from many people, including the workshop’s participants, but also people who provided inputs at a later stage. None of the guidelines provided below are set in stone: this blueprint will evolve as Epiverse-TRACE grows, and should be taken as a living and evolving document.
+This document was originally written as an attempt to summarize group discussions which took place at _R YouReady?_, a workshop co-organized by data.org and the London School of Hygiene and Tropical Medicine (LSHTM), which gathered experts in R package development as well as from the wider open-source software community in London, on the 7th June 2022. The document therefore reflects inputs from many people, including the workshop’s participants, but also people who provided inputs at a later stage. None of the guidelines provided below are set in stone: this blueprint will evolve as _Epiverse-TRACE_ grows, and should be taken as a living and evolving document.
 
 
 ## Contributors
@@ -36,7 +36,7 @@ The current version of this document is 0.0.1, published on the 26th July 2022.
 
 ## Guidelines
 
-The recommendations below aim to cover the most important aspects of the development of Epiverse-TRACE. For simplicity, we distinguish _users_ from _developers_ according to the type of contributions they make to a software project: _developers_ create content (code and documentation), while _users_ advise, test, and provide feedback on content. User-bases will be project-dependent but would typically include field epidemiologists or public health officers.
+The recommendations below aim to cover the most important aspects of the development of _Epiverse-TRACE_. For simplicity, we distinguish _users_ from _developers_ according to the type of contributions they make to a software project: _developers_ create content (code and documentation), while _users_ advise, test, and provide feedback on content. User-bases will be project-dependent but would typically include field epidemiologists or public health officers.
 
 Our blueprints is defined by 7 key aspects/principles:
 
