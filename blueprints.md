@@ -14,6 +14,7 @@ _Contributions in alphabetic order:_
 
 Anna Carnegie, Rosalind Eggo, Rich FitzJohn, Dawn Foster, Hannah Frick, Cyril Geismar, Sarah Gibson, Geraldine Gómez Millan, Ernest Guevarra, Hugo Gruson, Thibaut Jombart, Emma Marty, Ibrahim Mahgoub, Nuredin Mohammed, Rebecca Nash, Maëlle Salmon, Malvika Sharan, Janetta Skarp, Tim Taylor, Heather Turner, Chantal Wood
 
+_Maintainer_: Thibaut Jombart (thibaut@data.org)
 
 ## Abbreviations
 
@@ -94,11 +95,11 @@ Code reviews are not just a way to improve overall code quality: they are a key 
 * Consider code reviews are not a hierarchical exercise: they are performed by all members of the developers team.
 * Understand that code reviews are a great opportunity for training and collaboration
 * Consider Alex Hill’s[ quadrant of code reviews](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/) when conducting reviews and treat separately:
-    * Trivial issues which can be solved by improving automation (_e.g. _styling using _[lintr](https://github.com/r-lib/lintr)_ or _[styler](https://styler.r-lib.org/)_)
+    * Trivial issues which can be solved by improving automation (_e.g._ styling using _[lintr](https://github.com/r-lib/lintr)_ or _[styler](https://styler.r-lib.org/)_)
     * Non-conflictual, factual issues which can be quickly agreed on (_e.g._ missing tests, typos in the documentation)
     * Spend time to discuss high-conflict, high-reward items, and take a collaborative approach to identifying solutions
 * Use pair-programming sessions when developing features to foster a sense of code co-ownership and peer learning
-* Make code reviews an intrinsic part of the contribution workflow: they are typically performed[ as part of the PR review process](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request). 
+* Make code reviews an intrinsic part of the contribution workflow: they are typically performed [as part of the PR review process](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request). 
 * Use code walk-throughs ahead of reviews to facilitate the review process.
 * Prefer small reviews to large ones
 * Conduct occasional audits of the entire code base
@@ -110,7 +111,7 @@ Consistent, high quality, and accessible documentation is key to adopting softwa
 
 * Consider documentation on the same level as code, rather than as an afterthought
 * Use the [Diataxis framework](https://diataxis.fr/) to distinguish: tutorials, how-to guides, reference manuals, and explanatory material
-* Generate documentation dynamically using standard tools: _[roxygen2](https://roxygen2.r-lib.org/) _for basic documentation, _[rmarkdown](https://rmarkdown.rstudio.com/docs/) _for vignettes, _[pkgdown](https://pkgdown.r-lib.org/) _for websites
+* Generate documentation dynamically using standard tools: _[roxygen2](https://roxygen2.r-lib.org/)_ for basic documentation, _[rmarkdown](https://rmarkdown.rstudio.com/docs/)_ for vignettes, _[pkgdown](https://pkgdown.r-lib.org/)_ for websites
 * Provide user-friendly cheatsheets in html and pdf
 * Provide interactive content (tutorials, how-to guides) with no need for installing dependencies locally using [mybinder.org](https://mybinder.org/)
 * Write documentation assuming minimum R literacy and prior knowledge
