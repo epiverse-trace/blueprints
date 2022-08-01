@@ -26,9 +26,9 @@ knitr::opts_chunk$set(
 
  if (knitr::is_html_output())
  {
-   knitr::include_graphics("https://raster.shields.io/badge/License-CC%20BY%204.0-lightgrey.png")
+   knitr::include_graphics("https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png")
  } else {
-   knitr::include_url("https://raster.shields.io/badge/License-CC%20BY%204.0-lightgrey.png")
+   knitr::include_url("https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png")
  }
 
 ```
