@@ -1,8 +1,18 @@
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![render-blueprints](https://github.com/epiverse-trace/blueprints/actions/workflows/render_blueprints.yml/badge.svg)](https://github.com/epiverse-trace/blueprints/actions/workflows/render_blueprints.yml)
 
 # Welcome to this repository!
 
-This repository stores the [__software development blueprints__](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) for _Epiverse-TRACE_.
+This repository stores the [__software development blueprints__](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) for _Epiverse-TRACE_. You can:
+
+* view the blueprints in [markdown format](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) on github 
+
+* download them in [html format](https://github.com/epiverse-trace/blueprints/raw/main/blueprints.html)
+
+* download them in [pdf format](https://github.com/epiverse-trace/blueprints/raw/main/blueprints.pdf)
+
+
+
 
 __Questions__ and __comments__ on the blueprints are welcome through [github issues](https://github.com/epiverse-trace/blueprints/issues).
 
