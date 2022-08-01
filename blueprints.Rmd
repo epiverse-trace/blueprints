@@ -1,3 +1,4 @@
+
 ---
 title: "Software development blueprint for _Epiverse-TRACE_"
 output:
@@ -174,6 +175,18 @@ As an open-source initiative, Epiverse-TRACE will benefit from numerous other OS
 * We prioritize the integration of existing tools over development from scratch of new tools
 * We welcome external contributions and promote transparency on all our projects
 * When contributing to external projects, we observe their contributor code of conduct
+
+
+### Reusing third-party code
+Whether we reuse entire source files or libraries, or we paste source code from third-party authors, we must properly credit them.
+
+  - When directly inserting/adapting external code into our source files, add a comment right before said code using the following format:
+  ```
+  // credits: SOURCE_URL
+  ```
+  Where `SOURCE_URL` is the url of the code we reused. That way we may be able to automatically create a document that summarizes such credits
+
+  - When reusing entire libraries, ensure that their licenses are compatible with ours. For instance, if we chose MIT or a similar license for our projects, it may not be a good idea to reuse GPL code, since we would be compelled to change our license to GPL, too. In general, we should would avoid any library with licenses --either open or non non open source-- that are more restrictive than ours
 
 
 ### Community health
