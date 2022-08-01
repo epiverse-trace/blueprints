@@ -1,7 +1,7 @@
 Software development blueprint for *Epiverse-TRACE*
 ================
 
-![](https://raster.shields.io/badge/License-CC%20BY%204.0-lightgrey.png)<!-- -->
+![](https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png)<!-- -->
 
 ## Context
 
