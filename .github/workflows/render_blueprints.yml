@@ -1,0 +1,58 @@
+# Name of the workflow
+name: render-blueprints
+
+# Controls when the action will run. Triggers include:
+# 
+# - button trigger from github action page
+# - on changes to blueprints.Rmd
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'blueprints.Rmd'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# Important: ubuntu-latest is not set up properly for R, so use macOS
+jobs:
+  render-blueprints:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repos
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v1
+
+      - name: Setup pandoc
+        uses: r-lib/actions/setup-pandoc@v1
+    
+      - name: Install dependencies
+        run: |
+          Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS = "true")
+          options(install.packages.check.source = "no")
+          pkgs <- "rmarkdown"
+          install.packages(pkgs, repos = "https://cloud.r-project.org/")
+        shell: Rscript {0}
+ 
+      - name: Compile the blueprints
+        run: |
+          rmarkdown::render("blueprints.Rmd", output_format = "all")
+        shell: Rscript {0}
+        
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add blueprints.md blueprints.pdf blueprints.html
+          git diff-index --quiet HEAD || git commit -m "Automatic blueprints update"
+    
+      - name: Push files
+        run: |
+          git push --force
+ 
