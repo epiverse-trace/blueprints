@@ -27,6 +27,7 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+          persist-credentials: false # to avoid reusing these credentials when pushing
 
       - name: Setup R
         uses: r-lib/actions/setup-r@v1
@@ -54,10 +55,11 @@ jobs:
           git config --local user.name "GitHub Action"
           git add blueprints.md blueprints.pdf blueprints.html
           git diff-index --quiet HEAD || git commit -m "Automatic blueprints update"
- 
-      - name: Push files
-        run: |
-          git push --force
- 
-env:
-  GITHUB_PAT: ${{ secrets.PAT_TIBO }}
+   
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TIBO }}
+          branch: 'main'
+          force: true
+          
