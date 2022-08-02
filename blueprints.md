@@ -49,8 +49,8 @@ Sharan, Janetta Skarp, Tim Taylor, Heather Turner, Chantal Wood
 
 ## Version
 
-The current version of this document is 0.0.2, published on the 26th
-July 2022.
+The current version of this document is 0.0.2, published on the 2nd Aug
+2022.
 
 -----
 
