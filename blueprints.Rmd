@@ -106,7 +106,7 @@ Useful software development is unlikely to be achieved by developers alone: rath
 * Co-creation can also take the form of pair-programming to combine domain experts and developers
 
 
-### Lean and agile collaboration framework
+### Lean and Agile collaboration framework
 
 The main objective of our collaboration framework will be to optimize interactions between users and developers. We thus naturally embrace the agile philosophy in which projects progress iteratively through short cycles focussing on delivering and reviewing MVPs. We foresee that each cycle should have three main phases:
 
@@ -188,3 +188,4 @@ The success of an OSS project like epiverse-trace relies heavily on the quality 
 * Use [CHAOSS metrics](https://chaoss.community/metrics/) to monitor community health and reflect our values
 * Use occasional surveys to monitor aspects of community health which cannot be captured automatically
 * Invest in mentoring programs to strengthen capacity where it is most needed
+
