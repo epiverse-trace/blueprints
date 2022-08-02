@@ -1,5 +1,11 @@
-Software development blueprint for *Epiverse-TRACE*
+Software development blueprints for *Epiverse-TRACE*
 ================
+
+  - [Context](#context)
+  - [Contributors](#contributors)
+  - [Abbreviations](#abbreviations)
+  - [Version](#version)
+  - [Guidelines](#guidelines)
 
 ![](https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png)<!-- -->
 
