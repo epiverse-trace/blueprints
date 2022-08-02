@@ -105,7 +105,7 @@ key principles of this co-creation include:
   - Co-creation can also take the form of pair-programming to combine
     domain experts and developers
 
-### Lean and agile collaboration framework
+### Lean and Agile collaboration framework
 
 The main objective of our collaboration framework will be to optimize
 interactions between users and developers. We thus naturally embrace the
