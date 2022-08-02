@@ -19,6 +19,8 @@ on:
 jobs:
   render-blueprints:
     runs-on: macos-latest
+    env:
+      GITHUB_PAT: ${{ blueprints_secrets.PAT_TIBO }}
     steps:
       - name: Checkout repos
         uses: actions/checkout@v2
@@ -52,8 +54,10 @@ jobs:
           git config --local user.name "GitHub Action"
           git add blueprints.md blueprints.pdf blueprints.html
           git diff-index --quiet HEAD || git commit -m "Automatic blueprints update"
-    
-      - name: Push files
-        run: |
-          git push --force
- 
+     
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ blueprints_secrets.PAT_TIBO }}
+          branch: 'main'      
+          force_with_lease: true
