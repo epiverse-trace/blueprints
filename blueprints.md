@@ -74,7 +74,7 @@ Our blueprints is defined by 7 key aspects/principles:
 
   - [Software development as
     co-creation](#software-development-as-co-creation)
-  - [Lean and agile collaboration
+  - [Lean and Agile collaboration
     framework](#lean-and-agile-collaboration-framework)
   - [Decentralizing code ownership](#decentralizing-code-ownership)
   - [Code reviews](#code-reviews)
