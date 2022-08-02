@@ -63,7 +63,7 @@ _Maintainer_: Thibaut Jombart (thibaut@data.org)
 
 ## Version
 
-The current version of this document is 0.0.1, published on the 26th July 2022.
+The current version of this document is 0.0.2, published on the 26th July 2022.
 
 ---------------------------------------------------------------------------------------------
 
