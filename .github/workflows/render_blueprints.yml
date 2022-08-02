@@ -20,7 +20,7 @@ jobs:
   render-blueprints:
     runs-on: macos-latest
     env:
-      GITHUB_PAT: ${{ blueprints_secrets.PAT_TIBO }}
+      GITHUB_PAT: ${{ secrets.PAT_TIBO }}
     steps:
       - name: Checkout repos
         uses: actions/checkout@v2
@@ -58,6 +58,6 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ blueprints_secrets.PAT_TIBO }}
+          github_token: ${{ secrets.PAT_TIBO }}
           branch: 'main'      
           force_with_lease: true
