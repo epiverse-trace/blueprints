@@ -32,8 +32,8 @@ taken as a living and evolving document.
 Anna Carnegie, Rosalind Eggo, Rich FitzJohn, Dawn Foster, Hannah Frick,
 Cyril Geismar, Sarah Gibson, Geraldine Gómez Millan, Ernest Guevarra,
 Hugo Gruson, Thibaut Jombart, Emma Marty, Ibrahim Mahgoub, Nuredin
-Mohammed, Rebecca Nash, Maëlle Salmon, Malvika Sharan, Janetta Skarp,
-Tim Taylor, Heather Turner, Chantal Wood
+Mohammed, Rebecca Nash, Jaime Pavlich-Mariscal, Maëlle Salmon, Malvika
+Sharan, Janetta Skarp, Tim Taylor, Heather Turner, Chantal Wood
 
 *Maintainer*: Thibaut Jombart (<thibaut@data.org>)
 
@@ -236,7 +236,18 @@ observe a few principles:
   - We prioritize contributions to existing projects over forks, and
     forks over project duplications
   - When code re-use is needed, we duly credit authors and point to the
-    source, and invite authors as contributors on our project
+    source, and invite authors as contributors on our project. We give
+    credits by prefacing reused code by a comment e.g.: `// credits:
+    this code was adapted from SOURCE_URL`, where `SOURCE_URL` is the
+    URL we obtained the code from (*e.g.* stackoverflow, etc.). Using a
+    fixed syntax for credits can be used to summarize such contributions
+    programmatically.
+  - When reusing licensed code, we ensure that third-party licenses are
+    compatible with our project’s license. For instance, we may want to
+    avoid reusing GPL code if our project uses MIT, since we would then
+    have to change our license to GPL. See [this
+    article](https://www.gnu.org/licenses/license-list.html) by the Free
+    Software Foundation for more information on free software licenses.
   - We prioritize the integration of existing tools over development
     from scratch of new tools
   - We welcome external contributions and promote transparency on all
