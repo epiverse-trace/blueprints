@@ -1,13 +1,13 @@
 
 ---
-title: "Software development blueprint for _Epiverse-TRACE_"
+title: "Software development blueprints for _Epiverse-TRACE_"
 output:
   pdf_document: default
   html_document: default
   github_document:
     html_preview: false
-    toc: false
-    toc_depth: 1
+    toc: true
+    toc_depth: 2
 ---
 
 ```{r setup, include = FALSE}
