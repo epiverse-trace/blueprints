@@ -57,3 +57,5 @@ Please note that this project uses a [Contributor Code of Conduct](https://githu
 ). By contributing, you agree to abide by its terms.
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
+
+<br>
