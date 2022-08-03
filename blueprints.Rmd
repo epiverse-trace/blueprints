@@ -1,6 +1,6 @@
 
 ---
-title: "Software development blueprints for _Epiverse-TRACE_"
+title: "The _Epiverse-TRACE_ blueprints for software development"
 output:
   pdf_document: default
   html_document: default
