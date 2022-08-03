@@ -1,4 +1,4 @@
-Software development blueprints for *Epiverse-TRACE*
+The *Epiverse-TRACE* blueprints for software development
 ================
 
   - [Context](#context)
