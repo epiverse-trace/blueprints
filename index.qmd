@@ -1,4 +1,4 @@
-![](https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png)
+![](figures/cc-by-logo.png)
 
 ## Context
 
@@ -48,7 +48,7 @@ Our blueprints is defined by 7 key aspects/principles:
 
 The mindmap below provides an overview of the blueprints content. Please refer to the respective sections for details and explanations.
 
-![](https://raw.githubusercontent.com/epiverse-trace/blueprints/main/figures/mindmap.png)
+![](figures/mindmap.png)
 
 ### Software development as co-creation
 
