@@ -1,0 +1,17 @@
+project:
+  type: book
+
+book:
+  title: "The _Epiverse-TRACE_ blueprints for software development"
+  chapters:
+    - index.qmd
+
+format:
+  html:
+    theme: cosmo
+    number-sections: false
+  pdf:
+    documentclass: scrreprt
+    number-sections: false
+
+
