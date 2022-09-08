@@ -3,20 +3,13 @@
 
 # Welcome to this repository!
 
-This repository stores the [__Epiverse TRACE Blueprints__](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) for software development. You can:
+This repository stores the [__Epiverse TRACE Blueprints__](index.qmd) for software development. You can:
 
-* view the blueprints in [markdown format](https://github.com/epiverse-trace/blueprints/blob/main/blueprints.md) on github 
+* view the blueprints in [quarto / markdown format](index.qmd) on github 
 
-* download them in [pdf format](https://github.com/epiverse-trace/blueprints/raw/main/blueprints.pdf)
+* view the blueprints in [HTML](https://epiverse-trace.github.io/blueprints/)
 
-* download them in <a href="https://github.com/epiverse-trace/blueprints/raw/main/blueprints.html" download="epiverse_trace_blueprints.html">html format</a> 
-
-Note: github may show you the html source instead of downloading the file; if
-that happens, right click on the newly opened page and save the file as
-'blueprints.html' (or any name of your choosing).
-
-
-
+* download them in [pdf format](https://epiverse-trace.github.io/blueprints/The-_Epiverse-TRACE_-blueprints-for-software-development.pdf)
 
 ## Contributions
 
@@ -24,26 +17,28 @@ that happens, right click on the newly opened page and save the file as
 
 __Questions__ and __comments__ on the blueprints are welcome through [github issues](https://github.com/epiverse-trace/blueprints/issues). If you would like to suggest edits to the blueprints but do not want to make a _pull request_ (see below), feel free to suggest these edits directly as an issue. 
 
-
 ### Contributions via pull requests
 
-__Contributions__ are welcome via [pull requests](https://github.com/epiverse-trace/blueprints/pulls), usually after discussing edits in an issue. The blueprints file to edit is __blueprints.Rmd__ (not *blueprints.md*). This Rmarkdown file is used to render the blueprints to different formats: `md`, `pdf`, and `html`. This rendering is done automatically every time __blueprints.Rmd__ changes on the *main* branch. When making pull requests, it is best to only commit changes to the `Rmd` file. 
+__Contributions__ are welcome via [pull requests](https://github.com/epiverse-trace/blueprints/pulls), usually after discussing edits in an issue. The blueprints file to edit is __index.qmd__. This quarto file is used to render the blueprints to different formats: `pdf`, and `html`. This rendering is done automatically every time __index.qmd__ changes on the *main* branch. When making pull requests, it is best to only commit changes to the `qmd` file. 
 
 In a nutshell, the workflow for contributions would look something like:
 
-1. Clone the repository using SSH (note: all _Epiverse-TRACE_ repos require [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication)); this is only needed the first time your download the git repository.
+1. [Install quarto](https://quarto.org/docs/get-started/)
+
+1. Clone the repository using SSH; this is only needed the first time your download the git repository.
 
 2. Run `git pull` to fetch the latest version of the repository.
 
 3. Create a new branch to make your changes typing `git checkout -b [name_of_your_branch]`.
 
-3. Make changes to `blueprints.Rmd`, save the file.
+3. Make changes to `index.qmd`, save the file.
 
-4. From R, run `rmarkdown::render("blueprints.Rmd", output_format = "all")` to check your changes locally on the `pdf`, and `html` outputs.
+4. From your terminal, run `quarto render`. The `pdf` and `html` outputs will be generated in the `_book/` folder.
 
-5. Repeat steps 3 and 4 as many times as needed. Commit the final changes using:
+5. Repeat the two previous steps as many times as needed. Commit the final changes using:
+
 ```
-git add blueprints.Rmd
+git add index.md
 git commit -m "quick summary of changes"
 git push --set-upstream origin [name_of_your_branch]
 ```

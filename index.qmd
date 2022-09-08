@@ -1,39 +1,4 @@
-
----
-title: "The _Epiverse-TRACE_ blueprints for software development"
-output:
-  pdf_document: default
-  html_document: default
-  github_document:
-    html_preview: false
-    toc: true
-    toc_depth: 2
----
-
-```{r setup, include = FALSE}
-
-# knitr options
-knitr::opts_chunk$set(
-  echo = FALSE,
-  eval = TRUE,
-  include = TRUE,
-  warning = FALSE,
-  message = FALSE
-)
-
-```
-
-```{r cc-by}
-
- if (knitr::is_html_output())
- {
-   knitr::include_graphics("https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png")
- } else {
-   knitr::include_url("https://github.com/epiverse-trace/blueprints/raw/main/figures/cc-by-logo.png")
- }
-
-```
-
+![](figures/cc-by-logo.png)
 
 ## Context
 
@@ -83,17 +48,7 @@ Our blueprints is defined by 7 key aspects/principles:
 
 The mindmap below provides an overview of the blueprints content. Please refer to the respective sections for details and explanations.
 
-```{r mindmap}
-
- if (knitr::is_html_output())
- {
-   knitr::include_graphics("https://raw.githubusercontent.com/epiverse-trace/blueprints/main/figures/mindmap.png")
- } else {
-   knitr::include_url("https://raw.githubusercontent.com/epiverse-trace/blueprints/main/figures/mindmap.png")
- }
-
-```
-
+![](figures/mindmap.png)
 
 ### Software development as co-creation
 
