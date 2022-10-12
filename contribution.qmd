@@ -1,0 +1,20 @@
+---
+title: Contribution process
+---
+
+This chapter will walk you through the process through which new code is added
+to the epiverse-TRACE codebase, be it by project-funded or by community contributors.
+
+# Branching process
+
+## Keeping your branch up-to-date
+
+# Pull request review
+
+## Making your contribution easy to review
+
+# Merging pull requests
+
+# Deleting merged branches
+
+
