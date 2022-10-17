@@ -23,6 +23,8 @@ jobs:
 
       - uses: quarto-dev/quarto-actions/setup@main
 
+      - uses: r-lib/actions/setup-renv@v2
+
       - name: Render site
         run: quarto render
 
