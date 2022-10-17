@@ -18,7 +18,15 @@ It is possible that conflicts arise in your branch while it is under review.
 We try to minimise this by reviewing & merging branches fast, before any conflicts can be produced but it is bound to happen sometimes.
 If this happens, GitHub will warn you and indicate clearly where conflicts are with the following message:
 
-![GitHub warning about conflicts on PR](https://docs.github.com/assets/cb-17087/images/help/pull_requests/merge_conflict_error_on_github.png)
+```{r, echo = FALSE, fig.cap="GitHub warning about conflicts on PR"}
+merge_conflict_img <- tempfile(fileext = ".png")
+download.file(
+  url = "https://docs.github.com/assets/cb-17087/images/help/pull_requests/merge_conflict_error_on_github.png",
+  destfile = merge_conflict_img,
+  mode = 'wb'
+)
+knitr::include_graphics(path = merge_conflict_img)
+```
 
 If you don't know how to solve conflicts, feel free to ask the package maintainer, or any of the reviewers on your pull request, for help.
 
