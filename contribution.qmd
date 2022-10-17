@@ -7,14 +7,100 @@ to the epiverse-TRACE codebase, be it by project-funded or by community contribu
 
 # Branching process
 
-## Keeping your branch up-to-date
+In all our repositories, the main branch is protected and new code should be added in a feature branch before being submitted as a pull request (PR).
+
+Each branch, and each pull request, should focus on a single feature. 
+If you want to contribute multiple unrelated changes to the codebase, please open multiple pull requests.
+
+## Keeping your branch up-to-date with `main`
+
+It is possible that conflicts arise in your branch while it is under review.
+We try to minimise this by reviewing & merging branches fast, before any conflicts can be produced but it is bound to happen sometimes.
+If this happens, GitHub will warn you and indicate clearly where conflicts are with the following message:
+
+![GitHub warning about conflicts on PR](https://docs.github.com/assets/cb-17087/images/help/pull_requests/merge_conflict_error_on_github.png)
+
+If you don't know how to solve conflicts, feel free to ask the package maintainer, or any of the reviewers on your pull request, for help.
+
+To avoid issues when we will merge your pull request, please do not use GitHub built-in mechanism to solve conflicts, as this will result in merge commits, which are incompatible with the next steps of our process (read the ['Merging pull requests'](#merging-pull-requests) section for more info).
+Instead, you should solve conflicts locally, using the git command line and a rebase.
+
+## Avoiding local conflicts caused by automated commits
+
+Some actions run automatically on PR from our repositories.
+Sometimes, this can mean that the version living on GitHub has extra commits you don't yet have on your local machine.
+In this situation, if you attempt to push your most recent commits, you will get the following error message:
+
+```
+To https://github.com/REDACTED.git
+! [rejected]         master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/REDACTED.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+To solve this without creating a merge commit, you should run `git pull --rebase`.
+
+You can even set up git to automatically add the `--rebase` option when you run git pull by changing the git settings of your project:
+
+```sh
+git config pull.rebase true
+```
+
+In the event you don't manage to reproduce these steps, and you end up with a merge commit, don't worry, maintainers will fix it when [merging your pull request](#merging-pull-requests).
 
 # Pull request review
 
+To ensure the highest quality in our code, we always try to make sure that multiple pairs of eyes went through the code before releasing it to users.
+In practical terms, this means that each pull request goes through a code review by at least one person (usually a project-funded member, but this is a hard rule).
+Reviews are not a hierarchical exercise: they are performed by all members of the developers team.
+In addition to improving code quality, they offer an opportunity to learn from each other and a means to stay up-to-date on the codebase.
+
 ## Making your contribution easy to review
+
+We usually try to merge PRs as fast as possible, without sacrificing code quality.
+Fast reviews benefit everybody:
+
+- users can get access to new features faster
+- contributors get more free time & mental load to work on other features. It also limits the amount of git conflicts, which can be difficult to solve.
+- reviewers save time as well
+
+Here are a couple of ways you can facilitate the work of your reviewer(s) and get your PR through the door faster:
+
+- make sure each PR is focused on a single feature. As mentioned earlier, if you want to submit several unrelated changes, open multiple PRs.
+- try to use group related changes in atomic commits, with clear commit messages. This is not always easy to achieve while implementing the changes and it might be beneficial to regroup and re-order your commits just before submitting your PR, as documented in this [post on the official GitHub blog](https://github.blog/2022-06-30-write-better-commits-build-better-projects/).
+- provide a summary of your changes and the rationale behind each commit. You could also provide additional elements, such as benchmarks, reproducible examples, etc. This however is only necessary if GitHub issues don't already exist for the changes you're making.
+
+## Suggesting changes during review
+
+As a reviewer, if you have specific suggestions about changes during the review, you should communicate them via the [GitHub suggestion feature](https://stackoverflow.com/q/54239733/4439357).
+Using suggestions is clearer than making a PR targeting the feature branch because it is usually difficult to get a clear understanding of highly branched git repository.
+In other words, try to open PR targeting exclusively the `main` branch and use suggestions for all other cases.
 
 # Merging pull requests
 
+GitHub currently has [3 pull request merge mechanisms](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github):
+
+- Create a merge commit
+- Squash and merge
+- Rebase and merge
+
+The historical option 'merge commits' present severe drawbacks, such as creating a heavily non-linear history, which is extremely difficult to read without a client displaying the various branches over time. Notably, it is very difficult to browse & understand a git history with merge commits in GitHub web interface.
+For related reasons, merge commits can create flat out unintelligible diffs in pull requests in some cases.
+
+Because of this, we have disabled merge commits in our repositories (please get in touch if you find one where it's not the case).
+Instead, we rely on either 'rebase and merge' if commits are grouped logically and have clear error messages, as recommended in the ['Making your contribution easy to review'](#making-your-contribution-easy-to-review) section, or 'squash and merge' if we don't want to keep the commit history.
+
 # Deleting merged branches
 
+To avoid confusing situations with diverging histories, we prefer to delete branches.
+The setting auto-delete branches from merged PR should be activated on all our repos. 
+Please get in touch if you find a repo where it's not the case.
 
+We also encourage external contributors to follow the same tip in their own forks, where we cannot auto-delete branches.
+
+# Continue the discussion
+
+If you would like to add your input on this chapter or would like to know more about the reasons behind our choices, please checkout the [related GitHub issue](https://github.com/epiverse-trace/blueprints/issues/6).
