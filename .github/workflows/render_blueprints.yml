@@ -25,6 +25,11 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Install system deps
+        run: |
+          sudo apt update
+          sudo apt install libcurl4-openssl-dev
+
       - uses: quarto-dev/quarto-actions/setup@v2
 
       - uses: r-lib/actions/setup-renv@v2
