@@ -2,7 +2,9 @@
 title: General principles
 ---
 
-The recommendations below aim to cover the most important aspects of the development of _Epiverse-TRACE_. For simplicity, we distinguish _users_ from _developers_ according to the type of contributions they make to a software project: _developers_ create content (code and documentation), while _users_ advise, test, and provide feedback on content. User-bases will be project-dependent but would typically include field epidemiologists or public health officers.
+The recommendations below aim to cover the most important aspects of the development of _Epiverse-TRACE_. For simplicity, we distinguish _users_ from _developers_ according to the type of contributions they make to a software project: _developers_ create content (code and documentation), while _users_ advise, test, and provide feedback on content [^1]. User-bases will be project-dependent but would typically include field epidemiologists or public health officers. 
+
+[^1]: Note that _users_ and _developers_ are not exclusive or static roles. Community members are expected to have various levels of involvement with the project, evolving in a non-linear fashion with time, and in a complex way that cannot be fully captured by simple terms such as _user_ & _developer_. This is beyond the scope of this book but you can read [Woodley, Lou & Pratt, Katie. (2020)](https://doi.org/10.5281/zenodo.3997801) for a more in-depth analysis.
 
 Our blueprints is defined by 7 key aspects/principles:
 
