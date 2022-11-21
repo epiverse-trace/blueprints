@@ -5,7 +5,7 @@ book:
   title: "The _Epiverse-TRACE_ blueprints for software development"
   chapters:
     - index.qmd
-    - guidelines.qmd
+    - principles.qmd
 
 format:
   html:
