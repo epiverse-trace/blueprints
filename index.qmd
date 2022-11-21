@@ -1,8 +1,14 @@
 ![](figures/cc-by-logo.png)
 
+## Objectives and target audience
+
+This blueprint document lays out guidelines for the development of *Epiverse-TRACE*, a free, open-source ecosystem of R packages for outbreak analytics. It is primarily aimed at the Epiverse-TRACE developer community and attempts to standardize processes and facilitate onboarding of new members and contributors.
+
+It is made public as a commitment to open development and practices. We also hope parts of these blueprints can prove useful to other communities, and inform potential users of how the Epiverse-TRACE project ensures the highest quality of its packages.
+
 ## Context
 
-This blueprint document lays out guidelines for the development of *Epiverse-TRACE*, a free, open-source ecosystem of R packages for outbreak analytics. Rather than focussing only on coding aspects, we adopt the view that software development is a wider, more complex experience relying first and foremost on human interactions between and within developer and user groups. For this reason, the present document provides guidelines on coding practices as well as collaboration workflows, documentation, training, and community health monitoring.
+Rather than focussing only on coding aspects, we adopt the view that software development is a wider, more complex experience relying first and foremost on human interactions between and within developer and user groups. For this reason, the present document provides guidelines on coding practices as well as collaboration workflows, documentation, training, and community health monitoring.
 
 This document was originally written as an attempt to summarize group discussions which took place at _R YouReady?_, a workshop co-organized by data.org and the London School of Hygiene and Tropical Medicine (LSHTM), which gathered experts in R package development as well as from the wider open-source software community in London, on the 7th June 2022. The document therefore reflects inputs from many people, including the workshop’s participants, but also people who provided inputs at a later stage. None of the guidelines provided below are set in stone: this blueprint will evolve as _Epiverse-TRACE_ grows, and should be taken as a living and evolving document.
 
