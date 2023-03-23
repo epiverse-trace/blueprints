@@ -1,5 +1,0 @@
----
-title: Lean and agile collaboration framework
----
-
-WIP

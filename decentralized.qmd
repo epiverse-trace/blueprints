@@ -1,5 +1,0 @@
----
-title: Decentralizing code ownership
----
-
-WIP
