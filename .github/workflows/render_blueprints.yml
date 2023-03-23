@@ -31,6 +31,8 @@ jobs:
           sudo apt install libcurl4-openssl-dev
 
       - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
 
       - uses: r-lib/actions/setup-renv@v2
 
