@@ -44,7 +44,7 @@ latest_release <- gh::gh(
   )
 ```
 
-The current version of this document is `r latest_release$tag_name`, published 
-on the `r format(as.Date(latest_release$published_at))`.
-
-[![DOI](https://zenodo.org/badge/510390227.svg)](https://zenodo.org/badge/latestdoi/510390227)
+The current version of this document is `r latest_release$tag_name`, published
+on the `r format(as.Date(latest_release$published_at))`. 
+You can find an archived copy on Zenodo, under the DOI
+[10.5281/zenodo.7062318](https://doi.org/10.5281/zenodo.7062318).
