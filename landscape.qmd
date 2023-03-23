@@ -1,5 +1,0 @@
----
-title: Being part of the OSS landscape
----
-
-WIP

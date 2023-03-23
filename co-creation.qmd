@@ -1,5 +1,0 @@
----
-title: Software development as co-creation
----
-
-WIP

@@ -6,14 +6,6 @@ book:
   chapters:
     - index.qmd
     - principles.qmd
-    - co-creation.qmd
-    - agile.qmd
-    - landscape.qmd
-    - community.qmd
-    - documentation.qmd
-    - reviews.qmd
-    - decentralized.qmd
-
 
 format:
   html:
