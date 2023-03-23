@@ -1,0 +1,98 @@
+---
+title: Standards for branching and merging
+---
+
+This document results from the discussion of the 2023-03-01 all-RSEs internal meeting.
+
+## Branching workflow
+
+In all our repositories, new code should be added in a feature branch before being submitted as a pull request (PR).
+
+Two development strategies are common:
+
+-   [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) where you have 2 long-running branches: the stable `main` branch, and the unstable `development` branch; and many feature branches originating from and being merged into development
+-   [GitHub Flow](https://githubflow.github.io/): A simpler feature branch flow, where `main` is the only long-running branch, hosting the development version; and many feature branches originating from and being merged into it. In this flow, stable versions are contained in releases (possibly on CRAN in the case of R packages)
+
+The R community in general sticks with a simple feature branch flow, and doesn't use a development branch. Most developers and users assume that the main GitHub version can be somewhat unstable and that stable releases are on CRAN.
+
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                                                                      | GitHub Flow                                                                 | Git Flow                                                                                                                                                                             |
++======================================================================================================================================+=============================================================================+======================================================================================================================================================================================+
+| feature                                                                                                                              | 1 long-running branch                                                       | 2 long-running branches                                                                                                                                                              |
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| characteristic                                                                                                                       | -   **stable** released version                                             | -   **stable** `main` branch, and                                                                                                                                                    |
+|                                                                                                                                      |                                                                             |                                                                                                                                                                                      |
+|                                                                                                                                      | -   **unstable** `main` branch (development version)                        | -   **unstable** `development` branch;                                                                                                                                               |
+|                                                                                                                                      |                                                                             |                                                                                                                                                                                      |
+|                                                                                                                                      | -   many feature branches originating from and being merged into `main`     | -   many feature branches originating from and being merged into `development`                                                                                                       |
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| installation instructions                                                                                                            | The {real} package can be installed from CRAN with:                         | The {real} package can be installed from CRAN with:                                                                                                                                  |
+|                                                                                                                                      |                                                                             |                                                                                                                                                                                      |
+|                                                                                                                                      | `install.packages("real")`                                                  | `install.packages("real")`                                                                                                                                                           |
+|                                                                                                                                      |                                                                             |                                                                                                                                                                                      |
+|                                                                                                                                      | You can also choose to install the development version of real from GitHub: | You can also choose to install the development version of real from GitHub:                                                                                                          |
+|                                                                                                                                      |                                                                             |                                                                                                                                                                                      |
+|                                                                                                                                      | `remotes::install_github("epiverse-trace/real")`                            | `remotes::install_github("epiverse-trace/real@dev")`                                                                                                                                 |
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| use of the [{pkgdown} development mode](https://pkgdown.r-lib.org/reference/build_site.html#development-mode) to build two websites: | in the `_pkgdown.yml` file:                                                 | A custom `pkgdown.yml` GitHub Actions workflow setting the development mode to `dev` when trigger from the `development` branch and `release` when triggered from the `main` branch. |
+|                                                                                                                                      |                                                                             |                                                                                                                                                                                      |
+| -   released **stable** version                                                                                                      | ``` yaml                                                                    |                                                                                                                                                                                      |
+|                                                                                                                                      | development:                                                                |                                                                                                                                                                                      |
+| -   development **unstable** version                                                                                                 |   mode: auto                                                                |                                                                                                                                                                                      |
+|                                                                                                                                      | ```                                                                         |                                                                                                                                                                                      |
++--------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+At the time of writing this chapter, the [`@epiverse-trace/lac` team](https://github.com/orgs/epiverse-trace/teams/lac) team uses a branching process inspired from Git Flow and the [`@epiverse-trace/lshtm-mrcg` team](https://github.com/orgs/epiverse-trace/teams/lshtm-mrcg)
+
+## Avoid long feature branches
+
+The common feature of both workflows is that new code is added in a feature branch before being submitted as a pull request (PR).
+
+Each branch, and each pull request, should focus on a single feature. This can, for example, be achieved by creating one branch (and subsequently a pull request) per issue. Keep your branches focused on single small features/changes. Make sure to tie individual units of changes in one or more files in a commit. This will lead to small manageable branches and pull requests and ease the code review process.
+
+If you want to contribute multiple unrelated changes to the codebase, please open multiple pull requests.
+
+It is advised to use short branches because long branches are:
+
+-   More difficult and time consuming to review
+-   More difficult to work on
+-   More likely to result in conflicts
+-   In contradiction with the [agile strategy](principles.qmd#lean-and-agile-collaboration-framework) we adopted
+
+# Requiring passing tests
+
+We have a suite of automated tests running in PR. In general, we require tests to pass before merging the branch.
+
+However, in the rare case of an unexpected, unrelated bug popping up in a PR, it may sometimes be acceptable to merge a branch with failing tests (provided the tests don't point out an actual bug!) to keep the PR focused on a specific unit of changes.
+
+Another, preferred strategy, would be to open a new PR, fix the tests, and then rebase the previous branch on top of main / develop where tests are now passing.
+
+<!-- TODO: add schematic representation of fixing in another PR and rebasing -->
+
+# Merging pull requests: "merge commits" vs "squash and merge" vs "rebase and merge"
+
+GitHub currently has [3 pull request merge mechanisms](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github):
+
+- Create a merge commit
+- Squash and merge
+- Rebase and merge
+
+The historical option 'merge commits' presents severe drawbacks, such as creating a heavily non-linear history, which is extremely difficult to read. Notably, it is very difficult to browse & understand a git history with merge commits in GitHub web interface. Yet, git history is a very precious source of information in older packages to inform new maintainers about the reasons behind some choices by old maintainers.
+For related reasons, merge commits can sometimes create flat out unintelligible diffs in pull requests.
+
+Because of this, we have disabled merge commits in our repositories.
+Instead, we rely on either 'rebase and merge' (preferred option) if commits are grouped logically and have clear error messages, or 'squash and merge' if we don't want to keep the commit history (as a last resort; if the commit history is too messy and impossible to clean, or if there is a merge commit in the history).
+If necessary and in order to make a 'rebase' rather than a 'squash', the PR history can be rewritten & cleaned using a command-line interactive git rebase, and squashing, re-ordering, rewording, etc. as necessary and as described in [this blog post](https://github.blog/2022-06-30-write-better-commits-build-better-projects/).
+
+## Deleting merged branches
+
+To avoid confusing situations with diverging histories, we prefer to delete branches.
+The [setting "auto-delete branches from merged PR"](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches) should be activated on all our repositories.
+
+We also encourage external contributors to follow the same tip in their own forks, where we cannot auto-delete branches.
+
+::: callout-tip
+## Continue the discussion
+
+If you would like to add your input on this chapter or would like to know more about the reasons behind our choices, please checkout the [related GitHub issue](https://github.com/epiverse-trace/blueprints/issues/6).
+:::
