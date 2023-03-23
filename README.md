@@ -1,5 +1,6 @@
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![render-blueprints](https://github.com/epiverse-trace/blueprints/actions/workflows/render_blueprints.yml/badge.svg)](https://github.com/epiverse-trace/blueprints/actions/workflows/render_blueprints.yml)
+[![DOI](https://zenodo.org/badge/510390227.svg)](https://zenodo.org/badge/latestdoi/510390227)
 
 # Welcome to this repository!
 
