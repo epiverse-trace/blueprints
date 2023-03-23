@@ -59,7 +59,7 @@ It is advised to use short branches because long branches are:
 -   More likely to result in conflicts
 -   In contradiction with the [agile strategy](principles.qmd#lean-and-agile-collaboration-framework) we adopted
 
-# Requiring passing tests
+## Requiring passing tests
 
 We have a suite of automated tests running in PR. In general, we require tests to pass before merging the branch.
 
@@ -69,7 +69,7 @@ Another, preferred strategy, would be to open a new PR, fix the tests, and then 
 
 <!-- TODO: add schematic representation of fixing in another PR and rebasing -->
 
-# Merging pull requests: "merge commits" vs "squash and merge" vs "rebase and merge"
+## Merging pull requests: "merge commits" vs "squash and merge" vs "rebase and merge"
 
 GitHub currently has [3 pull request merge mechanisms](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github):
 
