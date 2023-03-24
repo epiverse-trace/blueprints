@@ -10,8 +10,6 @@ This repository stores the [__Epiverse TRACE Blueprints__](index.qmd) for softwa
 
 * view the blueprints in [HTML](https://epiverse-trace.github.io/blueprints/)
 
-* download them in [pdf format](https://epiverse-trace.github.io/blueprints/The-_Epiverse-TRACE_-blueprints-for-software-development.pdf)
-
 ## Contributions
 
 ### Tell us what you think
@@ -20,7 +18,7 @@ __Questions__ and __comments__ on the blueprints are welcome through [github iss
 
 ### Contributions via pull requests
 
-__Contributions__ are welcome via [pull requests](https://github.com/epiverse-trace/blueprints/pulls), usually after discussing edits in an issue. The blueprints file to edit is __index.qmd__. This quarto file is used to render the blueprints to different formats: `pdf`, and `html`. This rendering is done automatically every time __index.qmd__ changes on the *main* branch. When making pull requests, it is best to only commit changes to the `qmd` file. 
+__Contributions__ are welcome via [pull requests](https://github.com/epiverse-trace/blueprints/pulls), usually after discussing edits in an issue. The blueprints file to edit is __index.qmd__. This quarto file is used to render the blueprints to `html`. This rendering is done automatically every time __index.qmd__ changes on the *main* branch. When making pull requests, it is best to only commit changes to the `qmd` file. 
 
 In a nutshell, the workflow for contributions would look something like:
 
@@ -34,7 +32,7 @@ In a nutshell, the workflow for contributions would look something like:
 
 3. Make changes to `index.qmd`, save the file.
 
-4. From your terminal, run `quarto render`. The `pdf` and `html` outputs will be generated in the `_book/` folder.
+4. From your terminal, run `quarto render`. The `html` output will be generated in the `_book/` folder.
 
 5. Repeat the two previous steps as many times as needed. Commit the final changes using:
 
@@ -53,5 +51,3 @@ Please note that this project uses a [Contributor Code of Conduct](https://githu
 ). By contributing, you agree to abide by its terms.
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
-
-<br>
