@@ -24,17 +24,17 @@ In a nutshell, the workflow for contributions would look something like:
 
 1. [Install quarto](https://quarto.org/docs/get-started/)
 
-1. Clone the repository using SSH; this is only needed the first time your download the git repository.
+2. Clone the repository using SSH; this is only needed the first time your download the git repository.
 
-2. Run `git pull` to fetch the latest version of the repository.
+3. Run `git pull` to fetch the latest version of the repository.
 
-3. Create a new branch to make your changes typing `git checkout -b [name_of_your_branch]`.
+4. Create a new branch to make your changes typing `git checkout -b [name_of_your_branch]`.
 
-3. Make changes to `index.qmd`, save the file.
+5. Make changes to `index.qmd`, save the file.
 
-4. From your terminal, run `quarto render`. The `html` output will be generated in the `_book/` folder.
+6. From your terminal, run `quarto render`. The `html` output will be generated in the `_book/` folder.
 
-5. Repeat the two previous steps as many times as needed. Commit the final changes using:
+7. Repeat the two previous steps as many times as needed. Commit the final changes using:
 
 ```
 git add index.md
@@ -42,12 +42,12 @@ git commit -m "quick summary of changes"
 git push --set-upstream origin [name_of_your_branch]
 ```
 
-6. Open a pull request on [github](https://github.com/epiverse-trace/blueprints/pulls), using your branch, and explaining briefly which changes you have made.
+8. Open a pull request on [github](https://github.com/epiverse-trace/blueprints/pulls), using your branch, and explaining briefly which changes you have made.
 
 
 ### Notes
 
-Please note that this project uses a [Contributor Code of Conduct](https://github.com/epiverse-trace/linelist/blob/main/CODE_OF_CONDUCT.md
+Please note that this project uses a [Contributor Code of Conduct](https://github.com/epiverse-trace/.github/blob/main/CODE_OF_CONDUCT.md
 ). By contributing, you agree to abide by its terms.
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
