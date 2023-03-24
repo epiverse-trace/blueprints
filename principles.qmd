@@ -58,7 +58,7 @@ The sustainability of open source software (OSS) projects increases with the num
 ::: {.callout-tip}
 ### Read more about this principle in application
 
-- [Git branching and merging process](git-branching-mergin.qmd)
+- [Git branching and merging process](git-branching-merging.qmd)
 :::
 
 ## Code reviews
