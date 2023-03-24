@@ -32,6 +32,12 @@ Useful software development is unlikely to be achieved by developers alone: rath
 * User contributions need to be an intrinsic part of the collaboration framework (see section below), with dedicated events such as brainstorming sessions or product reviews
 * Co-creation can also take the form of pair-programming to combine domain experts and developers
 
+::: {.callout-tip}
+### Read more about this principle in application
+
+- [What should the first 100 lines of code written during an epidemic look like?](https://epiverse-trace.github.io/posts/100days-workshop/)
+:::
+
 ## Lean and Agile collaboration framework
 
 The main objective of our collaboration framework will be to optimize interactions between users and developers. We thus naturally embrace the agile philosophy in which projects progress iteratively through short cycles focussing on delivering and reviewing MVPs. We foresee that each cycle should have three main phases:
@@ -59,6 +65,8 @@ The sustainability of open source software (OSS) projects increases with the num
 ### Read more about this principle in application
 
 - [Git branching and merging process](git-branching-merging.qmd)
+- [Ensuring and showcasing the statistical correctness of your R package](https://epiverse-trace.github.io/posts/statistical-correctness/)
+- [https://epiverse-trace.github.io/posts/lint-rcpp/
 :::
 
 ## Code reviews
@@ -76,6 +84,12 @@ Code reviews are not just a way to improve overall code quality: they are a key 
 * Use code walk-throughs ahead of reviews to facilitate the review process.
 * Prefer small reviews to large ones
 * Conduct occasional audits of the entire code base
+
+::: {.callout-tip}
+### Read more about this principle in application
+
+- [Improving the C++ code quality of an Rcpp package](https://epiverse-trace.github.io/posts/lint-rcpp/)
+:::
 
 ## Documentation
 
@@ -104,6 +118,13 @@ As an open-source initiative, Epiverse-TRACE will benefit from numerous other OS
 * We prioritize the integration of existing tools over development from scratch of new tools
 * We welcome external contributions and promote transparency on all our projects
 * When contributing to external projects, we observe their contributor code of conduct
+
+::: {.callout-tip}
+### Read more about this principle in application
+
+- [From disconnected elements to a harmonious ecosystem: the Epiverse-TRACE project](https://epiverse-trace.github.io/slides/harmonious-ecosystem/)
+- [Converting your R Function to an S3 Generic: benefits, pitfalls & design considerations](https://epiverse-trace.github.io/posts/s3-generic/)
+:::
 
 ## Community health
 
