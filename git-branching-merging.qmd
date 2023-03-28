@@ -10,8 +10,8 @@ In all our repositories, new code should be added in a feature branch before bei
 
 Two development strategies are common:
 
--   [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) where you have 2 long-running branches: the stable `main` branch, and the unstable `development` branch; and many feature branches originating from and being merged into development
--   [GitHub Flow](https://githubflow.github.io/): A simpler feature branch flow, where `main` is the only long-running branch, hosting the development version; and many feature branches originating from and being merged into it. In this flow, stable versions are contained in releases (possibly on CRAN in the case of R packages)
+- [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) where you have 2 long-running branches: the stable `main` branch, and the unstable `development` branch; and many feature branches originating from and being merged into development
+- [GitHub Flow](https://githubflow.github.io/): A simpler feature branch flow, where `main` is the only long-running branch, hosting the development version; and many feature branches originating from and being merged into it. In this flow, stable versions are contained in releases (possibly on CRAN in the case of R packages)
 
 The R community in general sticks with a simple feature branch flow, and doesn't use a development branch. Most developers and users assume that the main GitHub version can be somewhat unstable and that stable releases are on CRAN.
 
@@ -49,10 +49,10 @@ If you want to contribute multiple unrelated changes to the codebase, please ope
 
 It is advised to use short branches because long branches are:
 
--   More difficult and time consuming to review
--   More difficult to work on
--   More likely to result in conflicts
--   In contradiction with the [agile strategy](principles.qmd#lean-and-agile-collaboration-framework) we adopted
+- More difficult and time consuming to review
+- More difficult to work on
+- More likely to result in conflicts
+- In contradiction with the [agile strategy](principles.qmd#lean-and-agile-collaboration-framework) we adopted
 
 ## Requiring passing tests
 
@@ -86,8 +86,8 @@ The [setting "auto-delete branches from merged PR"](https://docs.github.com/en/r
 
 We also encourage external contributors to follow the same tip in their own forks, where we cannot auto-delete branches.
 
-::: callout-tip
-## Continue the discussion
+::: {.callout-tip title="Continue the discussion"}
 
 If you would like to add your input on this chapter or would like to know more about the reasons behind our choices, please checkout the [related GitHub issue](https://github.com/epiverse-trace/blueprints/issues/6).
+
 :::
