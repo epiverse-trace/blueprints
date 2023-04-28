@@ -71,7 +71,7 @@ The sustainability of open source software (OSS) projects increases with the num
 
 ## Code reviews
 
-Code reviews are not just a way to improve overall code quality: they are a key mechanism through which team members can share programming knowledge, better understand existing code bases, and standardize coding practices. 
+Code reviews are not just a way to improve overall code quality: they are a key mechanism through which team members can share programming knowledge, better understand existing code bases, and standardize coding practices.
 
 Key principles include:
 
