@@ -78,7 +78,7 @@ Key principles include:
 - Consider code reviews as a non-hierarchical exercise, performed by all members of the developers team.
 - Understand that code reviews are a great opportunity for training and collaboration
 - Consider Alex Hill’s [quadrant of code reviews](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/) when conducting reviews and treat separately:
-  - Most code quality issues can be solved with automation (*e.g.* styling with [lintr](https://github.com/r-lib/lintr), [styler](https://styler.r-lib.org/), or [goodpractice](https://mangothecat.github.io/goodpractice/))
+  - Most code quality issues can be solved with automation (*e.g.* styling with [lintr](https://lintr.r-lib.org/), [styler](https://styler.r-lib.org/), or [goodpractice](https://mangothecat.github.io/goodpractice/))
   - Non-conflictual, factual issues can be quickly agreed on (*e.g.* missing tests, typos in the documentation)
   - Spend time to discuss high-conflict, high-reward items, and take a collaborative approach to identifying solutions
 - Use pair-programming sessions when developing features to foster a sense of code co-ownership and peer learning
