@@ -71,13 +71,15 @@ The sustainability of open source software (OSS) projects increases with the num
 
 ## Code reviews
 
-Code reviews are not just a way to improve overall code quality: they are a key mechanism through which team members can share programming knowledge, better understand existing code bases, and standardize coding practices. Key principles include:
+Code reviews are not just a way to improve overall code quality: they are a key mechanism through which team members can share programming knowledge, better understand existing code bases, and standardize coding practices.
 
-- Consider code reviews are not a hierarchical exercise: they are performed by all members of the developers team.
+Key principles include:
+
+- Consider code reviews as a non-hierarchical exercise, performed by all members of the developers team.
 - Understand that code reviews are a great opportunity for training and collaboration
 - Consider Alex Hill’s [quadrant of code reviews](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/) when conducting reviews and treat separately:
-  - Trivial issues which can be solved by improving automation (*e.g.* styling using [lintr](https://github.com/r-lib/lintr) or [styler](https://styler.r-lib.org/))
-  - Non-conflictual, factual issues which can be quickly agreed on (*e.g.* missing tests, typos in the documentation)
+  - Most code quality issues can be solved with automation (*e.g.* styling with [lintr](https://lintr.r-lib.org/), [styler](https://styler.r-lib.org/), or [goodpractice](https://mangothecat.github.io/goodpractice/))
+  - Non-conflictual, factual issues can be quickly agreed on (*e.g.* missing tests, typos in the documentation)
   - Spend time to discuss high-conflict, high-reward items, and take a collaborative approach to identifying solutions
 - Use pair-programming sessions when developing features to foster a sense of code co-ownership and peer learning
 - Make code reviews an intrinsic part of the contribution workflow: they are typically performed [as part of the PR review process](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
