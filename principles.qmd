@@ -90,6 +90,7 @@ Key principles include:
 ::: {.callout-tip title="Read more about this principle in application"}
 
 - [Improving the C++ code quality of an Rcpp package](https://epiverse-trace.github.io/posts/lint-rcpp/)
+- [Code review](code-review.qmd)
 
 :::
 
