@@ -10,6 +10,7 @@ book:
     - principles.qmd
     - dependencies.qmd
     - git-branching-merging.qmd
+    - package-scope.qmd
     - code-review.qmd
     - contribution-acknowledgements.qmd
   google-analytics: "G-XZ471458FQ"
@@ -24,6 +25,7 @@ book:
       - icon: github
         href: https://github.com/
         aria-label: GitHub
+
 format:
   html:
     theme: [cosmo, custom.scss]
