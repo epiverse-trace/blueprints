@@ -24,11 +24,11 @@ Epiverse-TRACE packages are not developed uniformly and certain packages may dev
 
 ## Epiverse-TRACE reasoning
 
-A benefit of including plotting functions is it enables package users to quickly inspect a feature of the package (e.g. model output) without having to write their own scripts or functions. Despite this clear benefit of shipping plotting with a package there are several
+A benefit of including plotting functions is it enables package users to quickly inspect a feature of the package (e.g. model output) without having to write their own script or function. Despite this clear benefit of shipping plotting with a package there are several
 drawbacks, and here we outline the reasons why only dependency-free plotting (also commonly referred to as base R plotting) is included in Epiverse-TRACE R packages.
 
 The most frequently used plotting package in R is [{ggplot2}](https://ggplot2.tidyverse.org/index.html). This package implements the grammar of graphics and provides users with a extensive and flexible set of tools to build custom plots. These are the reasons it is used for plotting in package vignettes. However, in
-order for an R package to export plotting functions that use {ggplot2}, it must list {ggplot2}
+order for an R package to export plotting functions that use {ggplot2}, it must list this package
 as a [dependency](https://cran.r-project.org/doc/manuals/R-exts.html#Package-Dependencies). {ggplot2} is a "heavy" package, not so much from the size of the code base (as 
 CRAN limits the size of packages to 5MB), but due to it's own dependencies.
 
@@ -40,15 +40,14 @@ tools::package_dependencies(packages = "ggplot2", recursive = TRUE)
 
 The relatively large number of dependencies introduces a couple of issues:
 
-1. Breaking changes in or deprecation of {ggplot2} or one of it's dependencies may cause breaking changes in Epiverse-TRACE packages hampering sustainable package maintenance.
-2. If depended on {ggplot2} would potentially install it's own dependencies on a user's device.
+1. Breaking changes in, or deprecation of, {ggplot2} or one of it's dependencies may cause breaking changes in Epiverse-TRACE packages hampering sustainable package maintenance.
+2. If depended on, {ggplot2} would potentially install it's own dependencies on a user's device.
 
 ## Alternative options
 
-There is a middle ground between providing users with dependency laden plotting functions, and relying on them to write their own or copy from documentation. This is to [extend {ggplot2}](https://ggplot2.tidyverse.org/articles/extending-ggplot2.html) by providing custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (for example recent developments in [{clock}](https://github.com/r-lib/clock/blob/03ab3169990094669727e405c1c398272a199c85/R/scale-week-year-week-day.R)).
+There is a middle ground between providing users with dependency laden plotting functions, and relying on them to write their own or copy from documentation. This is to [extend {ggplot2}](https://ggplot2.tidyverse.org/articles/extending-ggplot2.html) by providing custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (for example recent developments in [{clock}](https://github.com/r-lib/clock/blob/03ab3169990094669727e405c1c398272a199c85/R/scale-week-year-week-day.R)). At present, there are no Epiverse-TRACE packages using this strategy.
 
-
-Another option is to provide a separate R package whose sole purpose is to provide plotting functions. This gives the user the choice to install the plotting package if deemed necessary. This has been found to be a good option to enhance the maintenance of the core package and it's plotting accessory package. A marginal downside of this approach is requiring the user to install and attach both packages, as well as the assumption that they know the plotting package exists.
+Another option is to provide a separate R package whose sole purpose is to provide plotting functions. This gives the user the choice to install the plotting package if deemed necessary. This has been found to be a good option to enhance the maintenance of the core package and it's plotting accessory package. A marginal downside of this approach is requiring the user to install and attach both packages, as well as the assumption that they know the plotting package exists. There are currently no plotting-specific packages within Epiverse-TRACE.
 
 ## Flexible philosophy
 
