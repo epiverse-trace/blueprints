@@ -4,7 +4,7 @@ title: "Package scope"
 
 ## Visualisation in R packages
 
-The use of visualisation is a fundamental step in scientific analysis and a [core component of data science](https://r4ds.had.co.nz/introduction.html). However, the question of whether a package should include plotting functionality is not obvious. 
+The use of visualisation is a fundamental step in scientific analysis and a [core component of data science](https://r4ds.had.co.nz/introduction.html). However, the question of whether a package should include plotting functionality is not obvious.
 
 ::: {.callout-note title="Not all package plotting requires are equal"}
 
@@ -14,11 +14,11 @@ This section details the Epiverse-TRACE reasoning for the inclusion or exclusion
 
 ## Epiverse-TRACE philosophy
 
-The Epiverse-TRACE philosophy is to only include minimal, dependency-free, plotting functionality, and to instead provide examples and templates of plotting using {ggplot2} in vignettes. An example of the inclusion of a plotting function is the [`<epidist>` plotting method](https://epiverse-trace.github.io/epiparameter/reference/plot.epidist.html) in {epiparameter}. 
+The Epiverse-TRACE philosophy is to only include minimal, dependency-free, plotting functionality, and to instead provide examples and templates of plotting using {ggplot2} in vignettes. An example of the inclusion of a plotting function is the [`<epidist>` plotting method](https://epiverse-trace.github.io/epiparameter/reference/plot.epidist.html) in {epiparameter}.
 
-Epiverse-TRACE packages aim to provide comprehensive documentation that explains exported functions and demonstrates their applications, both through [{roxygen2}](https://roxygen2.r-lib.org/) function-specific documentation, or via longer-form vignettes. It is in the vignettes that Epiverse-TRACE packages show examples of how the data or model outputs can be visualised, with the associated code chunks required to produce the plot. 
+Epiverse-TRACE packages aim to provide comprehensive documentation that explains exported functions and demonstrates their applications, both through [{roxygen2}](https://roxygen2.r-lib.org/) function-specific documentation, or via longer-form vignettes. It is in the vignettes that Epiverse-TRACE packages show examples of how the data or model outputs can be visualised, with the associated code chunks required to produce the plot.
 
-It is with this provision of plotting code chunks we hope to provide the community with a resource from which their desired plots can be produced. Vignettes use the {ggplot2} package to provide easily extensible plots with the addition of [layers](https://rpubs.com/hadley/ggplot2-layers). 
+It is with this provision of plotting code chunks we hope to provide the community with a resource from which their desired plots can be produced. Vignettes use the {ggplot2} package to provide easily extensible plots with the addition of [layers](https://rpubs.com/hadley/ggplot2-layers).
 
 Epiverse-TRACE packages are not developed uniformly and certain packages may deviate from this philosophy. In these cases the reasoning for the difference should be documented in that package's design vignette.
 
@@ -29,8 +29,7 @@ drawbacks, and here we outline the reasons why only dependency-free plotting (al
 
 The most frequently used plotting package in R is [{ggplot2}](https://ggplot2.tidyverse.org/index.html). This package implements the grammar of graphics and provides users with a extensive and flexible set of tools to build custom plots. These are the reasons it is used for plotting in package vignettes. However, in
 order for an R package to export plotting functions that use {ggplot2}, it must list this package
-as a [dependency](https://cran.r-project.org/doc/manuals/R-exts.html#Package-Dependencies). {ggplot2} is a "heavy" package, not so much from the size of the code base (as 
-CRAN limits the size of packages to 5MB), but due to it's own dependencies.
+as a [dependency](https://cran.r-project.org/doc/manuals/R-exts.html#Package-Dependencies). {ggplot2} is a "heavy" package, not so much from the size of the code base (as CRAN limits the size of packages to 5MB), but due to it's own dependencies.
 
 ```{r, pkg-deps, eval=FALSE}
 tools::package_dependencies(packages = "ggplot2", recursive = FALSE)
@@ -54,4 +53,3 @@ Another option is to provide a separate R package whose sole purpose is to provi
 Lastly, most Epiverse-TRACE R packages are under active development and what is considered optimal and discussed above may evolve over time. User feedback and user training may elucidate a need that was overlooked in initial development and the inclusion or exclusion of dependencies may change.
 
 ---
-
