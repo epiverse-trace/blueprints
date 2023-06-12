@@ -8,7 +8,7 @@ The use of visualisation is a fundamental step in scientific analysis and a [cor
 
 ::: {.callout-note title="Not all package plotting requires are equal"}
 
-This section details the Epiverse-TRACE reasoning for the inclusion or exclusion of functionality around plotting. It is not a commentary generalisation to all R packages. For some packages it is obvious that plotting is superfluous or nonsensical, whereas for others, the purpose of the package may be plotting or the package could be a graphics library (e.g., {ggplot2}).
+This section details the Epiverse-TRACE reasoning for the inclusion or exclusion of functionality around plotting. It is not a commentary generalisation to all R packages. 
 
 :::
 
