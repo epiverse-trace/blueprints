@@ -44,7 +44,7 @@ The relatively large number of dependencies introduces a couple of issues:
 
 ## Alternative options
 
-There is a middle ground between providing users with dependency laden plotting functions, and relying on them to write their own or copy from documentation. This is to [extend {ggplot2}](https://ggplot2.tidyverse.org/articles/extending-ggplot2.html) by providing custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (for example recent developments in [{clock}](https://github.com/r-lib/clock/blob/03ab3169990094669727e405c1c398272a199c85/R/scale-week-year-week-day.R)). At present, there are no Epiverse-TRACE packages using this strategy.
+There is a middle ground between providing users with dependency laden plotting functions, and relying on them to write their own or copy from documentation. This is to [extend {ggplot2}](https://ggplot2.tidyverse.org/articles/extending-ggplot2.html) by providing custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (no examples outside of {ggplot2} exist for these). At present, there are no Epiverse-TRACE packages using this strategy.
 
 Another option is to provide a separate R package whose sole purpose is to provide plotting functions. This gives the user the choice to install the plotting package if deemed necessary. This has been found to be a good option to enhance the maintenance of the core package and it's plotting accessory package. A marginal downside of this approach is requiring the user to install and attach both packages, as well as the assumption that they know the plotting package exists. There are currently no plotting-specific packages within Epiverse-TRACE.
 
