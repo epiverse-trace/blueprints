@@ -3,26 +3,43 @@ Title: Epiverse Package Dependency Guidelines
 Introduction:
 The Epiverse community recognizes the importance of carefully selecting dependencies for packages. To provide clear guidance, this document presents a set of guidelines for managing dependencies in Epiverse packages. These guidelines consider factors such as functionality, efficiency, compatibility, maintainability, and community standards. Following these guidelines ensures that Epiverse packages create a robust and harmonious package ecosystem.
 
-1. Minimize Dependencies:
+Improving End-User Experience and Maintainer Experience:
+When evaluating dependencies, two key aspects to consider are improving the end-user experience and enhancing the maintainer experience. Dependencies should aim to enhance the speed, ease of use, ease of installation, and other aspects that contribute to a positive user experience. Additionally, dependencies that facilitate package maintenance and future development are valuable.
+
+Minimize Dependencies:
 The primary objective is to keep dependencies to a minimum, except when they offer significant benefits. This approach ensures that Epiverse packages remain lightweight and minimize potential compatibility issues. Dependencies should only be added if they provide notable performance improvements or essential functionality not available in base R.
 
-2. Established and Stable Dependencies:
+Established and Stable Dependencies:
 When considering dependencies, prioritize well-established packages with a strong track record on CRAN (Comprehensive R Archive Network). Packages with numerous reverse-dependencies demonstrate their reliability and maintainability. Opting for such dependencies reduces the risk of package instability and ensures a smooth user experience.
 
-3. External Libraries and Shared Computing Platforms:
+External Libraries and Shared Computing Platforms:
 Exercise caution when relying on dependencies that require external libraries, as they can pose challenges on shared computing platforms where users lack super-user privileges. While such dependencies may offer valuable functionality, their installation and maintenance might be problematic in certain environments. Consider alternative solutions or consult with platform administrators to address potential issues.
 
-4. Input Checking and Error Messaging:
-For user-facing functions, implementing input checking is crucial to identify errors early and enhance code robustness. Base R provides effective functionality for input checking, such as using `stopifnot()` with named arguments. Alternatively, utility packages like checkmate can streamline the process, especially for multilingual packages that benefit from standardized error messages. Choose an approach that balances functionality, code readability, and ease of translation.
+Input Checking and Error Messaging:
+For user-facing functions, implementing input checking is crucial to identify errors early and enhance code robustness. Base R provides effective functionality for input checking, such as using stopifnot() with named arguments. Alternatively, utility packages like checkmate can streamline the process, especially for multilingual packages that benefit from standardized error messages. Choose an approach that balances functionality, code readability, and ease of translation.
 
-5. Non-Standard Evaluation (NSE):
+Non-Standard Evaluation (NSE):
 Avoid non-standard evaluation unless there is a compelling reason to use it, such as when a package is intended to be used within a tidyverse pipeline. NSE introduces complexity and can complicate debugging efforts. Prioritize code simplicity, maintainability, and compatibility with other packages, unless there is a clear advantage in utilizing NSE.
 
-6. Tidyverse vs. Base R:
+Tidyverse vs. Base R:
 Consider the package's position in the software stack when deciding between the tidyverse and base R. For low-level packages that focus on underlying functionality, minimize dependencies and rely on base R. However, for high-level packages typically used by data analysts who leverage the tidyverse, consider incorporating tidyverse packages to provide a seamless and familiar user experience.
 
-7. Choosing data.table:
+Choosing data.table:
 Evaluate the potential benefits of data.table as a dependency based on specific use cases. Consider data.table when extensive data wrangling and performance optimization are crucial. Data.table is renowned for its efficiency, widespread usage, and compatibility with existing Epiverse-adjacent packages. However, use data.table judiciously, applying it only to packages where it significantly improves maintainability and performance.
+
+Additional Considerations:
+While the guidelines provide general principles, individual developer choices should be trusted and justified. In cases of doubt, raising an issue to discuss with others and explore alternative options can be useful. Consider including these discussions in design vignettes or documentation to provide clarity on the rationale behind specific dependencies. Hard, objective metrics can also be valuable in guiding dependency choices, fostering a balanced decision-making process.
+
+Dependencies to Avoid:
+To maintain package integrity, it is recommended not to include meta packages like tidyverse, avoid using experimental packages as strong dependencies unless they become stable, steer clear of packages with
+
+ system dependencies, and avoid dependencies that indirectly force reliance on a very recent R version.
+
+Learning from Epiverse-TRACE Packages:
+Exploring dependencies used in other Epiverse-TRACE packages can provide insights. For example, when working with Rcpp packages, considering options like RcppEigen or RcppArmadillo, which are already present in some Epiverse-TRACE packages, can be helpful in decision-making.
+
+Iterative Dependency Management:
+Dependencies can initially be included to expedite the Minimum Viable Product (MVP) development process. However, it is crucial to periodically review and remove dependencies that do not significantly contribute to the package's functionality, performance, or maintainability.
 
 Conclusion:
 These guidelines serve as a framework for Epiverse package developers to make informed decisions about dependencies. By minimizing dependencies, prioritizing established and stable packages, considering the trade-offs of input checking and NSE, and evaluating the benefits of data.table, Epiverse packages can deliver efficient and reliable solutions. These guidelines foster a consistent and sustainable package ecosystem that benefits both developers and users in the Epiverse community.
