@@ -1,28 +1,31 @@
-Title: Epiverse Package Dependency Guidelines
+---
+Title: Epiverse-TRACE Package Dependency Guidelines
+---
 
-Introduction:
-In the Epiverse community, we recognize the importance of carefully selecting dependencies for our packages. To ensure a robust and harmonious package ecosystem, we have established a set of guidelines for managing dependencies. These guidelines take into account factors such as functionality, efficiency, compatibility, maintainability, and community standards. By following these guidelines, we aim to create packages that deliver an enhanced end-user experience and provide ease of maintenance for package maintainers.
+In the Epiverse-TRACE community, we recognize the importance of carefully selecting dependencies for our packages. To ensure a robust and harmonious package ecosystem, we have established a set of guidelines for managing dependencies. These guidelines take into account factors such as functionality, efficiency, compatibility, maintainability, and community standards. By following these guidelines, we aim to create packages that deliver an enhanced end-user experience and provide ease of maintenance for package maintainers. Our goal is to strike a balance between improving package performance, facilitating ease of use and installation, and ensuring long-term maintainability.
 
-Key Considerations for Dependencies:
-When evaluating dependencies, we consider several key factors that prioritize both the end-user experience and the maintainer experience. Our goal is to strike a balance between improving package performance, facilitating ease of use and installation, and ensuring long-term maintainability.
+## Minimizing Dependencies and Prioritizing Stability
 
-Minimizing Dependencies and Prioritizing Stability:
 In our approach, we prefer to minimize dependencies unless they offer significant benefits. This strategy helps us keep our Epiverse packages lightweight and reduces the potential for compatibility issues. We prioritize well-established packages with a strong track record on CRAN, as they demonstrate reliability and maintainability, resulting in a smooth user experience.
 
-Caution with External Libraries and System Dependencies:
-We exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges on shared computing platforms where users may lack super-user privileges. While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
+In particular, we exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges on shared computing platforms where users may lack super-user privileges. While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
 
-Input Checking and Error Messaging:
-To enhance code robustness and identify errors early, we incorporate input checking in user-facing functions. We leverage the effective input checking functionality provided by base R, such as utilizing stopifnot() with named arguments. In some cases, we may use utility packages like checkmate to streamline the process, particularly for multilingual packages. Our aim is to maintain code simplicity, ease of maintenance, and compatibility.
+## Input Checking and Error Messaging
 
-Consideration for Tidyverse vs. Base R:
+To enhance code robustness and identify errors early, we incorporate input checking in user-facing functions. We leverage the effective input checking functionality provided by base R, such as utilizing `stopifnot()` with named arguments. In some cases, we may use utility packages like checkmate to streamline the process, particularly for multilingual packages. Our aim is to maintain code simplicity, ease of maintenance, and compatibility.
+
+## Consideration for Tidyverse vs. Base R
+
 When deciding between the tidyverse and base R, we take into account the package's position in the software stack. For low-level packages that focus on underlying functionality, we prefer minimizing dependencies and relying on base R. However, for high-level packages commonly used by data analysts who leverage the tidyverse, we recommend incorporating tidyverse packages to provide a seamless and familiar user experience.
 
-Selective Use of data.table:
+## Selective Use of data.table
+
 We carefully evaluate the potential benefits of data.table as a dependency based on specific use cases. When extensive data wrangling and performance optimization are crucial, we consider incorporating data.table. However, we exercise discretion and limit its use to packages where it significantly improves maintainability and performance.
 
-Additional Recommendations:
+## Additional Recommendations
+
 We trust the individual developer choices while ensuring that they can justify the dependencies they include. When in doubt, we encourage developers to raise an issue to initiate discussions with the community and explore alternative options. While it may not be necessary for all cases, we recommend including discussions on dependencies in design vignettes or documentation to provide clarity. Additionally, we encourage the use of hard, objective metrics to guide dependency choices, striking a balance between flexibility and standardization.
 
-Conclusion:
+## Conclusion
+
 These guidelines reflect our commitment to making informed decisions about dependencies in Epiverse packages. By minimizing dependencies, prioritizing stability, considering challenges with external libraries, implementing input checking, and carefully evaluating the use of data.table, we aim to deliver efficient and reliable solutions. Our collective adherence to these guidelines fosters a consistent and sustainable package ecosystem that benefits both developers and users within the Epiverse community.
