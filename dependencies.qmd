@@ -33,3 +33,9 @@ We trust the individual developer choices while ensuring that they can justify t
 ## Conclusion
 
 These guidelines reflect our commitment to making informed decisions about dependencies in Epiverse-TRACE packages. By minimizing dependencies, prioritizing stability, and considering the package context and position in the ecosystem to inform choices, we aim to deliver efficient and reliable solutions. Our collective adherence to these guidelines fosters a consistent and sustainable package ecosystem that benefits both developers and users within the Epiverse-TRACE community.
+
+::: {.callout-tip title="Continue the discussion"}
+
+If you would like to add your input on this chapter or would like to know more about the reasons behind our choices, please checkout the [related GitHub issue](https://github.com/epiverse-trace/blueprints/issues/7).
+
+:::
