@@ -20,7 +20,11 @@ When deciding between the tidyverse and base R, we take into account the package
 
 ## Selective Use of data.table
 
-We carefully evaluate the potential benefits of data.table as a dependency based on specific use cases. When extensive data wrangling and performance optimization are crucial, we consider incorporating data.table. However, we exercise discretion and limit its use to packages where it significantly improves maintainability and performance.
+We carefully evaluate the potential benefits of data.table as a dependency based on specific use cases. When extensive data wrangling and performance optimization are crucial, we consider incorporating data.table. Indeed, data.table is renowned for its efficiency, widespread usage, and compatibility with existing Epiverse-adjacent packages. However, we exercise discretion and limit its use to packages where it significantly improves maintainability and performance.
+
+## Iterative Development and Dependency Evolution
+
+We embrace an iterative development approach where dependencies can evolve over time. Initially, dependencies can be included to quickly build a Minimum Viable Product (MVP) and gain early feedback. However, we recognize that not all dependencies may bring significant value in the long-run. Therefore, we encourage package maintainers to regularly evaluate the usefulness and impact of dependencies and remove those that do not contribute substantially to the package.
 
 ## Additional Recommendations
 
