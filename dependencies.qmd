@@ -8,11 +8,11 @@ In the Epiverse-TRACE community, we recognize the importance of carefully select
 
 In our approach, we prefer to minimize dependencies unless they offer significant benefits. This strategy helps us keep our Epiverse packages lightweight and reduces the potential for compatibility issues. We prioritize well-established packages with a strong track record on CRAN, as they demonstrate reliability and maintainability, resulting in a smooth user experience.
 
-In particular, we exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges on shared computing platforms where users may lack super-user privileges. While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
+In particular, we exercise caution when considering dependencies that rely on external libraries. [Such dependencies can pose challenges on shared computing platforms where users may lack super-user privileges](https://twitter.com/groundwalkergmb/status/1350336844022521857). While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
 
 ## Input Checking and Error Messaging
 
-To enhance code robustness and identify errors early, we incorporate input checking in user-facing functions. We leverage the effective input checking functionality provided by base R, such as utilizing `stopifnot()` with named arguments. In some cases, we may use utility packages like checkmate to streamline the process, particularly for multilingual packages. Our aim is to maintain code simplicity, ease of maintenance, and compatibility.
+To enhance code robustness and identify errors early, [we incorporate input checking in user-facing functions](https://blog.r-hub.io/2022/03/10/input-checking/). We leverage the effective input checking functionality provided by base R, such as utilizing `stopifnot()` with named arguments. In some cases, we may use utility packages like checkmate to streamline the process, particularly for multilingual packages. Our aim is to maintain code simplicity, ease of maintenance, and compatibility.
 
 ## Consideration for Tidyverse vs. Base R
 
@@ -28,7 +28,7 @@ We embrace an iterative development approach where dependencies can evolve over 
 
 ## Additional Recommendations
 
-We trust the individual developer choices while ensuring that they can justify the dependencies they include. When in doubt, we encourage developers to raise an issue to initiate discussions with the community and explore alternative options. While it may not be necessary for all cases, we recommend including discussions on dependencies in design vignettes or documentation to provide clarity. Additionally, we encourage the use of hard, objective metrics to guide dependency choices, striking a balance between flexibility and standardization.
+We trust the individual developer choices while ensuring that they can justify the dependencies they include. When in doubt, we encourage developers to raise an issue to initiate discussions with the community and explore alternative options. While it may not be necessary for all cases, we recommend including discussions on dependencies in design vignettes or documentation to provide clarity. Additionally, [we encourage the use of hard, objective metrics to guide dependency choices](https://www.tidyverse.org/blog/2019/05/itdepends/), striking a balance between flexibility and standardization.
 
 ## Conclusion
 
