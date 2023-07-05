@@ -1,0 +1,35 @@
+---
+Title: Authorship and Contribution Acknowledgements
+---
+
+Hi Zulma, no, there is no standard definition. Pretty much like a scientific article, each maintainer has their own precise definition about what is a significant enough contribution to become an author. The general guidance is to err of the side of generosity and offer authorship is you're hesitating.
+I personally tend to use contributor when I expect something to be a one-off contributor and author when I notice / expect sustained contribution over time.
+
+        c("aut" = "Use for full authors who have made substantial contributions to\nthe package and should show up in the package citation.",
+          "com" = "Use for package maintainers that collected code (potentially in\nother languages) but did not make further substantial\ncontributions to the package.",
+          "cph" = "Use for all copyright holders.",
+          "cre" = "Use for the package maintainer.",
+          "ctb" = "Use for authors who have made smaller contributions (such as\ncode patches etc.) but should not show up in the package\ncitation.",
+          "ctr" = "Use for authors who have been contracted to write (parts of) the\npackage and hence do not own intellectual property.",
+          "dtc" = "Use for persons who contributed data sets for the package.",
+          "fnd" = "Use for persons or organizations that furnished financial support\nfor the development of the package",
+          "rev" = "Use for persons or organizations responsible for reviewing\n(parts of) the package.",
+          "ths" = "If the package is part of a thesis, use for the thesis advisor.", 
+          "trl" = "If the R code is merely a translation from another language\n(typically S), use for the translator to R.")
+          
+https://github.com/wch/r-source/blob/2910f5c7f8db02a5b10985fd4fec09d411324fd6/src/library/utils/R/sysdata.R#L29-L39C126
+
+One thing that was probably not mentioned according to the notes is the option to use the "rev" role to acknowledge the work of reviewers. This practice was spearheaded by rOpenSci: https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/
+
+## Package attribution and contributor credit
+​
+- Reviewers are important for the development process. 
+- Some in the team feel that the reviewers should be contributors given their large input 
+- Use of contributors for reviews need to be consistent so should not be left to maintainer to subjectively decide
+- Can we add a 'reviewed by' section to the package? Might not work in the DESCRIPTION due to R guidelines (https://cran.r-project.org/doc/manuals/R-exts.html). But could be added as an extra file.
+- Framework needs to be setup to judge whether a reviewer has contributed enough to be considered a package contributor.
+- Reviewers should be freely able to decline contributor status.
+- Currently the LSHTM (incl. MRC-Gambia) and LAC teams haven't considered how to list reviewers.
+- Would the package still exist without the reviewer process, this might impact the value of review?
+- Github insights shows contribution, and a link to the insights in the package (e.g. readme), but will need to be careful as the insights can miss contributors that are not working on the code directly.
+​
