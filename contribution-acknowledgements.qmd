@@ -2,34 +2,40 @@
 Title: Authorship and Contribution Acknowledgements
 ---
 
-Hi Zulma, no, there is no standard definition. Pretty much like a scientific article, each maintainer has their own precise definition about what is a significant enough contribution to become an author. The general guidance is to err of the side of generosity and offer authorship is you're hesitating.
-I personally tend to use contributor when I expect something to be a one-off contributor and author when I notice / expect sustained contribution over time.
+## Package Attribution and Contributor Credit
 
-        c("aut" = "Use for full authors who have made substantial contributions to\nthe package and should show up in the package citation.",
-          "com" = "Use for package maintainers that collected code (potentially in\nother languages) but did not make further substantial\ncontributions to the package.",
-          "cph" = "Use for all copyright holders.",
-          "cre" = "Use for the package maintainer.",
-          "ctb" = "Use for authors who have made smaller contributions (such as\ncode patches etc.) but should not show up in the package\ncitation.",
-          "ctr" = "Use for authors who have been contracted to write (parts of) the\npackage and hence do not own intellectual property.",
-          "dtc" = "Use for persons who contributed data sets for the package.",
-          "fnd" = "Use for persons or organizations that furnished financial support\nfor the development of the package",
-          "rev" = "Use for persons or organizations responsible for reviewing\n(parts of) the package.",
-          "ths" = "If the package is part of a thesis, use for the thesis advisor.", 
-          "trl" = "If the R code is merely a translation from another language\n(typically S), use for the translator to R.")
-          
-https://github.com/wch/r-source/blob/2910f5c7f8db02a5b10985fd4fec09d411324fd6/src/library/utils/R/sysdata.R#L29-L39C126
+In the development of our R packages, it is crucial to properly attribute contributions and credit individuals for their involvement. This section outlines guidelines and considerations for package attribution and recognizing the contributions of contributors, authors, and reviewers.
 
-One thing that was probably not mentioned according to the notes is the option to use the "rev" role to acknowledge the work of reviewers. This practice was spearheaded by rOpenSci: https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/
+### Roles in Package Attribution
 
-## Package attribution and contributor credit
-​
-- Reviewers are important for the development process. 
-- Some in the team feel that the reviewers should be contributors given their large input 
-- Use of contributors for reviews need to be consistent so should not be left to maintainer to subjectively decide
-- Can we add a 'reviewed by' section to the package? Might not work in the DESCRIPTION due to R guidelines (https://cran.r-project.org/doc/manuals/R-exts.html). But could be added as an extra file.
-- Framework needs to be setup to judge whether a reviewer has contributed enough to be considered a package contributor.
-- Reviewers should be freely able to decline contributor status.
-- Currently the LSHTM (incl. MRC-Gambia) and LAC teams haven't considered how to list reviewers.
-- Would the package still exist without the reviewer process, this might impact the value of review?
-- Github insights shows contribution, and a link to the insights in the package (e.g. readme), but will need to be careful as the insights can miss contributors that are not working on the code directly.
-​
+To provide clarity and consistency, we should follow the list of roles defined in the R source code as the primary reference for package attribution. These roles help differentiate the levels of contribution and responsibilities within the project. The following roles are recommended for use:
+
+- **aut**: Use for full authors who have made substantial contributions to the package and should show up in the package citation.
+- **com**: Use for package maintainers who collected code (potentially in other languages) but did not make further substantial contributions to the package.
+- **cph**: Use for all copyright holders.
+- **cre**: Use for the package maintainer.
+- **ctb**: Use for authors who have made smaller contributions (such as code patches, bug fixes, or documentation improvements) but should not show up in the package citation.
+- **ctr**: Use for authors who have been contracted to write (parts of) the package and hence do not own intellectual property.
+- **dtc**: Use for persons who contributed data sets for the package.
+- **fnd**: Use for persons or organizations that furnished financial support for the development of the package.
+- **rev**: Use for persons or organizations responsible for reviewing (parts of) the package.
+- **ths**: If the package is part of a thesis, use for the thesis advisor.
+- **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
+
+By following these roles, we align with the official standard and ensure consistency in our package attributions.
+
+### Contributor vs. Author Distinction
+
+It is important to distinguish between **contributors** and **authors** within our package attribution guidelines. While there is no strict definition for the level of contribution required to become an author, we should err on the side of generosity and offer authorship when there is hesitancy.
+
+As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time. This distinction helps acknowledge the varying levels of commitment and contribution from individuals.
+
+Contributors can also be recognized by being added as **commit authors** or **co-authors**. This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package DESCRIPTION file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
+
+### Reviewer Contributions
+
+Reviewers play a crucial role in the development process, providing valuable feedback and insights to improve the quality of the package. To recognize the contributions of reviewers, we can use the rev role in the package attribution.
+
+The practice of including reviewers as contributors in package attribution was spearheaded by rOpenSci. This acknowledges the efforts of individuals or organizations responsible for reviewing parts of the package.
+
+By recognizing the contributions of both authors and contributors, including commit authors or co-authors, and acknowledging the role of reviewers, we create a culture of appreciation and inclusivity within our package development process. This fosters a collaborative environment where individuals feel valued for their contributions, regardless of the scale or nature of their involvement.
