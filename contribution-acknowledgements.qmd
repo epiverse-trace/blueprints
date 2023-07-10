@@ -2,11 +2,9 @@
 Title: Authorship and Contribution Acknowledgements
 ---
 
-## Package Attribution and Contributor Credit
-
 In the development of our R packages, it is crucial to properly attribute contributions and credit individuals for their involvement. This section outlines guidelines and considerations for package attribution and recognizing the contributions of contributors, authors, and reviewers.
 
-### Roles in Package Attribution
+## Roles in Package `DESCRIPTION`
 
 To provide clarity and consistency, we should follow the list of roles defined in the R source code as the primary reference for package attribution. These roles help differentiate the levels of contribution and responsibilities within the project. The following roles are recommended for use:
 
@@ -24,18 +22,20 @@ To provide clarity and consistency, we should follow the list of roles defined i
 
 By following these roles, we align with the official standard and ensure consistency in our package attributions.
 
-### Contributor vs. Author Distinction
+## Contributor vs. Author Distinction
 
 It is important to distinguish between **contributors** and **authors** within our package attribution guidelines. While there is no strict definition for the level of contribution required to become an author, we should err on the side of generosity and offer authorship when there is hesitancy.
 
 As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time. This distinction helps acknowledge the varying levels of commitment and contribution from individuals.
 
-Contributors can also be recognized by being added as **commit authors** or **co-authors**. This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package DESCRIPTION file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
+Contributors can also be recognized by being added as commit authors** or co-authors. This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package DESCRIPTION file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
 
-### Reviewer Contributions
+## Reviewer Contributions
 
 Reviewers play a crucial role in the development process, providing valuable feedback and insights to improve the quality of the package. To recognize the contributions of reviewers, we can use the rev role in the package attribution.
 
 The practice of including reviewers as contributors in package attribution was spearheaded by rOpenSci. This acknowledges the efforts of individuals or organizations responsible for reviewing parts of the package.
+
+## Conclusion
 
 By recognizing the contributions of both authors and contributors, including commit authors or co-authors, and acknowledging the role of reviewers, we create a culture of appreciation and inclusivity within our package development process. This fosters a collaborative environment where individuals feel valued for their contributions, regardless of the scale or nature of their involvement.
