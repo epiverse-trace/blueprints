@@ -26,7 +26,19 @@ A common question is the difference between **contributors** and **authors**. Wh
 
 As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time.
 
+## Other ways to recognize contributions
+
+### As commit (co-authors)
+
 Contributors can also be recognized by [adding them as commit authors or co-authors](https://github.blog/2018-01-29-commit-together-with-co-authors/). This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package `DESCRIPTION` file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
+
+### In the package changelog
+
+Similarly, each change should be documented as a bullet in `NEWS.md`. It is then good practice to document who created the change and link to the relevant pull request. For example:
+
+```{filename="NEWS.md"}
+- The package now has a logo (@awesomelogodesigner, #32)
+```
 
 ## Beyond code contributions
 
