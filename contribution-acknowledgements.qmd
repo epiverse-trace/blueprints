@@ -2,7 +2,7 @@
 Title: Authorship and Contribution Acknowledgements
 ---
 
-In the development of our R packages, it is crucial to properly attribute contributions and credit individuals for their involvement. This section outlines guidelines and considerations for package attribution and recognizing the contributions of contributors, authors, and reviewers.
+In the development of our R packages, it is crucial to properly attribute contributions and credit individuals for their involvement. This section outlines guidelines and considerations for credit attribution and recognizing the contributions of contributors, authors, and reviewers.
 
 ## Roles in package `DESCRIPTION`
 
