@@ -4,9 +4,9 @@ Title: Authorship and Contribution Acknowledgements
 
 In the development of our R packages, it is crucial to properly attribute contributions and credit individuals for their involvement. This section outlines guidelines and considerations for package attribution and recognizing the contributions of contributors, authors, and reviewers.
 
-## Roles in Package `DESCRIPTION`
+## Roles in package `DESCRIPTION`
 
-To provide clarity and consistency, we should follow the list of roles defined in the R source code as the primary reference for package attribution. These roles help differentiate the levels of contribution and responsibilities within the project. The following roles are recommended for use:
+Roles in `DESCRIPTION` can be picked from the very long [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
 
 - **aut**: Use for full authors who have made substantial contributions to the package and should show up in the package citation.
 - **com**: Use for package maintainers who collected code (potentially in other languages) but did not make further substantial contributions to the package.
@@ -20,15 +20,13 @@ To provide clarity and consistency, we should follow the list of roles defined i
 - **ths**: If the package is part of a thesis, use for the thesis advisor.
 - **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
 
-By following these roles, we align with the official standard and ensure consistency in our package attributions.
+## Contributor vs. author distinction
 
-## Contributor vs. Author Distinction
+A common question is the difference between **contributors** and **authors**. While there is no strict definition for the level of contribution required to become an author, we should err on the side of generosity and offer authorship when there is hesitancy.
 
-It is important to distinguish between **contributors** and **authors** within our package attribution guidelines. While there is no strict definition for the level of contribution required to become an author, we should err on the side of generosity and offer authorship when there is hesitancy.
+As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time.
 
-As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time. This distinction helps acknowledge the varying levels of commitment and contribution from individuals.
-
-Contributors can also be recognized by being added as commit authors** or co-authors. This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package DESCRIPTION file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
+Contributors can also be recognized by [adding them as commit authors or co-authors](https://github.blog/2018-01-29-commit-together-with-co-authors/). This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package `DESCRIPTION` file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
 
 ## Reviewer Contributions
 
