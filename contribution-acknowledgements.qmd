@@ -28,11 +28,17 @@ As a guideline, consider using the **contributor** role when you anticipate a on
 
 Contributors can also be recognized by [adding them as commit authors or co-authors](https://github.blog/2018-01-29-commit-together-with-co-authors/). This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package `DESCRIPTION` file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
 
+## Beyond code contributions
+
+It is important to highlight that contributions to a package also include non-code contributions such as: beta testing, graphical design, domain expert guidance, etc.
+
+Importantly, and as opposed to code contributions, non-code contributions are generally invisible in the version control history. For this reason, we recommend paying a specific attention to them and make sure you include them in `DESCRIPTION`, or add their author as commit author or co-author.
+
 ## Reviewer Contributions
 
-Reviewers play a crucial role in the development process, providing valuable feedback and insights to improve the quality of the package. To recognize the contributions of reviewers, we can use the rev role in the package attribution.
+Reviewers are an example of non-code contributions that plays a crucial role in the development process, providing valuable feedback and insights to improve the quality of the package. To recognize the contributions of reviewers, we can use the `"rev"` role in the package `DESCRIPTION`.
 
-The practice of including reviewers as contributors in package attribution was spearheaded by rOpenSci. This acknowledges the efforts of individuals or organizations responsible for reviewing parts of the package.
+[The practice of including reviewers as contributors in package `DESCRIPTION` was spearheaded by rOpenSci](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). This explicitly acknowledges in a standard way the efforts of individuals or organizations responsible for reviewing parts of the package.
 
 ## Conclusion
 
