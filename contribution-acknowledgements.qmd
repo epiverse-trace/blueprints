@@ -42,4 +42,4 @@ Reviewers are an example of non-code contributions that plays a crucial role in 
 
 ## Conclusion
 
-By recognizing the contributions of both authors and contributors, including commit authors or co-authors, and acknowledging the role of reviewers, we create a culture of appreciation and inclusivity within our package development process. This fosters a collaborative environment where individuals feel valued for their contributions, regardless of the scale or nature of their involvement.
+By recognizing various levels and types of code or non-code contributions, and acknowledging the role of reviewers, we create a culture of appreciation and inclusivity within our package development process. This fosters a collaborative environment where individuals feel valued for their contributions, regardless of the scale or nature of their involvement.
