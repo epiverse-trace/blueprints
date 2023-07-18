@@ -35,6 +35,7 @@ Useful software development is unlikely to be achieved by developers alone: rath
 ::: {.callout-tip title="Read more about this principle in application"}
 
 - [What should the first 100 lines of code written during an epidemic look like?](https://epiverse-trace.github.io/posts/100days-workshop/)
+- [Communicating development stages of open-source software](https://epiverse-trace.github.io/posts/comm-software-devel/)
 
 :::
 
@@ -47,6 +48,12 @@ The main objective of our collaboration framework will be to optimize interactio
 3. *Review*: presentation of MVPs and collection of feedback; the backlog is updated accordingly; this is also the opportunity for a retrospective assessment of the process: What was done well? What caused problems? How can the team improve the work process?
 
 To maximize agility, we recommend also adopting the lean principle in which the amount of work in progress (WIP) at any time is minimized. In other words, it is more efficient to work on a few MVPs and deliver value quickly, rather than working on many MVPs at the same time, resulting in a lot of WIP and low completion rates. We recommend using Kanban boards to keep track of progress, and as a tool for identifying long-lasting WIP, likely indicative of blockage or issues which need addressing. These boards should be fully public to encourage and facilitate external visibility and contributions.
+
+::: {.callout-tip title="Read more about this principle in application"}
+
+- [Communicating development stages of open-source software](https://epiverse-trace.github.io/posts/comm-software-devel/)
+
+:::
 
 ## Decentralizing code ownership
 
