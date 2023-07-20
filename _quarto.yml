@@ -8,6 +8,10 @@ book:
     - principles.qmd
     - git-branching-merging.qmd
     - code-review.qmd
+  google-analytics: "G-XZ471458FQ"
+  twitter-card:
+    creator: "@Epiverse_TRACE"
+  open-graph: true
 
 format:
   html:
