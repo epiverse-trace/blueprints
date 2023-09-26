@@ -73,7 +73,7 @@ The sustainability of open source software (OSS) projects increases with the num
 - [Git branching and merging process](git-branching-merging.qmd)
 - [Ensuring and showcasing the statistical correctness of your R package](https://epiverse-trace.github.io/posts/statistical-correctness/)
 - [Improving the C++ code quality of an Rcpp package](https://epiverse-trace.github.io/posts/lint-rcpp/)
-
+- [System Dependencies in R Packages & Automatic Testing](https://epiverse-trace.github.io/posts/system-dependencies/)
 :::
 
 ## Code reviews
