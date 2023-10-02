@@ -148,3 +148,9 @@ The success of an OSS project like epiverse-trace relies heavily on the quality 
 - Use [CHAOSS metrics](https://chaoss.community/metrics/) to monitor community health and reflect our values
 - Use occasional surveys to monitor aspects of community health which cannot be captured automatically
 - Invest in mentoring programs to strengthen capacity where it is most needed
+
+::: {.callout-tip title="Read more about this principle in application"}
+
+- [Authorship and Contribution Acknowledgements](contribution-acknowledgements)
+
+:::
