@@ -144,6 +144,6 @@ The success of an OSS project like epiverse-trace relies heavily on the quality 
 
 ::: {.callout-tip title="Read more about this principle in application"}
 
-- [Authorship and Contribution Acknowledgements](contribution-acknowledgements)
+- [Authorship and Contribution Acknowledgements](contribution-acknowledgements.qmd)
 
 :::
