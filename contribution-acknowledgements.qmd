@@ -4,6 +4,9 @@ Title: Authorship and Contribution Acknowledgements
 
 As part of the development process we want to ensure individuals are properly credited for their involvement. This section outlines considerations you should make, and guidelines to follow, in acknowledging collaborators.
 
+Any contributor who matches the criteria described here should feel empowered to add themselves to `DESCRIPTION`.
+However, ultimately, it is the maintainer's responsibility to ensure that no contribution remains neglected and that everyone is credited as required by our guidelines.
+
 ## Roles in package `DESCRIPTION`
 
 Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
@@ -19,7 +22,6 @@ Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code 
 > - **rev**: Use for persons or organizations responsible for reviewing (parts of) the package.
 > - **ths**: If the package is part of a thesis, use for the thesis advisor.
 > - **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
-
 
 ## Contributor vs. author distinction
 
@@ -49,7 +51,7 @@ It is important to highlight that contributions to a package also include non-co
 
 As opposed to code contributions, non-code contributions are generally invisible in the version control history. For this reason, we recommend paying a specific attention to them and make sure you include them in `DESCRIPTION`, or add their author as commit author or co-author.
 
-## Reviewer Contributions
+## Reviewer contributions
 
 Reviewers are an example of non-code contributions that plays a crucial role in the development process, providing valuable feedback and insights to improve the quality of the package. To recognize the contributions of reviewers, we can use the `"rev"` role in the package `DESCRIPTION`.
 
