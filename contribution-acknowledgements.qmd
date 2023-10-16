@@ -2,11 +2,11 @@
 Title: Authorship and Contribution Acknowledgements
 ---
 
-In the development of our R packages, it is crucial to properly attribute contributions and credit individuals for their involvement. This section outlines guidelines and considerations for credit attribution and recognizing the contributions of contributors, authors, and reviewers.
+As part of the development process we want to ensure individuals are properly credited for their involvement. This section outlines considerations you should make, and guidelines to follow, in acknowledging collaborators.
 
 ## Roles in package `DESCRIPTION`
 
-Roles in `DESCRIPTION` can be picked from the very long [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
+Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
 
 - **aut**: Use for full authors who have made substantial contributions to the package and should show up in the package citation.
 - **com**: Use for package maintainers who collected code (potentially in other languages) but did not make further substantial contributions to the package.
@@ -46,7 +46,7 @@ Similarly, each change should be documented as a bullet in `NEWS.md`. It is then
 
 It is important to highlight that contributions to a package also include non-code contributions such as: beta testing, graphical design, domain expert guidance, etc.
 
-Importantly, and as opposed to code contributions, non-code contributions are generally invisible in the version control history. For this reason, we recommend paying a specific attention to them and make sure you include them in `DESCRIPTION`, or add their author as commit author or co-author.
+As opposed to code contributions, non-code contributions are generally invisible in the version control history. For this reason, we recommend paying a specific attention to them and make sure you include them in `DESCRIPTION`, or add their author as commit author or co-author.
 
 ## Reviewer Contributions
 
