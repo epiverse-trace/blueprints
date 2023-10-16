@@ -8,17 +8,18 @@ As part of the development process we want to ensure individuals are properly cr
 
 Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
 
-- **aut**: Use for full authors who have made substantial contributions to the package and should show up in the package citation.
-- **com**: Use for package maintainers who collected code (potentially in other languages) but did not make further substantial contributions to the package.
-- **cph**: Use for all copyright holders.
-- **cre**: Use for the package maintainer.
-- **ctb**: Use for authors who have made smaller contributions (such as code patches, bug fixes, or documentation improvements) but should not show up in the package citation.
-- **ctr**: Use for authors who have been contracted to write (parts of) the package and hence do not own intellectual property.
-- **dtc**: Use for persons who contributed data sets for the package.
-- **fnd**: Use for persons or organizations that furnished financial support for the development of the package.
-- **rev**: Use for persons or organizations responsible for reviewing (parts of) the package.
-- **ths**: If the package is part of a thesis, use for the thesis advisor.
-- **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
+> - **aut**: Use for full authors who have made substantial contributions to the package and should show up in the package citation.
+> - **com**: Use for package maintainers who collected code (potentially in other languages) but did not make further substantial contributions to the package.
+> - **cph**: Use for all copyright holders.
+> - **cre**: Use for the package maintainer.
+> - **ctb**: Use for authors who have made smaller contributions (such as code patches, bug fixes, or documentation improvements) but should not show up in the package citation.
+> - **ctr**: Use for authors who have been contracted to write (parts of) the package and hence do not own intellectual property.
+> - **dtc**: Use for persons who contributed data sets for the package.
+> - **fnd**: Use for persons or organizations that furnished financial support for the development of the package.
+> - **rev**: Use for persons or organizations responsible for reviewing (parts of) the package.
+> - **ths**: If the package is part of a thesis, use for the thesis advisor.
+> - **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
+
 
 ## Contributor vs. author distinction
 
