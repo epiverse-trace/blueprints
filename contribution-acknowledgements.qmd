@@ -1,0 +1,62 @@
+---
+Title: Authorship and Contribution Acknowledgements
+---
+
+As part of the development process we want to ensure individuals are properly credited for their involvement. This section outlines considerations you should make, and guidelines to follow, in acknowledging collaborators.
+
+Any contributor who matches the criteria described here should feel empowered to add themselves to `DESCRIPTION`.
+However, ultimately, it is the maintainer's responsibility to ensure that no contribution remains neglected and that everyone is credited as required by our guidelines.
+
+## Roles in package `DESCRIPTION`
+
+Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
+
+> - **aut**: Use for full authors who have made substantial contributions to the package and should show up in the package citation.
+> - **com**: Use for package maintainers who collected code (potentially in other languages) but did not make further substantial contributions to the package.
+> - **cph**: Use for all copyright holders.
+> - **cre**: Use for the package maintainer.
+> - **ctb**: Use for authors who have made smaller contributions (such as code patches, bug fixes, or documentation improvements) but should not show up in the package citation.
+> - **ctr**: Use for authors who have been contracted to write (parts of) the package and hence do not own intellectual property.
+> - **dtc**: Use for persons who contributed data sets for the package.
+> - **fnd**: Use for persons or organizations that furnished financial support for the development of the package.
+> - **rev**: Use for persons or organizations responsible for reviewing (parts of) the package.
+> - **ths**: If the package is part of a thesis, use for the thesis advisor.
+> - **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
+
+## Contributor vs. author distinction
+
+A common question is the difference between **contributors** and **authors**. While there is no strict definition for the level of contribution required to become an author, we should err on the side of generosity and offer authorship when there is hesitancy.
+
+As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time.
+
+Drawing a parallel with academic publishing: contributors (`"ctb"`) are more akin to people listed in acknowledgements and authors (`"aut"`) are paper authors. The relevance of this parallel is particularly visible in the automatically generated package citation, and the pkgdown sidebar where only authors (`"aut"`) are listed).
+
+## Other ways to recognize contributions
+
+### As commit (co-authors)
+
+Contributors can also be recognized by [adding them as commit authors or co-authors](https://github.blog/2018-01-29-commit-together-with-co-authors/). This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package `DESCRIPTION` file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
+
+### In the package changelog
+
+Similarly, each change should be documented as a bullet in `NEWS.md`. It is then good practice to document who created the change and link to the relevant pull request. For example:
+
+```{filename="NEWS.md"}
+- The package now has a logo (@awesomelogodesigner, #32)
+```
+
+## Beyond code contributions
+
+It is important to highlight that contributions to a package also include non-code contributions such as: beta testing, graphical design, domain expert guidance, etc.
+
+As opposed to code contributions, non-code contributions are generally invisible in the version control history. For this reason, we recommend paying a specific attention to them and make sure you include them in `DESCRIPTION`, or add their author as commit author or co-author.
+
+## Reviewer contributions
+
+Reviewers are an example of non-code contributions that plays a crucial role in the development process, providing valuable feedback and insights to improve the quality of the package. To recognize the contributions of reviewers, we can use the `"rev"` role in the package `DESCRIPTION`.
+
+[The practice of including reviewers as contributors in package `DESCRIPTION` was spearheaded by rOpenSci](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). This explicitly acknowledges in a standard way the efforts of individuals or organizations responsible for reviewing parts of the package.
+
+## Conclusion
+
+By recognizing various levels and types of code or non-code contributions, and acknowledging the role of reviewers, we create a culture of appreciation and inclusivity within our package development process. This fosters a collaborative environment where individuals feel valued for their contributions, regardless of the scale or nature of their involvement.
