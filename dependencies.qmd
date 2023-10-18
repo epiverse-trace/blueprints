@@ -8,7 +8,10 @@ In the Epiverse-TRACE community, we recognize the importance of carefully select
 
 We prefer to minimize dependencies unless they offer significant performance or usability benefits. This strategy helps us keep our Epiverse-TRACE packages lightweight and reduces the potential for compatibility issues. We prioritize well-established packages with a strong track record of staying on CRAN to limit accumulation of technical debt. For example, we adhere to [rOpenSci's guidance on recommended scaffolding](https://devguide.ropensci.org/building.html#recommended-scaffolding) and avoid unmaintained packages.
 
-In particular, we exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges [on shared computing platforms where users may lack super-user privileges](https://twitter.com/groundwalkergmb/status/1350336844022521857), or [when using webR](https://www.tidyverse.org/blog/2023/08/webr-0-2-0/#webassembly-system-libraries-for-r-packages). While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
+In particular, packages that are not available on CRAN or Bioconductor should not be included as dependencies. Only CRAN/Bioconductor packages that already went through a couple of releases and/or have more than 100 monthly users can be considered as dependencies.
+This policy applies for taking both Epiverse-TRACE packages or external packages as dependencies.
+
+We also exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges [on shared computing platforms where users may lack super-user privileges](https://twitter.com/groundwalkergmb/status/1350336844022521857), or [when using webR](https://www.tidyverse.org/blog/2023/08/webr-0-2-0/#webassembly-system-libraries-for-r-packages). While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
 
 ## Input Checking and Error Messaging
 
