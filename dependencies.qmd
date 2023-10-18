@@ -10,6 +10,7 @@ We prefer to minimize dependencies unless they offer significant performance or 
 
 In particular, packages that are not available on CRAN or Bioconductor should not be included as dependencies. Only CRAN/Bioconductor packages that already went through a couple of releases and/or have more than 100 monthly users can be considered as dependencies.
 This policy applies for taking both Epiverse-TRACE packages or external packages as dependencies.
+It aims at ensuring the robustness of the ecosystem we are building but also allowing maturing packages to go through necessary breaking changes unencumbered.
 
 We also exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges [on shared computing platforms where users may lack super-user privileges](https://twitter.com/groundwalkergmb/status/1350336844022521857), or [when using webR](https://www.tidyverse.org/blog/2023/08/webr-0-2-0/#webassembly-system-libraries-for-r-packages). While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
 
