@@ -13,7 +13,7 @@ This policy applies for taking both Epiverse-TRACE packages or external packages
 It aims at:
 
 - facilitating the implementation of our agile strategy by removing time dependency for the first CRAN release of packages
-- ensuring the robustness of the ecosystem we are building 
+- ensuring the robustness of the ecosystem we are building
 - allowing maturing packages to go through necessary breaking changes unencumbered
 
 We also exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges [on shared computing platforms where users may lack super-user privileges](https://twitter.com/groundwalkergmb/status/1350336844022521857), or [when using webR](https://www.tidyverse.org/blog/2023/08/webr-0-2-0/#webassembly-system-libraries-for-r-packages). While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
