@@ -13,7 +13,10 @@ book:
   twitter-card:
     creator: "@Epiverse_TRACE"
   open-graph: true
+  navbar:
+    search: true
+    logo: logo_white.svg
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     number-sections: false
