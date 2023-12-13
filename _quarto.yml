@@ -16,6 +16,10 @@ book:
   navbar:
     search: true
     logo: logo_white.svg
+    right:
+      - icon: github
+        href: https://github.com/
+        aria-label: GitHub
 format:
   html:
     theme: [cosmo, custom.scss]
