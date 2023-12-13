@@ -3,6 +3,8 @@ project:
 
 book:
   title: "The _Epiverse-TRACE_ blueprints for software development"
+  doi: "10.5281/zenodo.7062318"
+  license: "CC-BY-4.0"
   chapters:
     - index.qmd
     - principles.qmd
