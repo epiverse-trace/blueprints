@@ -18,6 +18,7 @@ book:
   navbar:
     search: true
     logo: logo_white.svg
+    logo-href: https://epiverse-trace.github.io/
     right:
       - icon: github
         href: https://github.com/
