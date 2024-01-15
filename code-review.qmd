@@ -31,8 +31,6 @@ GitHub's feature of suggestions that can be directly committed within the PR are
 
 However, in a scenario where the suggested change cannot be commited to the feature branch in the PR, and instead is incorporated in a different feature branch, the suggestion should still be acknowledged. This is where manually specifying [commit coauthors](https://github.blog/2018-01-29-commit-together-with-co-authors/) can help. When using the suggestions of a collaborator, include two empty lines after the commit message and use the phrase `Co-authored-by:` followed by the collaborator's GitHub name and email (this may be a Github no-reply email). See <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors> for details.
 
-If you do not have the collaborators email address, one way to find it is to navigate on GitHub to a commit they have authored. The URL of the commit should follow the form: `https://github.com/<gh_username>/<repo_name>/commit/<commit_sha>`. Once on this page, add `.patch` to the end of the URL and their email should be given. As stated above, this can be a GitHub no-reply email.
-
 ::: {.callout-tip title="Read more about this principle in application"}
 
 If a collaborator makes a substantial contribution to the package make sure that they are [recognised in the DESCRIPTION](contribution-acknowledgements.qmd#contributor-vs.-author-distinction).

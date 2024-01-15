@@ -37,6 +37,8 @@ Drawing a parallel with academic publishing: contributors (`"ctb"`) are more aki
 
 Contributors can also be recognized by [adding them as commit authors or co-authors](https://github.blog/2018-01-29-commit-together-with-co-authors/). This practice is particularly appropriate for minor contributions, such as typo fixes, code formatting improvements, or small documentation updates that do not warrant an addition to the list of authors in the package `DESCRIPTION` file. By including contributors as commit authors or co-authors, their contributions are acknowledged within the version control history. This approach provides visibility and recognition for their specific contributions.
 
+Co-authoring commits manually requires the contributors username and email. If you do not have the collaborators email address, one way to find it is to navigate on GitHub to a commit they have authored. The URL of the commit should follow the form: `https://github.com/<gh_username>/<repo_name>/commit/<commit_sha>`. Once on this page, add `.patch` to the end of the URL and their email should be given. As stated above, this can be a GitHub no-reply email.
+
 ### In the package changelog
 
 Similarly, each change should be documented as a bullet in `NEWS.md`. It is then good practice to document who created the change and link to the relevant pull request. For example:
