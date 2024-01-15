@@ -33,8 +33,6 @@ However, in a scenario where the suggested change cannot be commited to the feat
 
 If you do not have the collaborators email address, one way to find it is to navigate on GitHub to a commit they have authored. The URL of the commit should follow the form: `https://github.com/<gh_username>/<repo_name>/commit/<commit_sha>`. Once on this page, add `.patch` to the end of the URL and their email should be given. As stated above, this can be a GitHub no-reply email.
 
-If you have forgotten to include a co-author on a commit that they collaborated on and already commited or pushed, you can [amend your commit message to include them](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/changing-a-commit-message). _Warning: amending old commits can require force pushing, so should be done consideration of the effects_.
-
 ::: {.callout-tip title="Read more about this principle in application"}
 
 If a collaborator makes a substantial contribution to the package make sure that they are [recognised in the DESCRIPTION](contribution-acknowledgements.qmd#contributor-vs.-author-distinction).
