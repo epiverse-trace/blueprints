@@ -131,6 +131,7 @@ As an open-source initiative, Epiverse-TRACE will benefit from numerous other OS
 
 ::: {.callout-tip title="Read more about this principle in application"}
 
+- [Epiverse-TRACE Package Dependency Guidelines](./dependencies.qmd)
 - [From disconnected elements to a harmonious ecosystem: the Epiverse-TRACE project](https://epiverse-trace.github.io/slides/harmonious-ecosystem/)
 - [Converting your R Function to an S3 Generic: benefits, pitfalls & design considerations](https://epiverse-trace.github.io/posts/s3-generic/)
 - [Extending Data Frames: Creating custom classes and {dplyr} compatibility](https://epiverse-trace.github.io/posts/extend-dataframes/)
