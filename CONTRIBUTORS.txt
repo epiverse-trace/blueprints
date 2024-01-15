@@ -1,34 +1,34 @@
-James Azam
-Anna Carnegie
-Rosalind Eggo
-Rich FitzJohn
-Dawn Foster
-Hannah Frick
-Sebastian Funk
-Cyril Geismar
-Sarah Gibson
-Miguel Enrique Gámez López
-Geraldine Gómez Millán
-Hugo Gruson
-Ernest Guevarra
-Pratik Gupte
-Thibaut Jombart
-Joshua Lambert
-Emma Marty
-Ibrahim Mahgoub
-Karim Mané
-Nuredin Mohammed
-Andrés Moreno
-Rebecca Nash
-Julian David Otero Acosta
-Jaime Pavlich-Mariscal
-David Santiago Quevedo Vega
-Maëlle Salmon
-Malvika Sharan
-Janetta Skarp
-Tim Taylor
-Nicolás Torres
-Heather Turner
-Juan Daniel Umaña
-Andree Valle Campos
-Chantal Wood
+- James Azam
+- Anna Carnegie
+- Rosalind Eggo
+- Rich FitzJohn
+- Dawn Foster
+- Hannah Frick
+- Sebastian Funk
+- Cyril Geismar
+- Sarah Gibson
+- Miguel Enrique Gámez López
+- Geraldine Gómez Millán
+- Hugo Gruson
+- Ernest Guevarra
+- Pratik Gupte
+- Thibaut Jombart
+- Joshua Lambert
+- Emma Marty
+- Ibrahim Mahgoub
+- Karim Mané
+- Nuredin Mohammed
+- Andrés Moreno
+- Rebecca Nash
+- Julian David Otero Acosta
+- Jaime Pavlich-Mariscal
+- David Santiago Quevedo Vega
+- Maëlle Salmon
+- Malvika Sharan
+- Janetta Skarp
+- Tim Taylor
+- Nicolás Torres
+- Heather Turner
+- Juan Daniel Umaña
+- Andree Valle Campos
+- Chantal Wood

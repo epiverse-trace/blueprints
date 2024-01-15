@@ -1,6 +1,5 @@
 ---
 title: Preface
-engine: knitr
 ---
 
 ![License: CC BY 4.0](figures/cc-by-logo.png)
@@ -21,8 +20,7 @@ This document was originally written as an attempt to summarize group discussion
 
 *Contributions in alphabetic order:*
 
-```{embed file = "CONTRIBUTORS.txt"}
-```
+{{< include CONTRIBUTORS.txt >}}
 
 ## Abbreviations
 
