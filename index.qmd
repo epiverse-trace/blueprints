@@ -20,10 +20,7 @@ This document was originally written as an attempt to summarize group discussion
 
 *Contributions in alphabetic order:*
 
-```{r, echo = FALSE, results = "asis"}
-readLines("CONTRIBUTORS") |> 
-  cat(sep = ", ")
-```
+{{< include CONTRIBUTORS.txt >}}
 
 ## Abbreviations
 
@@ -34,18 +31,3 @@ readLines("CONTRIBUTORS") |>
 * MVP: Minimal Viable Product
 * PR: Pull Request
 * WIP: Work In Progress
-
-## Version
-
-```{r, echo = FALSE}
-latest_release <- gh::gh(
-    "/repos/{owner}/{repo}/releases/latest", 
-    owner = "epiverse-trace", 
-    repo = "blueprints"
-  )
-```
-
-The current version of this document is `r latest_release$tag_name`, published
-on the `r format(as.Date(latest_release$published_at))`.
-You can find an archived copy on Zenodo, under the DOI
-[10.5281/zenodo.7062318](https://doi.org/10.5281/zenodo.7062318).
