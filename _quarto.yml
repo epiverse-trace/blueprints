@@ -8,6 +8,7 @@ book:
   chapters:
     - index.qmd
     - principles.qmd
+    - dependencies.qmd
     - git-branching-merging.qmd
     - code-review.qmd
     - contribution-acknowledgements.qmd
