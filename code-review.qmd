@@ -36,3 +36,60 @@ However, in a scenario where the suggested change cannot be commited to the feat
 If a collaborator makes a substantial contribution to the package make sure that they are [recognised in the DESCRIPTION](contribution-acknowledgements.qmd#contributor-vs.-author-distinction).
 
 :::
+
+## Types of review
+
+Utilising GitHub pull requests, we conduct two different types of code reviews, which we will explain in this section. The first, _partial code review_, includes only some of a code base. In other words, this only contains changes to the code from a certain point in the past. The second type, _full package review_, is to facilitate reviewing an entire code base.
+
+### Partial review
+
+Partial review is likely the most familiar to people. It is commonly used when a feature branch is going to be merged with the stable [(`main` or `development`)](git-branching-merging.qmd#branching-workflow) branch, and GitHub shows the differences between the two branches. The [_Files changed_ tab of the GitHub pull request](https://docs.github.com/en/enterprise-cloud@latest/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) provides the template for comments and suggestions. 
+
+A second use of partial code review is reviewing the changes between version releases. More generally, this can be considered as reviewing changes between a chosen branch and an arbitrary commit in the past, but for the purpose of this example we will focus on differences between versions. For this mock example, lets say a new version (v0.3.0) of a package is ready to be released and all the differences to the previously release version (v0.2.0) need to be reviewed. A branch, which we will call `v_020`, is created from the commit that is tagged with the v0.2.0 release. To find this commit we can run `git show-ref --tags`. This should return each commit SHA with it's associated release tag. Then create a new branch from this commit using `git branch v_020 <commit_sha>` (replacing `<commit_sha>` with the chosen commit from the previous command). Push this branch with `git push origin v_020`. We then want to create a branch from our stable branch (e.g. `main`) for the purpose of the review, here we will call it `review`. 
+
+```sh
+git branch review
+git push origin review
+```
+
+The pull request can now be made from the `review` branch to the `v_020` branch and will provide the difference between versions.
+
+This process is similar to the [release comparison feature provided by Github](https://docs.github.com/en/repositories/releasing-projects-on-github/comparing-releases), but that feature does not allow commenting and suggesting like the pull request interface.
+
+### Full package review
+
+::: {.callout-tip title="Read more about this principle in application"}
+
+The full package review setup used by Epiverse-TRACE is inspired by a informative blog post by [Thomas Robitaille posted on .py in the sky](https://astrofrog.github.io/blog/2013/04/10/how-to-conduct-a-full-code-review-on-github/).
+
+:::
+
+The full package review is useful when the entire code base should be shown as changed files. This can be for either the first release of a package, or a subsequent release where all the code can be viewed (useful to understand the package architecture).
+
+The full package review requires a similar setup process to the version release partial code review. Instead of a branch from the previous release, we want a branch that is completely empty. This is not possible, but we can create the next best thing, a branch from the first commit using:
+
+```sh
+git rev-list --all | tail -1
+git branch empty <commit_sha>
+git push origin empty
+```
+
+This retrieve the commit SHA and then creates and pushes the branch. Then the `review` branch can be created with the same method as the partial review:
+
+```sh
+git branch review
+git push origin review
+```
+
+Now the full package review pull request can be made on GitHub, targeting `empty` from `review`.
+
+### Addressing package reviews
+
+We have used two strategies for integrating suggestions in package reviews. 
+
+1. Commit changes to the `review` branch, once all changes have been made the pull request can be [redirected](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-base-branch-of-a-pull-request) to the stable branch and merged. 
+
+2. New feature branches can be created to make requested changes; each merged into the stable branch. Once all changes have been made in dedicated pull requests, the review pull request can be closed and the `review` branch deleted. 
+
+An [example of the first strategy can be found in the {finalsize} R package](https://github.com/epiverse-trace/finalsize/pull/161), and an [example of the second strategy can be found in the {superspreading} R package](https://github.com/epiverse-trace/superspreading/pull/31).
+
