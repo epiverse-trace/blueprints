@@ -25,18 +25,6 @@ Code review can be skipped in cases when the package maintainer or authors makes
 
 If suggested changes fall outside the scope of the PR, utilise Github's feature of generating issues from PR comments. Clicking the ellipsis in the PR comment and selecting "Reference in new issue" will open an issue with reference to the PR.
 
-## Recognising contributions in reviews
-
-GitHub's feature of suggestions that can be directly committed within the PR are a useful feature that we recommend using for relatively small changes to the code. In most circumstances, these can be directly committed to the feature branch in the PR. GitHub attributes [co-authorship to those that suggested the change and who commited the change](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes). This is a nice feature that [enables easy recognition of contributions.](contribution-acknowledgements.qmd)
-
-However, in a scenario where the suggested change cannot be commited to the feature branch in the PR, and instead is incorporated in a different feature branch, the suggestion should still be acknowledged. This is where manually specifying [commit coauthors](https://github.blog/2018-01-29-commit-together-with-co-authors/) can help. When using the suggestions of a collaborator, include two empty lines after the commit message and use the phrase `Co-authored-by:` followed by the collaborator's GitHub name and email (this may be a Github no-reply email). See <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors> for details.
-
-::: {.callout-tip title="Read more about this principle in application"}
-
-If a collaborator makes a substantial contribution to the package make sure that they are [recognised in the DESCRIPTION](contribution-acknowledgements.qmd#contributor-vs.-author-distinction).
-
-:::
-
 ## Types of review
 
 Utilising GitHub pull requests, we conduct two different types of code reviews, which we will explain in this section. The first, _partial code review_, includes only some of a code base. In other words, this only contains changes to the code from a certain point in the past. The second type, _full package review_, is to facilitate reviewing an entire code base.
@@ -93,3 +81,16 @@ We have used two strategies for integrating suggestions in package reviews.
 
 An [example of the first strategy can be found in the {finalsize} R package](https://github.com/epiverse-trace/finalsize/pull/161), and an [example of the second strategy can be found in the {superspreading} R package](https://github.com/epiverse-trace/superspreading/pull/31).
 
+
+
+## Recognising contributions in reviews
+
+GitHub's feature of suggestions that can be directly committed within the PR are a useful feature that we recommend using for relatively small changes to the code. In most circumstances, these can be directly committed to the feature branch in the PR. GitHub attributes [co-authorship to those that suggested the change and who commited the change](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes). This is a nice feature that [enables easy recognition of contributions.](contribution-acknowledgements.qmd)
+
+However, in a scenario where the suggested change cannot be commited to the feature branch in the PR, and instead is incorporated in a different feature branch, the suggestion should still be acknowledged. This is where manually specifying [commit coauthors](https://github.blog/2018-01-29-commit-together-with-co-authors/) can help. When using the suggestions of a collaborator, include two empty lines after the commit message and use the phrase `Co-authored-by:` followed by the collaborator's GitHub name and email (this may be a Github no-reply email). See <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors> for details.
+
+::: {.callout-tip title="Read more about this principle in application"}
+
+If a collaborator makes a substantial contribution to the package make sure that they are [recognised in the DESCRIPTION](contribution-acknowledgements.qmd#contributor-vs.-author-distinction).
+
+:::
