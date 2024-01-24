@@ -74,7 +74,7 @@ git branch empty <commit_sha>
 git push origin empty
 ```
 
-This retrieve the commit SHA and then creates and pushes the branch. Then the `review` branch can be created with the same method as the partial review:
+This retrieves the commit SHA and then creates and pushes the branch. Then the `review` branch can be created with the same method as the partial review:
 
 ```sh
 git branch review
