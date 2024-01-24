@@ -31,7 +31,11 @@ Utilising GitHub pull requests, we conduct two different types of code reviews, 
 
 ### Partial review
 
+#### Feature review
+
 Partial review is likely the most familiar to people. It is commonly used when a feature branch is going to be merged with the stable [(`main` or `development`)](git-branching-merging.qmd#branching-workflow) branch, and GitHub shows the differences between the two branches. The [_Files changed_ tab of the GitHub pull request](https://docs.github.com/en/enterprise-cloud@latest/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) provides the template for comments and suggestions. 
+
+#### Pre-release partial review
 
 A second use of partial code review is reviewing the changes between version releases. More generally, this can be considered as reviewing changes between a chosen branch and an arbitrary commit in the past, but for the purpose of this example we will focus on differences between versions. For this mock example, lets say a new version (v0.3.0) of a package is ready to be released and all the differences to the previously release version (v0.2.0) need to be reviewed. A branch, which we will call `v_020`, is created from the commit that is tagged with the v0.2.0 release. To find this commit we can run `git show-ref --tags`. This should return each commit SHA with it's associated release tag. Then create a new branch from this commit using `git branch v_020 <commit_sha>` (replacing `<commit_sha>` with the chosen commit from the previous command). Push this branch with `git push origin v_020`. We then want to create a branch from our stable branch (e.g. `main`) for the purpose of the review, here we will call it `review`. 
 
