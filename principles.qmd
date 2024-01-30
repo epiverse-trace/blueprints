@@ -113,6 +113,7 @@ Consistent, high quality, and accessible documentation is key to adopting softwa
 - Write documentation assuming minimum R literacy and prior knowledge
 - Content should clearly state requirements, objectives, and value for the user
 - Aim to provide translations for the most common languages
+- We aim to provide [automated blog posts for major and minor releases](https://epiverse-trace.github.io/blog.html#category=new-release). Code owners may occasionally decide to release patch blogs if the patch is critical.
 
 ## Being part of the OSS landscape
 
