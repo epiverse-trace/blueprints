@@ -38,6 +38,8 @@ We embrace an [iterative development approach](principles.html#lean-and-agile-co
 
 We trust the individual developer choices while ensuring that they can justify the dependencies they include. When in doubt, we encourage developers to raise an issue to initiate discussions with the community and explore alternative options. While it may not be necessary for all cases, we recommend including discussions on dependencies in design vignettes or documentation to provide clarity, and inform future maintainers of the reasons behind our choices. Additionally, [we encourage the use of hard, objective metrics to guide dependency choices](https://www.tidyverse.org/blog/2019/05/itdepends/), striking a balance between flexibility and standardization.
 
+To assist with this, we have a GitHub Actions workflow in place to highlight the total impact (recursive dependencies and system dependencies) of any dependency addition or removal in a package: [`dependency-change.yaml`](https://github.com/epiverse-trace/packagetemplate/blob/main/.github/workflows/dependency-change.yaml).
+
 ## Conclusion
 
 These guidelines reflect our commitment to making informed decisions about dependencies in Epiverse-TRACE packages. By minimizing dependencies, prioritizing stability, and considering the package context and position in the ecosystem to inform choices, we aim to deliver efficient and reliable solutions. Our collective adherence to these guidelines fosters a consistent and sustainable package ecosystem that benefits both developers and users within the Epiverse-TRACE community.
