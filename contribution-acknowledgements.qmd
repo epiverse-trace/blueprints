@@ -59,6 +59,8 @@ Reviewers are an example of non-code contributions that plays a crucial role in 
 
 [The practice of including reviewers as contributors in package `DESCRIPTION` was spearheaded by rOpenSci](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). This explicitly acknowledges in a standard way the efforts of individuals or organizations responsible for reviewing parts of the package.
 
+However, if a reviewer has made a significant contribution to the package through their comments or suggestions, they should be directly credited as an author (`"aut"`) in `DESCRIPTION`.
+
 ## Conclusion
 
 By recognizing various levels and types of code or non-code contributions, and acknowledging the role of reviewers, we create a culture of appreciation and inclusivity within our package development process. This fosters a collaborative environment where individuals feel valued for their contributions, regardless of the scale or nature of their involvement.
