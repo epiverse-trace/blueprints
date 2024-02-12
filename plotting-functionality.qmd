@@ -1,0 +1,43 @@
+---
+title: "Plotting functionality"
+---
+
+Visualisation is key to (data) science and in this section we detail how we approach plotting functionality for our Epiverse packages.
+
+:::{.callout-warning}
+There is ongoing work around theming of plots. Please see [{epiversetheme}](https://epiverse-trace.github.io/epiversetheme/) for more information on this.
+:::
+
+## Approach
+
+Our approach to plotting functionality is twofold:
+
+1. We minimize dependencies used for plotting functions in our packages.
+
+2. We provide detailed plotting examples throughout our vignettes, which may rely on external dependencies and include reproducible code. 
+
+Epiverse packages may vary from these principles on a case by case basis. Packages that do must document the motivation in the package vignette.
+
+## Reasoning
+
+We include dependency free plotting in our packages (approach 1) to [minimize dependency bloat](https://epiverse-trace.github.io/blueprints/dependencies.html) and maximize maintainability. We must balance the benefits of dependencies with package development. 
+
+For example, we could include the most widely used plotting package, [{ggplot2}](https://ggplot2.tidyverse.org/index.html), as a dependency.
+
+However, {ggplot2} includes a fair amount of its own dependencies (`r length(tools::package_dependencies(packages = "ggplot2", recursive = TRUE)$ggplot2)` to be precise), risking dependency blaot. 
+
+Within the wider Epiverse, we also [saw changes to {ggplot2}](https://github.com/reconhub/incidence/issues/119), breaking package implementations. This is always a risk of dependencies and goes against our [minimal dependency guideline](https://epiverse-trace.github.io/blueprints/dependencies.html).
+
+Plots using {ggplot2} are immensely powerful. Package functions would either need to be highly specific or  complex to manage {ggplot2}'s functionality. We consider this out of scope, if we can provide code for {ggplot2} in vignettes directly.
+
+---
+
+We provide more detailed plotting examples in our vignettes (approach 2) to provide avenues to start building more customized plots. Examples include [{epichains}](https://epiverse-trace.github.io/epichains/articles/epichains.html#plotting) and [{epiparameter}](https://epiverse-trace.github.io/epiparameter/articles/epiparameter.html#plotting-epidemiological-distributions)
+
+With specific code examples in vignettes we want to provide a resource from which desired plots can be produced. Vignettes use base R or the {ggplot2} package to provide easily extensible plots with the addition of [layers](https://rpubs.com/hadley/ggplot2-layers). These are more maintainable than including a dependency relation in the package directly, and allow us to provide opinionated plot versions at low cost or exposure to people using the package.
+
+## Alternatives
+
+Alternatively to our approach here, one could provide custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (no examples outside of {ggplot2} exist for these). This could balance dependencies with maintainability in some scenarios. At present, no Epiverse packages use this strategy.
+
+Another option is to provide a separate R package whose sole purpose is to provide plotting functions. This gives the user the choice to install the plotting package if deemed necessary. This has been found to be a good option to enhance the maintenance of the core package and it's plotting accessory package. A marginal downside of this approach is requiring the user to install and attach both packages, as well as the assumption that they know the plotting package exists. There are currently no plotting-specific packages within Epiverse-TRACE.

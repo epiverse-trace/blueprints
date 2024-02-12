@@ -10,8 +10,8 @@ book:
     - principles.qmd
     - dependencies.qmd
     - git-branching-merging.qmd
-    - package-scope.qmd
     - code-review.qmd
+    - plotting-functionality.qmd
     - contribution-acknowledgements.qmd
   google-analytics: "G-XZ471458FQ"
   twitter-card:
