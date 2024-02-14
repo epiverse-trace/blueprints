@@ -72,6 +72,7 @@ The sustainability of open source software (OSS) projects increases with the num
 
 ::: {.callout-tip title="Read more about this principle in application"}
 
+- [Project and software sustainability](sustainability.qmd)
 - [Git branching and merging process](git-branching-merging.qmd)
 - [Ensuring and showcasing the statistical correctness of your R package](https://epiverse-trace.github.io/posts/statistical-correctness/)
 - [Improving the C++ code quality of an Rcpp package](https://epiverse-trace.github.io/posts/lint-rcpp/)

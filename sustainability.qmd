@@ -1,0 +1,24 @@
+---
+title: Project and software sustainability
+---
+
+## Archiving and back-ups
+
+One aspect of sustainability is the ability to recover from data loss, and the long-term preservation of our work, even in the case this GitHub organization ever ceases to exist.
+We tackle this concern by:
+
+- Creating weekly backup of the entire GitHub organization, including the entire git repository contents, but also issues, pull requests, and wikis.
+  This is done with the [gitcellar package from rOpenSci](https://docs.ropensci.org/gitcellar/), and the backups are stored on Google Cloud Platform.
+- Archiving each package release in Zenodo. Compared to the previous solution, the archives are public and can be recovered by anyone in the future.
+
+## Lottery factor
+
+Another aspect of sustainability is the ability to continue maintenance and development of our tools, even after the original authors have left the project (because they won the lottery and retired to a tropical island for example 🏝️).
+It is important to highlight that this does not only relates to permanent departure from the project, but also to extended leave periods.
+
+We try to reduce our lottery factor by:
+
+- Creating good developer documentation for each tool, thus facilitating new developer onboarding. The key developer document is the ['Design Principles' vignette](https://github.com/epiverse-trace/packagetemplate/blob/main/vignettes/design-principles.Rmd), included in all packages, which presents the scope of the package, and the motivation between some design choices.
+- Using continuous integration and automated testing to ensure that dormant packages, with no active development, are still working correctly.
+- Moving conversations on GitHub instead of private communication channels, so that the knowledge is shared and not lost when someone leaves the project.
+- Having a [clear git history](git-branching-merging.qmd), which can help understanding the rationale behind some decisions, and the context of the code.
