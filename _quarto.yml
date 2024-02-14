@@ -12,6 +12,7 @@ book:
     - git-branching-merging.qmd
     - code-review.qmd
     - contribution-acknowledgements.qmd
+    - sustainability.qmd
   google-analytics: "G-XZ471458FQ"
   twitter-card:
     creator: "@Epiverse_TRACE"
