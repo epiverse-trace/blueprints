@@ -72,6 +72,8 @@ GitHub currently has [3 pull request merge mechanisms](https://docs.github.com/e
 - Squash and merge
 - Rebase and merge
 
+[![The 3 ways to combine branches in git: their differences, their respective benefits and drawbacks, by Julia Evans (@b0rk), CC BY-NC-SA 4.0.](https://wizardzines.com/images/uploads/combining-branches.png)](https://wizardzines.com/comics/combining-branches/)
+
 The historical option 'merge commits' presents severe drawbacks, such as creating a heavily non-linear history, which is extremely difficult to read. Notably, it is very difficult to browse & understand a git history with merge commits in GitHub web interface. Yet, git history is a very precious source of information in older packages to inform new maintainers about the reasons behind some choices by old maintainers.
 For related reasons, merge commits can sometimes create flat out unintelligible diffs in pull requests.
 
