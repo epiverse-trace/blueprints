@@ -19,6 +19,5 @@ It is important to highlight that this does not only relates to permanent depart
 We try to reduce our lottery factor by:
 
 - Creating good developer documentation for each tool, thus facilitating new developer onboarding. The key developer document is the ['Design Principles' vignette](https://github.com/epiverse-trace/packagetemplate/blob/main/vignettes/design-principles.Rmd), included in all packages, which presents the scope of the package, and the motivation between some design choices.
-- Using continuous integration and automated testing to ensure that dormant packages, with no active development, are still working correctly.
 - Moving conversations on GitHub instead of private communication channels, so that the knowledge is shared and not lost when someone leaves the project.
 - Having a [clear git history](git-branching-merging.qmd), which can help understanding the rationale behind some decisions, and the context of the code.
