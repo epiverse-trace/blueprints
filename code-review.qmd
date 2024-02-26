@@ -8,7 +8,7 @@ The ways of working for code reviews within Epiverse-TRACE packages follows many
 
 - Code reviews take place on Github pull requests to provide a transparent and open platform for people to engage with package reviews.
 - Progress over perfection: accept pull requests which better the code without needing to be perfect to prevent slowdowns.
-- Adhere to the established code style. This is automatically checked by the [lintr continuous integration workflow](https://github.com/epiverse-trace/workflows/blob/main/lint-changed-files.yaml)
+- Adhere to the established code style. This is automatically checked by the [lintr continuous integration workflow](https://github.com/epiverse-trace/packagetemplate/blob/main/.github/workflows/lint-changed-files.yaml)
 - When changes are non-trivial test out new changes locally. This is especially important if the changes are user-facing.
 - To enable [agile development](https://epiverse-trace.github.io/blueprints/principles.html#lean-and-agile-collaboration-framework) PRs should be swiftly, but thoroughly, reviewed. The pace of code review is predominantly influenced by the size of the PR, so but keeping changes in PRs functionality small and [focused](https://code-review.tidyverse.org/author/focused.html), will enable the team to review and close PRs and keep momentum with development.
 - Use suggestions when beneficial, for example typos, to allow the PR author to easily apply changes through commits directly in Github.
