@@ -6,24 +6,24 @@ The principles and reasoning for code reviews are laid out in the [General princ
 
 The ways of working for code reviews within Epiverse-TRACE packages follows many of the guidelines covered in the [Tidyteam code review principles](https://code-review.tidyverse.org/). Instead of repeating all of the information from the Tidyteams documents here we highlight a few areas of similarity between the Tidyteam and Epiverse-TRACE for clarity.
 
-- Code reviews take place on Github pull requests to provide a transparent and open platform for people to engage with package reviews.
+- Code reviews take place on GitHub pull requests to provide a transparent and open platform for people to engage with package reviews.
 - Progress over perfection: accept pull requests which better the code without needing to be perfect to prevent slowdowns.
 - Adhere to the established code style. This is automatically checked by the [lintr continuous integration workflow](https://github.com/epiverse-trace/packagetemplate/blob/main/.github/workflows/lint-changed-files.yaml)
 - When changes are non-trivial test out new changes locally. This is especially important if the changes are user-facing.
 - To enable [agile development](https://epiverse-trace.github.io/blueprints/principles.html#lean-and-agile-collaboration-framework) PRs should be swiftly, but thoroughly, reviewed. The pace of code review is predominantly influenced by the size of the PR, so but keeping changes in PRs functionality small and [focused](https://code-review.tidyverse.org/author/focused.html), will enable the team to review and close PRs and keep momentum with development.
-- Use suggestions when beneficial, for example typos, to allow the PR author to easily apply changes through commits directly in Github.
-- Take advantage of [Github's keyword mechanism](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) to reference and close issues through commits and then refer to these in the description of the PR.
-- Once a conversation on a PR is resolved, the "Resolve conversation" button can collapse that specific discussion. The PR author should resolve conversations. It is good practice to add a comment with a link to the commit SHA (which can be copied from Github commit history) to let those involved in the conversation know where the changes were applied. In the case a PR author misses resolving a conversation but has messaged with the commit SHA the PR reviewer can resolve it. Additionally, it is perfectly reasonable to merge an approved PR with some conversations left open, assuming they have been addressed in the PR.
+- Use suggestions when beneficial, for example typos, to allow the PR author to easily apply changes through commits directly in GitHub.
+- Take advantage of [GitHub's keyword mechanism](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) to reference and close issues through commits and then refer to these in the description of the PR.
+- Once a conversation on a PR is resolved, the "Resolve conversation" button can collapse that specific discussion. The PR author should resolve conversations. It is good practice to add a comment with a link to the commit SHA (which can be copied from GitHub commit history) to let those involved in the conversation know where the changes were applied. In the case a PR author misses resolving a conversation but has messaged with the commit SHA the PR reviewer can resolve it. Additionally, it is perfectly reasonable to merge an approved PR with some conversations left open, assuming they have been addressed in the PR.
 
 One difference to highlight between the [Tidyteam principles](https://code-review.tidyverse.org/) and Epiverse-TRACE is not directly related to code reviews and more to merging strategies. Within Epiverse-TRACE we prefer [rebase and merge](git-branching-merging.qmd#merging-pull-requests-merge-commits-vs-squash-and-merge-vs-rebase-and-merge), to maintain a linear commit history, over the [tidyverse preference of squash and merge](https://code-review.tidyverse.org/author/submitting.html#finishing-a-pr).
 
-Reviewers can be assigned in Github. Those assigned should review at their earliest convenience or notify the PR author assigning them that they are unable to review. It is not mandatory for reviewers to be assigned, and reviewing a PR without being assigned can help the PR author complete the merge sooner.
+Reviewers can be assigned in GitHub. Those assigned should review at their earliest convenience or notify the PR author assigning them that they are unable to review. It is not mandatory for reviewers to be assigned, and reviewing a PR without being assigned can help the PR author complete the merge sooner.
 
 It is left to the maintainer or one of the authors of a package to merge the PR once reviewed. This ensures that code quality is maintained throughout development. The maintainer may be the PR author, in the case of requesting a code review from another member of the team, or may be the PR reviewer, when PR is opened by a contributor. PR authors cannot approve their own PRs even if they are the package maintainer.
 
-Code review can be skipped in cases when the package maintainer or authors makes minimal changes, these include, but are not limited to: not touching user-facing functions, only changing package accessories (e.g. Github actions) or minor documentation fixes. In these cases a "Merge without waiting for requirements to be met (bypass branch protections)" option can be ticked and the PR can be merged. For more information on merging see the [Standards for branching and merging](git-branching-merging.qmd).
+Code review can be skipped in cases when the package maintainer or authors makes minimal changes, these include, but are not limited to: not touching user-facing functions, only changing package accessories (e.g. GitHub actions) or minor documentation fixes. In these cases a "Merge without waiting for requirements to be met (bypass branch protections)" option can be ticked and the PR can be merged. For more information on merging see the [Standards for branching and merging](git-branching-merging.qmd).
 
-If suggested changes fall outside the scope of the PR, utilise Github's feature of generating issues from PR comments. Clicking the ellipsis in the PR comment and selecting "Reference in new issue" will open an issue with reference to the PR.
+If suggested changes fall outside the scope of the PR, utilise GitHub's feature of generating issues from PR comments. Clicking the ellipsis in the PR comment and selecting "Reference in new issue" will open an issue with reference to the PR.
 
 ## Types of review
 
@@ -46,7 +46,7 @@ git push origin review
 
 The pull request can now be made from the `review` branch to the `v_020` branch and will provide the difference between versions.
 
-This process is similar to the [release comparison feature provided by Github](https://docs.github.com/en/repositories/releasing-projects-on-github/comparing-releases), but that feature does not allow commenting and suggesting like the pull request interface.
+This process is similar to the [release comparison feature provided by GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/comparing-releases), but that feature does not allow commenting and suggesting like the pull request interface.
 
 ### Full package review
 
@@ -91,7 +91,7 @@ An [example of the first strategy can be found in the {finalsize} R package](htt
 
 GitHub's feature of suggestions that can be directly committed within the PR are a useful feature that we recommend using for relatively small changes to the code. In most circumstances, these can be directly committed to the feature branch in the PR. GitHub attributes [co-authorship to those that suggested the change and who commited the change](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes). This is a nice feature that [enables easy recognition of contributions.](contribution-acknowledgements.qmd)
 
-However, in a scenario where the suggested change cannot be commited to the feature branch in the PR, and instead is incorporated in a different feature branch, the suggestion should still be acknowledged. This is where manually specifying [commit coauthors](https://github.blog/2018-01-29-commit-together-with-co-authors/) can help. When using the suggestions of a collaborator, include two empty lines after the commit message and use the phrase `Co-authored-by:` followed by the collaborator's GitHub name and email (this may be a Github no-reply email). See <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors> for details.
+However, in a scenario where the suggested change cannot be commited to the feature branch in the PR, and instead is incorporated in a different feature branch, the suggestion should still be acknowledged. This is where manually specifying [commit coauthors](https://github.blog/2018-01-29-commit-together-with-co-authors/) can help. When using the suggestions of a collaborator, include two empty lines after the commit message and use the phrase `Co-authored-by:` followed by the collaborator's GitHub name and email (this may be a GitHub no-reply email). See <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors> for details.
 
 ::: {.callout-tip title="Read more about this principle in application"}
 
