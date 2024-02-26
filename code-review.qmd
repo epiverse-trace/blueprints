@@ -48,6 +48,8 @@ The pull request can now be made from the `review` branch to the `v_020` branch 
 
 This process is similar to the [release comparison feature provided by GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/comparing-releases), but that feature does not allow commenting and suggesting like the pull request interface.
 
+Now that the partial review pull request is set up, see the [Addressing package reviews section](https://epiverse-trace.github.io/blueprints/code-review.html#addressing-package-reviews) for ways to incorporate changes from reviewer's comments and complete the code review.
+
 ### Full package review
 
 ::: {.callout-tip title="Read more about this principle in application"}
@@ -74,6 +76,8 @@ git push origin review
 ```
 
 Now the full package review pull request can be made on GitHub, targeting `empty` from `review`.
+
+Once reviewer comments and suggestions are received, methods for incorporating changes and completing the full package review are outlined in the [next section: Addressing package reviews section](https://epiverse-trace.github.io/blueprints/code-review.html#addressing-package-reviews).
 
 ### Addressing package reviews
 
