@@ -77,7 +77,7 @@ git push origin review
 
 Now the full package review pull request can be made on GitHub, targeting `empty` from `review`.
 
-Once reviewer comments and suggestions are received, methods for incorporating changes and completing the full package review are outlined in the [next section: Addressing package reviews section](https://epiverse-trace.github.io/blueprints/code-review.html#addressing-package-reviews).
+Once reviewer comments and suggestions are received, methods for incorporating changes and completing the full package review are outlined in the [next section: Addressing package reviews section](#addressing-package-reviews).
 
 ### Addressing package reviews
 
