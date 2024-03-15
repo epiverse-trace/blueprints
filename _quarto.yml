@@ -22,7 +22,7 @@ book:
     logo-href: https://epiverse-trace.github.io/
     right:
       - icon: github
-        href: https://github.com/
+        href: https://github.com/epiverse-trace/blueprints
         aria-label: GitHub
 format:
   html:
