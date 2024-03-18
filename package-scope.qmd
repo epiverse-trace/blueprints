@@ -24,7 +24,7 @@ We include dependency free plotting in our packages (approach 1) to [minimize de
 
 For example, we could include the most widely used plotting package, [{ggplot2}](https://ggplot2.tidyverse.org/index.html), as a dependency.
 
-However, {ggplot2} includes a fair amount of its own dependencies (`r length(tools::package_dependencies(packages = "ggplot2", recursive = TRUE)$ggplot2)` to be precise), risking dependency blaot. 
+However, {ggplot2} includes a fair amount of its own dependencies (`r length(tools::package_dependencies(packages = "ggplot2", recursive = TRUE)$ggplot2)` to be precise), risking dependency bloat. 
 
 Within the wider Epiverse, we also [saw changes to {ggplot2}](https://github.com/reconhub/incidence/issues/119), breaking package implementations. This is always a risk of dependencies and goes against our [minimal dependency guideline](https://epiverse-trace.github.io/blueprints/dependencies.html).
 
