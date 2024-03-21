@@ -6,21 +6,97 @@ The principles and reasoning for code reviews are laid out in the [General princ
 
 The ways of working for code reviews within Epiverse-TRACE packages follows many of the guidelines covered in the [Tidyteam code review principles](https://code-review.tidyverse.org/). Instead of repeating all of the information from the Tidyteams documents here we highlight a few areas of similarity between the Tidyteam and Epiverse-TRACE for clarity.
 
-- Code reviews take place on Github pull requests to provide a transparent and open platform for people to engage with package reviews.
+- Code reviews take place on GitHub pull requests to provide a transparent and open platform for people to engage with package reviews.
 - Progress over perfection: accept pull requests which better the code without needing to be perfect to prevent slowdowns.
-- Adhere to the established code style. This is automatically checked by the [lintr continuous integration workflow](https://github.com/epiverse-trace/workflows/blob/main/lint-changed-files.yaml)
+- Adhere to the established code style. This is automatically checked by the [lintr continuous integration workflow](https://github.com/epiverse-trace/packagetemplate/blob/main/.github/workflows/lint-changed-files.yaml)
 - When changes are non-trivial test out new changes locally. This is especially important if the changes are user-facing.
 - To enable [agile development](https://epiverse-trace.github.io/blueprints/principles.html#lean-and-agile-collaboration-framework) PRs should be swiftly, but thoroughly, reviewed. The pace of code review is predominantly influenced by the size of the PR, so but keeping changes in PRs functionality small and [focused](https://code-review.tidyverse.org/author/focused.html), will enable the team to review and close PRs and keep momentum with development.
-- Use suggestions when beneficial, for example typos, to allow the PR author to easily apply changes through commits directly in Github.
-- Take advantage of [Github's keyword mechanism](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) to reference and close issues through commits and then refer to these in the description of the PR.
-- Once a conversation on a PR is resolved, the "Resolve conversation" button can collapse that specific discussion. The PR author should resolve conversations. It is good practice to add a comment with a link to the commit SHA (which can be copied from Github commit history) to let those involved in the conversation know where the changes were applied. In the case a PR author misses resolving a conversation but has messaged with the commit SHA the PR reviewer can resolve it. Additionally, it is perfectly reasonable to merge an approved PR with some conversations left open, assuming they have been addressed in the PR.
+- Use suggestions when beneficial, for example typos, to allow the PR author to easily apply changes through commits directly in GitHub.
+- Take advantage of [GitHub's keyword mechanism](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/using-keywords-in-issues-and-pull-requests) to reference and close issues through commits and then refer to these in the description of the PR.
+- Once a conversation on a PR is resolved, the "Resolve conversation" button can collapse that specific discussion. The PR author should resolve conversations. It is good practice to add a comment with a link to the commit SHA (which can be copied from GitHub commit history) to let those involved in the conversation know where the changes were applied. In the case a PR author misses resolving a conversation but has messaged with the commit SHA the PR reviewer can resolve it. Additionally, it is perfectly reasonable to merge an approved PR with some conversations left open, assuming they have been addressed in the PR.
 
 One difference to highlight between the [Tidyteam principles](https://code-review.tidyverse.org/) and Epiverse-TRACE is not directly related to code reviews and more to merging strategies. Within Epiverse-TRACE we prefer [rebase and merge](git-branching-merging.qmd#merging-pull-requests-merge-commits-vs-squash-and-merge-vs-rebase-and-merge), to maintain a linear commit history, over the [tidyverse preference of squash and merge](https://code-review.tidyverse.org/author/submitting.html#finishing-a-pr).
 
-Reviewers can be assigned in Github. Those assigned should review at their earliest convenience or notify the PR author assigning them that they are unable to review. It is not mandatory for reviewers to be assigned, and reviewing a PR without being assigned can help the PR author complete the merge sooner.
+Reviewers can be assigned in GitHub. Those assigned should review at their earliest convenience or notify the PR author assigning them that they are unable to review. It is not mandatory for reviewers to be assigned, and reviewing a PR without being assigned can help the PR author complete the merge sooner.
 
 It is left to the maintainer or one of the authors of a package to merge the PR once reviewed. This ensures that code quality is maintained throughout development. The maintainer may be the PR author, in the case of requesting a code review from another member of the team, or may be the PR reviewer, when PR is opened by a contributor. PR authors cannot approve their own PRs even if they are the package maintainer.
 
-Code review can be skipped in cases when the package maintainer or authors makes minimal changes, these include, but are not limited to: not touching user-facing functions, only changing package accessories (e.g. Github actions) or minor documentation fixes. In these cases a "Merge without waiting for requirements to be met (bypass branch protections)" option can be ticked and the PR can be merged. For more information on merging see the [Standards for branching and merging](git-branching-merging.qmd).
+Code review can be skipped in cases when the package maintainer or authors makes minimal changes, these include, but are not limited to: not touching user-facing functions, only changing package accessories (e.g. GitHub actions) or minor documentation fixes. In these cases a "Merge without waiting for requirements to be met (bypass branch protections)" option can be ticked and the PR can be merged. For more information on merging see the [Standards for branching and merging](git-branching-merging.qmd).
 
-If suggested changes fall outside the scope of the PR, utilise Github's feature of generating issues from PR comments. Clicking the ellipsis in the PR comment and selecting "Reference in new issue" will open an issue with reference to the PR.
+If suggested changes fall outside the scope of the PR, utilise GitHub's feature of generating issues from PR comments. Clicking the ellipsis in the PR comment and selecting "Reference in new issue" will open an issue with reference to the PR.
+
+## Types of review
+
+Utilising GitHub pull requests, we conduct two different types of code reviews, which we will explain in this section. The first, _partial code review_, includes only some of a code base. In other words, this only contains changes to the code from a certain point in the past. The second type, _full package review_, is to facilitate reviewing an entire code base.
+
+### Partial review
+
+#### Feature review
+
+Partial review is likely the most familiar to people. It is commonly used when a feature branch is going to be merged with the stable [(`main` or `development`)](git-branching-merging.qmd#branching-workflow) branch, and GitHub shows the differences between the two branches. The [_Files changed_ tab of the GitHub pull request](https://docs.github.com/en/enterprise-cloud@latest/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request) provides the template for comments and suggestions.
+
+#### Pre-release partial review
+
+A second use of partial code review is reviewing the changes between version releases. More generally, this can be considered as reviewing changes between a chosen branch and an arbitrary commit in the past, but for the purpose of this example we will focus on differences between versions. For this mock example, lets say a new version (v0.3.0) of a package is ready to be released and all the differences to the previously release version (v0.2.0) need to be reviewed. A branch, which we will call `v_020`, is created from the commit that is tagged with the v0.2.0 release. To find this commit we can run `git show-ref --tags`. This should return each commit SHA with it's associated release tag. Then create a new branch from this commit using `git branch v_020 <commit_sha>` (replacing `<commit_sha>` with the chosen commit from the previous command). Push this branch with `git push origin v_020`. We then want to create a branch from our stable branch (e.g. `main`) for the purpose of the review, here we will call it `review`.
+
+```sh
+git branch review
+git push origin review
+```
+
+The pull request can now be made from the `review` branch to the `v_020` branch and will provide the difference between versions.
+
+This process is similar to the [release comparison feature provided by GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/comparing-releases), but that feature does not allow commenting and suggesting like the pull request interface.
+
+Now that the partial review pull request is set up, see the [Addressing package reviews section](#addressing-package-reviews) for ways to incorporate changes from reviewer's comments and complete the code review.
+
+### Full package review
+
+::: {.callout-tip title="Read more about this principle in application"}
+
+The full package review setup used by Epiverse-TRACE is inspired by a informative blog post by [Thomas Robitaille posted on .py in the sky](https://astrofrog.github.io/blog/2013/04/10/how-to-conduct-a-full-code-review-on-github/).
+
+:::
+
+The full package review is useful when the entire code base should be shown as changed files. This can be for either the first release of a package, or a subsequent release where all the code can be viewed (useful to understand the package architecture).
+
+The full package review requires a similar setup process to the version release partial code review. Instead of a branch from the previous release, we want a branch that is completely empty. This is not possible, but we can create the next best thing, a branch from the first commit using:
+
+```sh
+git rev-list --all | tail -1
+git branch empty <commit_sha>
+git push origin empty
+```
+
+This retrieves the commit SHA and then creates and pushes the branch. Then the `review` branch can be created with the same method as the partial review:
+
+```sh
+git branch review
+git push origin review
+```
+
+Now the full package review pull request can be made on GitHub, targeting `empty` from `review`.
+
+Once reviewer comments and suggestions are received, methods for incorporating changes and completing the full package review are outlined in the [next section: Addressing package reviews section](#addressing-package-reviews).
+
+### Addressing package reviews
+
+We have used two strategies for integrating suggestions in package reviews.
+
+1. Commit changes to the `review` branch, once all changes have been made the pull request can be [redirected](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-base-branch-of-a-pull-request) to the stable branch and merged.
+
+2. New feature branches can be created to make requested changes; each merged into the stable branch. Once all changes have been made in dedicated pull requests, the review pull request can be closed and the `review` branch deleted.
+
+An [example of the first strategy can be found in the {finalsize} R package](https://github.com/epiverse-trace/finalsize/pull/161), and an [example of the second strategy can be found in the {superspreading} R package](https://github.com/epiverse-trace/superspreading/pull/31).
+
+## Recognising contributions in reviews
+
+GitHub's feature of suggestions that can be directly committed within the PR are a useful feature that we recommend using for relatively small changes to the code. In most circumstances, these can be directly committed to the feature branch in the PR. GitHub attributes [co-authorship to those that suggested the change and who commited the change](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes). This is a nice feature that [enables easy recognition of contributions.](contribution-acknowledgements.qmd)
+
+However, in a scenario where the suggested change cannot be commited to the feature branch in the PR, and instead is incorporated in a different feature branch, the suggestion should still be acknowledged. This is where manually specifying [commit coauthors](https://github.blog/2018-01-29-commit-together-with-co-authors/) can help. When using the suggestions of a collaborator, include two empty lines after the commit message and use the phrase `Co-authored-by:` followed by the collaborator's GitHub name and email (this may be a GitHub no-reply email). See <https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors> for details.
+
+::: {.callout-tip title="Read more about this principle in application"}
+
+If a collaborator makes a substantial contribution to the package make sure that they are [recognised in the DESCRIPTION](contribution-acknowledgements.qmd#contributor-vs.-author-distinction).
+
+:::

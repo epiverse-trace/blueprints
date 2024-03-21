@@ -3,14 +3,30 @@ project:
 
 book:
   title: "The _Epiverse-TRACE_ blueprints for software development"
+  doi: "10.5281/zenodo.7062318"
+  license: "CC-BY-4.0"
   chapters:
     - index.qmd
     - principles.qmd
+    - dependencies.qmd
     - git-branching-merging.qmd
     - code-review.qmd
     - plotting-functionality.qmd
-
+    - contribution-acknowledgements.qmd
+    - sustainability.qmd
+  google-analytics: "G-XZ471458FQ"
+  twitter-card:
+    creator: "@Epiverse_TRACE"
+  open-graph: true
+  navbar:
+    search: true
+    logo: logo_white.svg
+    logo-href: https://epiverse-trace.github.io/
+    right:
+      - icon: github
+        href: https://github.com/epiverse-trace/blueprints
+        aria-label: GitHub
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, custom.scss]
     number-sections: false

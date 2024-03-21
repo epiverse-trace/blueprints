@@ -1,0 +1,71 @@
+---
+title: Epiverse-TRACE Package Dependency Guidelines
+---
+
+In the Epiverse-TRACE community, we recognize the importance of carefully selecting dependencies for our packages. To ensure a robust and harmonious package ecosystem, we have established a set of guidelines for managing dependencies. These guidelines take into account factors such as functionality, efficiency, compatibility, maintainability, and community standards. By following these guidelines, we aim to create packages that deliver an enhanced end-user experience and provide ease of maintenance for package maintainers. Our goal is to strike a balance between improving package performance, facilitating ease of use and installation, and ensuring long-term maintainability.
+
+## Minimizing Dependencies and Prioritizing Stability
+
+We prefer to minimize dependencies unless they offer significant performance or usability benefits. This strategy helps us keep our Epiverse-TRACE packages lightweight and reduces the potential for compatibility issues. We prioritize well-established packages with a strong track record of staying on CRAN to limit accumulation of technical debt. For example, we adhere to [rOpenSci's guidance on recommended scaffolding](https://devguide.ropensci.org/building.html#recommended-scaffolding) and avoid unmaintained packages.
+
+In particular, packages that are not available on CRAN or Bioconductor should not be included as dependencies. Before being considered as a dependency, packages should have been through multiple release cycles and/or have a number of active users to ensure they are well tested.
+This policy applies for taking both Epiverse-TRACE packages or external packages as dependencies.
+It aims at:
+
+- facilitating the implementation of our agile strategy by removing time dependency for the first CRAN release of packages
+- ensuring the robustness of the ecosystem we are building
+- allowing maturing packages to go through necessary breaking changes unencumbered
+
+We also exercise caution when considering dependencies that rely on external libraries. Such dependencies can pose challenges [on shared computing platforms where users may lack super-user privileges](https://twitter.com/groundwalkergmb/status/1350336844022521857), or [when using webR](https://www.tidyverse.org/blog/2023/08/webr-0-2-0/#webassembly-system-libraries-for-r-packages). While these dependencies may offer valuable functionality, we carefully consider alternative solutions or consult with platform administrators to address potential issues and ensure seamless deployment.
+
+## Input Checking and Error Messaging
+
+To enhance code robustness and identify errors early, [we incorporate input checking in user-facing functions](https://blog.r-hub.io/2022/03/10/input-checking/). We leverage the effective input checking functionality provided by base R, such as utilizing `stopifnot()` with named arguments. In some cases, we may use utility packages like checkmate to streamline the process, particularly for multilingual packages. Our aim is to maintain code simplicity, ease of maintenance, and compatibility.
+
+## Consideration for Tidyverse vs. Base R
+
+When deciding between the tidyverse and base R, we take into account the package's position in the software stack. For low-level packages, we prefer minimizing dependencies and relying on base R. However, for high-level packages commonly used by data analysts who leverage the tidyverse, we recommend incorporating tidyverse packages to provide a seamless and familiar user experience.
+
+## Selective Use of data.table
+
+We carefully evaluate the potential benefits of data.table as a dependency based on specific use cases. When extensive data wrangling and performance optimization are crucial, we consider incorporating data.table. Indeed, data.table is renowned for its efficiency, widespread usage, and compatibility with existing Epiverse-adjacent packages. However, we exercise discretion and limit its use to packages where it significantly improves maintainability and performance.
+
+## Iterative Development and Dependency Evolution
+
+We embrace an [iterative development approach](principles.html#lean-and-agile-collaboration-framework) where dependencies can evolve over time. Initially, dependencies can be included to quickly build a Minimum Viable Product (MVP) and gain early feedback. However, we recognize that not all dependencies may bring significant value in the long-run. Therefore, we encourage package maintainers to regularly evaluate the usefulness and impact of dependencies and remove those that do not contribute substantially to the package. The [itdepends package](https://github.com/r-lib/itdepends) can help to identify dependencies that are used just one time in a given package or codebase. Such dependencies are good candidates for removal.
+
+### Base R support schedule
+
+We maintain a minimum support for the last four versions of R ([the {tidyverse} standard](https://www.tidyverse.org/blog/2019/04/r-version-support/)). The table outlines the concrete minimum supported version.
+Adopting the tidyverse standard allows us to use relatively recent R features, while putting a low pressure on our users to update their R version since they will already have to update to use the latest ggplot2 or tidyverse version.
+
+| Year | Current R version | Minimum supported version |
+|------|-------------------|---------------------------|
+| 2023 | 4.3               | 3.6                       |
+| 2024 | 4.4               | 4.0                       |
+| 2025 | 4.5               | 4.1                       |
+| 2026 | 4.6               | 4.2                       |
+
+## Additional Recommendations
+
+We trust the individual developer choices while ensuring that they can justify the dependencies they include. When in doubt, we encourage developers to raise an issue to initiate discussions with the community and explore alternative options. While it may not be necessary for all cases, we recommend including discussions on dependencies in design vignettes or documentation to provide clarity, and inform future maintainers of the reasons behind our choices. Additionally, [we encourage the use of hard, objective metrics to guide dependency choices](https://www.tidyverse.org/blog/2019/05/itdepends/), striking a balance between flexibility and standardization.
+
+To assist with this, we have a GitHub Actions workflow in place to highlight the total impact (recursive dependencies and system dependencies) of any dependency addition or removal in a package: [`dependency-change.yaml`](https://github.com/epiverse-trace/packagetemplate/blob/main/.github/workflows/dependency-change.yaml).
+
+## Conclusion
+
+These guidelines reflect our commitment to making informed decisions about dependencies in Epiverse-TRACE packages. By minimizing dependencies, prioritizing stability, and considering the package context and position in the ecosystem to inform choices, we aim to deliver efficient and reliable solutions. Our collective adherence to these guidelines fosters a consistent and sustainable package ecosystem that benefits both developers and users within the Epiverse-TRACE community.
+
+::: {.callout-tip title="Continue the discussion"}
+
+If you would like to add your input on this chapter or would like to know more about the reasons behind our choices, please checkout the [related GitHub issue](https://github.com/epiverse-trace/blueprints/issues/7).
+
+:::
+
+::: {.callout-tip title="Additional resources"}
+
+You can read about what other communities are doing in:
+
+- [rOpenSci devguide's section on package dependencies](https://devguide.ropensci.org/building.html#pkgdependencies)
+
+:::

@@ -30,7 +30,7 @@ In a nutshell, the workflow for contributions would look something like:
 
 4. Create a new branch to make your changes typing `git checkout -b [name_of_your_branch]`.
 
-5. Make changes to `index.qmd`, save the file.
+5. Make changes to the relevant quarto (file with `.qmd` extension), and save the file.
 
 6. From your terminal, run `quarto render`. The `html` output will be generated in the `_book/` folder.
 
