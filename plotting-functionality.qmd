@@ -20,7 +20,7 @@ Epiverse packages may vary from these principles on a case by case basis. Packag
 
 ## Reasoning
 
-Plots using {ggplot2} are immensely powerful. Package functions would either need to be highly specific or  complex to manage {ggplot2}'s functionality. We consider this out of scope, if we can provide code for {ggplot2} in vignettes directly.
+Plots using {ggplot2} are immensely powerful. Package functions would either need to be highly specific or complex to manage {ggplot2}'s functionality. We consider this out of scope, if we can provide code for {ggplot2} in vignettes directly.
 
 We include dependency free plotting in our packages (approach 1) to [minimize dependency bloat](https://epiverse-trace.github.io/blueprints/dependencies.html) and maximize maintainability. We must balance the benefits of dependencies with package development. 
 
