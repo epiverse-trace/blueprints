@@ -11,6 +11,7 @@ book:
     - dependencies.qmd
     - git-branching-merging.qmd
     - code-review.qmd
+    - plotting-functionality.qmd
     - contribution-acknowledgements.qmd
     - sustainability.qmd
   google-analytics: "G-XZ471458FQ"
