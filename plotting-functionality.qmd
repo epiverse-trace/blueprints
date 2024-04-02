@@ -22,7 +22,7 @@ Epiverse packages may vary from these principles on a case by case basis. Packag
 
 Plots using {ggplot2} are immensely powerful. Package functions would either need to be highly specific or complex to manage {ggplot2}'s functionality. We consider this out of scope, if we can provide code for {ggplot2} in vignettes directly.
 
-We include dependency free plotting in our packages (approach 1) to [minimize dependency bloat](https://epiverse-trace.github.io/blueprints/dependencies.html) and maximize maintainability. We must balance the benefits of dependencies with package development. 
+We include dependency free plotting in our packages (approach 1) to [minimize dependency bloat](https://epiverse-trace.github.io/blueprints/dependencies.html) and maximize maintainability. We must balance the benefits of dependencies with package development.
 
 For example, we could include the most widely used plotting package, [{ggplot2}](https://ggplot2.tidyverse.org/index.html), as a dependency.
 
@@ -38,6 +38,6 @@ With specific code examples in vignettes we want to provide a resource from whic
 
 ## Alternatives
 
-Alternatively to our approach here, one could provide custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (no examples outside of {ggplot2} exist for these). This could balance dependencies with maintainability in some scenarios. At present, no Epiverse packages use this strategy.
+Alternatively to our approach here, one could provide custom `geom` objects (for example [{ggtree}](https://github.com/YuLab-SMU/ggtree)) or `scales` objects (e.g., in [{grates}](https://www.reconverse.org/grates/reference/index.html#plotting)). This could balance dependencies with maintainability in some scenarios. At present, no Epiverse packages use this strategy.
 
 Another option is to provide a separate R package whose sole purpose is to provide plotting functions. This gives the user the choice to install the plotting package if deemed necessary. This has been found to be a good option to enhance the maintenance of the core package and it's plotting accessory package. A marginal downside of this approach is requiring the user to install and attach both packages, as well as the assumption that they know the plotting package exists. There are currently no plotting-specific packages within Epiverse-TRACE and we will document examples in the R ecosystem as we come across them.
