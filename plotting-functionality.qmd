@@ -5,7 +5,7 @@ title: "Plotting functionality"
 Visualisation is key to (data) science and in this section we detail how we approach plotting functionality for our Epiverse packages.
 
 :::{.callout-warning}
-There is ongoing work around theming of plots. Please see [{epiversetheme}](https://epiverse-trace.github.io/epiversetheme/) for more information on this.
+There is ongoing work around theming of plots. Please see [{tracetheme}](https://epiverse-trace.github.io/tracetheme/) for more information on this.
 :::
 
 ## Approach
