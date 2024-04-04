@@ -61,7 +61,7 @@ To maximize agility, we recommend also adopting the lean principle in which the 
 
 The sustainability of open source software (OSS) projects increases with the number of developers who understand the code base enough to make contributions. While there is always a need for a single official maintainer, we will aim at decentralizing code ownership as much as possible, using a series of practices:
 
-- Avoid siloed code base: have team members move across different projects
+- Avoid siloed codebase: have team members move across different projects
 - Aim for code clarity by following [coding standards established by Rstudio](https://style.tidyverse.org/); consider using static code analysis *e.g.* [lintr](https://github.com/r-lib/lintr) or [styler](https://styler.r-lib.org/) to ensure adherence with standards
 - Use modular, reusable code, with small, well-documented functions having a clear purpose
 - Use canonical, widely used data structures and tools where possible
