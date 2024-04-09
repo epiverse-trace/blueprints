@@ -2,4 +2,4 @@
 package = "@quarto/netlify-plugin-quarto"
 
 [[plugins]]
-package = "@Munter/netlify-plugin-checklinks"
+package = "netlify-plugin-checklinks"

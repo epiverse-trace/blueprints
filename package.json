@@ -1,6 +1,6 @@
 {
   "dependencies": {
     "@quarto/netlify-plugin-quarto": "^0.0.5",
-    "@Munter/netlify-plugin-checklinks": "^4.1.1"
+    "netlify-plugin-checklinks": "^4.1.1"
   }
 }
