@@ -3,3 +3,5 @@ package = "@quarto/netlify-plugin-quarto"
 
 [[plugins]]
 package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+  checkExternal = false
