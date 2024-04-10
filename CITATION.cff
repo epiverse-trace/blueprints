@@ -1,0 +1,85 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Epiverse-TRACE blueprints
+message: "If you use this book, please cite it using the metadata from this file."
+type: software
+authors:
+  - given-names: James
+    family-names: Azam
+  - given-names: Anna
+    family-names: Carnegie
+  - given-names: Rosalind
+    family-names: Eggo
+  - given-names: Rich
+    family-names: FitzJohn
+  - given-names: Dawn
+    family-names: Foster
+  - given-names: Hannah
+    family-names: Frick
+  - given-names: Sebastian
+    family-names: Funk
+  - given-names: Cyril
+    family-names: Geismar
+  - given-names: Sarah
+    family-names: Gibson
+  - given-names: Miguel Enrique
+    family-names: Gámez López
+  - given-names: Geraldine
+    family-names: Gómez Millán
+  - given-names: Hugo
+    family-names: Gruson
+  - given-names: Ernest
+    family-names: Guevarra
+  - given-names: Pratik
+    family-names: Gupte
+  - given-names: Thibaut
+    family-names: Jombart
+  - given-names: Joshua
+    family-names: Lambert
+  - given-names: Emma
+    family-names: Marty
+  - given-names: Ibrahim
+    family-names: Mahgoub
+  - given-names: Karim
+    family-names: Mané
+  - given-names: Nuredin
+    family-names: Mohammed
+  - given-names: Andrés
+    family-names: Moreno
+  - given-names: Rebecca
+    family-names: Nash
+  - given-names: Julian David
+    family-names: Otero Acosta
+  - given-names: Jaime
+    family-names: Pavlich-Mariscal
+  - given-names: David Santiago
+    family-names: Quevedo Vega
+  - given-names: Maëlle
+    family-names: Salmon
+  - given-names: Malvika
+    family-names: Sharan
+  - given-names: Janetta
+    family-names: Skarp
+  - given-names: Tim
+    family-names: Taylor
+  - given-names: Nicolás
+    family-names: Torres
+  - given-names: Heather
+    family-names: Turner
+  - given-names: Juan Daniel
+    family-names: Umaña
+  - given-names: Andree
+    family-names: Valle Campos
+  - given-names: Chantal
+    family-names: Wood
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.7062318
+repository-code: 'https://github.com/epiverse-trace/blueprints'
+url: 'https://epiverse-trace.github.io/'
+keywords:
+  - standards
+  - software development
+license: CC-BY-4.0
