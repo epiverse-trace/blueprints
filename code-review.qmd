@@ -95,7 +95,7 @@ We have used two strategies for integrating suggestions in package reviews.
 
 2. New feature branches can be created to make requested changes; each merged into the stable branch. Once all changes have been made in dedicated pull requests, the review pull request can be closed and the `review` branch deleted.
 
-An [example of the first strategy can be found in the {finalsize} R package](https://github.com/epiverse-trace/finalsize/pull/161), and an [example of the second strategy can be found in the {superspreading} R package](https://github.com/epiverse-trace/superspreading/pull/31).
+An [example of the first strategy can be found in the **finalsize** R package](https://github.com/epiverse-trace/finalsize/pull/161), and an [example of the second strategy can be found in the **superspreading** R package](https://github.com/epiverse-trace/superspreading/pull/31).
 
 ## Recognising contributions in reviews
 

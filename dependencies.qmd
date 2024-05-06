@@ -36,7 +36,7 @@ We embrace an [iterative development approach](principles.html#lean-and-agile-co
 
 ### Base R support schedule
 
-We maintain a minimum support for the last four versions of R ([the {tidyverse} standard](https://www.tidyverse.org/blog/2019/04/r-version-support/)). The table outlines the concrete minimum supported version.
+We maintain a minimum support for the last four versions of R ([the **tidyverse** standard](https://www.tidyverse.org/blog/2019/04/r-version-support/)). The table outlines the concrete minimum supported version.
 Adopting the tidyverse standard allows us to use relatively recent R features, while putting a low pressure on our users to update their R version since they will already have to update to use the latest ggplot2 or tidyverse version.
 
 | Year | Current R version | Minimum supported version |
