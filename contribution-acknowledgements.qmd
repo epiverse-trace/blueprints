@@ -29,7 +29,7 @@ A common question is the difference between **contributors** and **authors**. Wh
 
 As a guideline, consider using the **contributor** role when you anticipate a one-off contribution or limited involvement from an individual. Conversely, use the **author** role when you notice sustained contributions or expect ongoing involvement over time.
 
-Drawing a parallel with academic publishing: contributors (`"ctb"`) are more akin to people listed in acknowledgements and authors (`"aut"`) are paper authors. The relevance of this parallel is particularly visible in the automatically generated package citation, and the pkgdown sidebar where only authors (`"aut"`) are listed).
+Drawing a parallel with academic publishing: contributors (`"ctb"`) are more akin to people listed in acknowledgements and authors (`"aut"`) are paper authors. The relevance of this parallel is particularly visible in the automatically generated package citation, and the pkgdown sidebar where only authors (`"aut"`) are listed [by default](https://pkgdown.r-lib.org/reference/build_home.html#additional-control-via-yaml)).
 
 ## Other ways to recognize contributions
 
