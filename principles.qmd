@@ -6,7 +6,7 @@ The recommendations below aim to cover the most important aspects of the develop
 
 [^1]: Note that *users* and *developers* are not exclusive or static roles. Community members are expected to have various levels of involvement with the project, evolving in a non-linear fashion with time, and in a complex way that cannot be fully captured by simple terms such as *user* & *developer*. This is beyond the scope of this book but you can read [Woodley, Lou & Pratt, Katie. (2020)](https://doi.org/10.5281/zenodo.3997801) for a more in-depth analysis.
 
-Our blueprints is defined by 7 key aspects/principles:
+Our blueprints are defined by 7 key aspects/principles:
 
 - [Software development as co-creation](#software-development-as-co-creation)
 - [Lean and Agile collaboration framework](#lean-and-agile-collaboration-framework)
