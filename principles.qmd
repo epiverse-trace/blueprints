@@ -1,5 +1,6 @@
 ---
 title: General principles
+lightbox: true
 ---
 
 The recommendations below aim to cover the most important aspects of the development of *Epiverse-TRACE*. For simplicity, we distinguish *users* from *developers* according to the type of contributions they make to a software project: *developers* create content (code and documentation), while *users* advise, test, and provide feedback on content [^1]. User-bases will be project-dependent but would typically include field epidemiologists or public health officers.
