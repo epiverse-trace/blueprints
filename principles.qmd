@@ -19,7 +19,7 @@ Our blueprints are defined by 7 key aspects/principles:
 
 The mindmap below provides an overview of the blueprints content. Please refer to the respective sections for details and explanations.
 
-![Mindmap representation of the 7 principles presented below and their key features](figures/mindmap.png)
+![Mindmap representation of the 7 principles presented below and their key features](figures/mindmap.png){fig-alt="A mindmap summary of the 7 principles underpinning Epiverse-TRACE. At the center of the mindmap is the Epiverse-TRACE hex logo. It is surrounded by 7 boxes: Software development as co-creation, Lean and Agile collaboration framework, Decentralizing code ownership, Code reviews, Documentation, Being part of the OSS landscape, Community health. Each of these seven boxes is then linked to a series of smaller boxes containing key features of the principle, also detailed in the rest of this page."}
 
 This page is focused on general principles of the project and for each one of these principles, we link to other sections of the book detailing the practical application of these principles in our processes.
 
