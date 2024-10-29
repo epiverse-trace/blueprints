@@ -112,6 +112,7 @@ Consistent, high quality, and accessible documentation is key to adopting softwa
 - Consider documentation on the same level as code, rather than as an afterthought
 - Use the [Diataxis framework](https://diataxis.fr/) to distinguish: tutorials, how-to guides, reference manuals, and explanatory material
 - Generate documentation dynamically using standard tools: [roxygen2](https://roxygen2.r-lib.org/) for basic documentation, [rmarkdown](https://rmarkdown.rstudio.com/docs/) for vignettes, [pkgdown](https://pkgdown.r-lib.org/) for websites
+- Generate tutorial content using [The Carpentries Workbench](https://carpentries.github.io/sandpaper-docs/), which provides a distinctive approach to organizing learning materials for both learners and instructors
 - Provide user-friendly cheatsheets in html and pdf
 - Provide interactive content (tutorials, how-to guides) with no need for installing dependencies locally using [mybinder.org](https://mybinder.org/)
 - Write documentation assuming minimum R literacy and prior knowledge
