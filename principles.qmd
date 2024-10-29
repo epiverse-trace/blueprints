@@ -23,6 +23,8 @@ The mindmap below provides an overview of the blueprints content. Please refer t
 
 This page is focused on general principles of the project and for each one of these principles, we link to other sections of the book detailing the practical application of these principles in our processes.
 
+Additionally, these principles are implemented in a GitHub template repository: [epiverse-trace/packagetemplate](https://github.com/epiverse-trace/packagetemplate). This template repository is aiming to facilitate the adoption of the standards presented here and provide a quick start point for new packages. Further information about this template repository is available in the [dedicated wiki](https://github.com/epiverse-trace/packagetemplate/wiki).
+
 ## Software development as co-creation
 
 Useful software development is unlikely to be achieved by developers alone: rather, it needs to be co-created by users and developers. Some key principles of this co-creation include:
