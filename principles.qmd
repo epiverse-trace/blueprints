@@ -119,6 +119,15 @@ Consistent, high quality, and accessible documentation is key to adopting softwa
 - Aim to provide translations for the most common languages
 - We aim to provide [automated blog posts for major and minor releases](https://epiverse-trace.github.io/blog.html#category=new-release). Code owners may occasionally decide to release patch blogs if the patch is critical.
 
+### Website modes
+
+Epiverse-TRACE packages use [`pkgdown`](https://pkgdown.r-lib.org/) to generate websites. `pkgdown` provides [options](https://pkgdown.r-lib.org/reference/build_site.html#development-mode) (in the `_pkgdown.yml` file) to generate different sites for the development and released versions of your package.
+
+When the package is not yet on CRAN, we use the `unreleased` mode. After the package is on CRAN, we switch to `auto`, which provides two versions of the website: `release` and `devel`. This is because we expect most users to install from CRAN and so we direct them to the frozen release site, with an option to manually switch to the `devel` website if they installed from GitHub.
+
+We also provide text in the README to direct users to the appropriate site. Typical text for the README might be: "The package has two websites: one for [the stable release version on CRAN](URL), and
+another for [the version in development](URL)", where `URL` is the link to the respective site.
+
 ## Being part of the OSS landscape
 
 As an open-source initiative, Epiverse-TRACE will benefit from numerous other OSS projects. In becoming part of the OSS landscape, we will observe a few principles:
