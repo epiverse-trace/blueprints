@@ -125,8 +125,8 @@ Epiverse-TRACE packages use [`pkgdown`](https://pkgdown.r-lib.org/) to generate 
 
 When the package is not yet on CRAN, we use the `unreleased` mode. After the package is on CRAN, we switch to `auto`, which provides two versions of the website: `release` and `devel`. This is because we expect most users to install from CRAN and so we direct them to the frozen release site, with an option to manually switch to the `devel` website if they installed from GitHub.
 
-We also provide text in the README to direct users to the appropriate site. Typical text for the README might be: "The package has two websites: one for [the stable release version on CRAN](URL), and
-another for [the version in development](URL)", where `URL` is the link to the respective site.
+We also provide text in the README to direct users to the appropriate site. Typical text for the README might be: "The package has two websites: one for `[the stable release version on CRAN](URL)`, and
+another for `[the version in development](URL)`", where `URL` is the link to the respective site.
 
 ## Being part of the OSS landscape
 
