@@ -13,6 +13,7 @@ book:
     - code-review.qmd
     - contribution-acknowledgements.qmd
     - sustainability.qmd
+    - website.qmd
   google-analytics: "G-XZ471458FQ"
   twitter-card:
     creator: "@Epiverse_TRACE"
