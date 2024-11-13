@@ -1,5 +1,5 @@
 ---
-title: Authorship and Contribution Acknowledgements
+title: Authorship and contribution acknowledgements
 ---
 
 As part of the development process we want to ensure individuals are properly credited for their involvement. This section outlines considerations you should make, and guidelines to follow, in acknowledging collaborators.
