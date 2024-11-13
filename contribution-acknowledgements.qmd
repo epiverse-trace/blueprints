@@ -23,6 +23,8 @@ Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code 
 > - **ths**: If the package is part of a thesis, use for the thesis advisor.
 > - **trl**: If the R code is merely a translation from another language (typically S), use for the translator to R.
 
+We include the ORCID of authors, where available, as part of their inclusion in the `DESCRIPTION`. This helps disambiguate in case of a common name and ensures that authors are properly credited.
+
 ## Contributor vs. author distinction
 
 A common question is the difference between **contributors** and **authors**. While there is no strict definition for the level of contribution required to become an author, we err on the side of generosity and offer authorship when there is hesitancy.
