@@ -1,5 +1,5 @@
 ---
-title: Epiverse-TRACE Package Dependency Guidelines
+title: Epiverse-TRACE package dependency guidelines
 ---
 
 In the Epiverse-TRACE community, we recognize the importance of carefully selecting dependencies for our packages. To ensure a robust and harmonious package ecosystem, we have established a set of guidelines for managing dependencies.
