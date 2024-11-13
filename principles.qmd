@@ -27,7 +27,7 @@ Additionally, these principles are implemented in a [GitHub template repository]
 
 ## Software development as co-creation
 
-Useful software development is co-created by users and developers – it unlikely to be achieved by developers alone. 
+Useful software development is co-created by users and developers – it unlikely to be achieved by developers alone.
 
 Some key principles of this co-creation include:
 
@@ -52,7 +52,7 @@ The main objective of our collaboration framework is to optimize interactions be
 2. *Production*: developers produce MVPs; if pair-programming is used, users could be involved at this stage too
 3. *Review*: presentation of MVPs and collection of feedback; the backlog is updated accordingly; this is also the opportunity for a retrospective assessment of the process: What was done well? What caused problems? How can the team improve the work process?
 
-To maximize agility, we recommend adopting the lean principle in which the amount of work in progress (WIP) at any time is minimized. In other words, it is more efficient to work on fewer MVPs and deliver value quickly, rather than working on many MVPs at the same time, resulting in a lot of WIP and low completion rates. 
+To maximize agility, we recommend adopting the lean principle in which the amount of work in progress (WIP) at any time is minimized. In other words, it is more efficient to work on fewer MVPs and deliver value quickly, rather than working on many MVPs at the same time, resulting in a lot of WIP and low completion rates.
 
 We recommend using Kanban boards ([which can be created through the **Projects** tab on GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project)) to keep track of progress, and as a tool for identifying long-lasting WIP, likely indicative of blockage or issues which need addressing. These boards should be fully public to encourage and facilitate external visibility and contributions.
 
