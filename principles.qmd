@@ -21,18 +21,20 @@ The mindmap below provides an overview of the blueprints content. Please refer t
 
 ![Mindmap representation of the 7 principles presented below and their key features](figures/mindmap.png){fig-alt="A mindmap summary of the 7 principles underpinning Epiverse-TRACE. At the center of the mindmap is the Epiverse-TRACE hex logo. It is surrounded by 7 boxes: Software development as co-creation, Lean and Agile collaboration framework, Decentralizing code ownership, Code reviews, Documentation, Being part of the OSS landscape, Community health. Each of these seven boxes is then linked to a series of smaller boxes containing key features of the principle, also detailed in the rest of this page."}
 
-This page is focused on general principles of the project and for each one of these principles, we link to other sections of the book detailing the practical application of these principles in our processes.
+This page is focused on general principles of the project. For each of these principles, we link to other sections of the book detailing the practical application of these principles in our processes.
 
-Additionally, these principles are implemented in a [GitHub template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template): [epiverse-trace/packagetemplate](https://github.com/epiverse-trace/packagetemplate). This template repository is aiming to facilitate the adoption of the standards presented here and provide a quick start point for new packages. Further information about this template repository is available in the [dedicated wiki](https://github.com/epiverse-trace/packagetemplate/wiki).
+Additionally, these principles are implemented in a [GitHub template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template): [`epiverse-trace/packagetemplate`](https://github.com/epiverse-trace/packagetemplate). This template repository aims to facilitate the adoption of the presented standards and provide a quick starting point for new packages. Further information about the template repository is available in the [dedicated wiki](https://github.com/epiverse-trace/packagetemplate/wiki).
 
 ## Software development as co-creation
 
-Useful software development is unlikely to be achieved by developers alone: rather, it needs to be co-created by users and developers. Some key principles of this co-creation include:
+Useful software development is co-created by users and developers – it unlikely to be achieved by developers alone. 
 
-- Users provide key inputs on the identification and prioritization of minimal viable products (MVPs), which can be defined as the smallest increment of the project delivering value for the user
-- Users should be involved from the start of a project, and provide continuous feedback as the project develops
-- User contributions need to be valued and acknowledged clearly
-- User contributions need to be an intrinsic part of the collaboration framework (see section below), with dedicated events such as brainstorming sessions or product reviews
+Some key principles of this co-creation include:
+
+- Users provide key input on the identification and prioritization of minimal viable products (MVPs), which can be defined as the smallest increment of the project delivering value for the user
+- Users are involved from the start of a project and provide continuous feedback as the project develops
+- User contributions are valued and acknowledged clearly
+- User contributions are an intrinsic part of the collaboration framework (see section below), with dedicated events such as brainstorming sessions or product reviews
 - Co-creation can also take the form of pair-programming to combine domain experts and developers
 
 ::: {.callout-tip title="Read more about this principle in application"}
@@ -44,13 +46,15 @@ Useful software development is unlikely to be achieved by developers alone: rath
 
 ## Lean and Agile collaboration framework
 
-The main objective of our collaboration framework will be to optimize interactions between users and developers. We thus naturally embrace the agile philosophy in which projects progress iteratively through short cycles focusing on delivering and reviewing MVPs. We foresee that each cycle should have three main phases:
+The main objective of our collaboration framework is to optimize interactions between users and developers. We embrace the agile philosophy, in which projects progress iteratively through short cycles. During those cycles, focus is on delivering and reviewing MVPs. We foresee that each cycle should have three main phases:
 
 1. *Planning*: users and developers write a backlog of tasks to complete, identify top priorities, and define which MVPs will be worked on in the production phase
 2. *Production*: developers produce MVPs; if pair-programming is used, users could be involved at this stage too
 3. *Review*: presentation of MVPs and collection of feedback; the backlog is updated accordingly; this is also the opportunity for a retrospective assessment of the process: What was done well? What caused problems? How can the team improve the work process?
 
-To maximize agility, we recommend also adopting the lean principle in which the amount of work in progress (WIP) at any time is minimized. In other words, it is more efficient to work on a few MVPs and deliver value quickly, rather than working on many MVPs at the same time, resulting in a lot of WIP and low completion rates. We recommend using Kanban boards ([which can be created through the **Projects** tab on GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project)) to keep track of progress, and as a tool for identifying long-lasting WIP, likely indicative of blockage or issues which need addressing. These boards should be fully public to encourage and facilitate external visibility and contributions.
+To maximize agility, we recommend adopting the lean principle in which the amount of work in progress (WIP) at any time is minimized. In other words, it is more efficient to work on fewer MVPs and deliver value quickly, rather than working on many MVPs at the same time, resulting in a lot of WIP and low completion rates. 
+
+We recommend using Kanban boards ([which can be created through the **Projects** tab on GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project)) to keep track of progress, and as a tool for identifying long-lasting WIP, likely indicative of blockage or issues which need addressing. These boards should be fully public to encourage and facilitate external visibility and contributions.
 
 ![The Epiverse-TRACE agile workflow for new projects, as recorded by [Melissa Avila](https://massabiosjuntos.com/melissadibuja/) during the Epiverse-TRACE Summit 2023 in Bogotá, CC BY.](figures/agile.png){fig-alt="The Epiverse-TRACE agile strategy is graphically represented as a workflow composed of 7 steps connected by arrows. The steps are: 1. Pitch the idea; 2. Seek feedback; 3. Create the design document; 4. Seek feedback; 5. Create repository from packagetemplate; 6. Start initial development; 7. Seek feedback on MVP. The figure has a cartoonish style, with lilac and purples hues and was create by Melissa Avila during the Epiverse-TRACE Summit 2023 in Bogotá."}
 
@@ -84,19 +88,19 @@ The sustainability of open source software (OSS) projects increases with the num
 
 ## Code reviews
 
-Code reviews are not just a way to improve overall code quality: they are a key mechanism through which team members can share programming knowledge, better understand existing code bases, and standardize coding practices.
+Code reviews are a way to improve overall code quality and a key mechanism through which team members can share programming knowledge, better understand existing code bases, and standardize coding practices.
 
 Key principles include:
 
-- Consider code reviews as a non-hierarchical exercise, performed by all members of the developers team.
-- Understand that code reviews are a great opportunity for training and collaboration
+- Code reviews are performed by all members of the developers team (regardless of hierarchy).
+- Code reviews are an opportunity for training and collaboration
 - Consider Alex Hill’s [quadrant of code reviews](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/) when conducting reviews and treat separately:
   - Most code quality issues can be solved with automation (*e.g.* styling with [lintr](https://lintr.r-lib.org/), [styler](https://styler.r-lib.org/), or [goodpractice](https://mangothecat.github.io/goodpractice/)).
   - Non-conflictual, factual issues can be quickly agreed on (*e.g.* missing tests, typos in the documentation).
   - Spend time to discuss high-conflict, high-reward items, and take a collaborative approach to identifying solutions.
 - Use pair-programming sessions when developing features to foster a sense of code co-ownership and peer learning.
 - Make code reviews an intrinsic part of the contribution workflow: they are typically performed [as part of the PR review process](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
-- Use code walk-throughs ahead of reviews to facilitate the review process.
+- Code walk-throughs facilitate the review process.
 - Prefer small reviews to large ones.
 - Conduct occasional audits of the entire code base.
 
@@ -109,7 +113,9 @@ Key principles include:
 
 ## Documentation
 
-Consistent, high quality, and accessible documentation is key to adopting software tools. Key consideration for delivering good documentation include:
+Consistent, high quality, and accessible documentation is key to adopting software tools.
+
+Key considerations for delivering quality documentation include:
 
 - Consider documentation on the same level as code, rather than as an afterthought
 - Use the [Diataxis framework](https://diataxis.fr/) to distinguish: tutorials, how-to guides, reference manuals, and explanatory material
@@ -120,7 +126,7 @@ Consistent, high quality, and accessible documentation is key to adopting softwa
 - Write documentation assuming minimum R literacy and prior knowledge
 - Content should clearly state requirements, objectives, and value for the user
 - Aim to provide translations for the most common languages
-- We aim to provide [automated blog posts for major and minor releases](https://epiverse-trace.github.io/blog.html#category=new-release). Code owners may occasionally decide to release patch blogs if the patch is critical.
+- We provide [automated blog posts for major and minor releases](https://epiverse-trace.github.io/blog.html#category=new-release). Code owners may occasionally decide to release patch blogs if the patch is critical.
 
 ## Being part of the OSS landscape
 
@@ -149,10 +155,10 @@ As an open-source initiative, Epiverse-TRACE will benefit from numerous other OS
 
 ## Community health
 
-The success of an OSS project like epiverse-trace relies heavily on the quality and frequency of interactions between members of our community of users and developers. We will ensure a healthy community through the following principles:
+The success of an OSS project like Epiverse-TRACE relies heavily on the quality and frequency of interactions between members of our community of users and developers. We will ensure a healthy community through the following principles:
 
 - Foster a welcoming environment which promotes diversity and inclusiveness
-- Provide a [code of conduct](https://docs.google.com/document/d/e/2PACX-1vRcwl2uaKdEQT5iS-9MroDMKsd81oR8v1gdlY1kHTTjgGEbLKfcWxtdrkvVRhJJGQalsgC1A4K4YiDe/pub) for our community members to highlight and support our values
+- Provide a [code of conduct](https://github.com/epiverse-trace/.github/blob/main/CODE_OF_CONDUCT.md) for our community members to highlight and support our values
 - Give proper recognition to all [types of contributions](https://chaoss.community/metric-types-of-contributions/), which go beyond coding and can take diverse forms *e.g.* testing, input on tool design, training
 - Use [CHAOSS metrics](https://chaoss.community/metrics/) to monitor community health and reflect our values
 - Use occasional surveys to monitor aspects of community health which cannot be captured automatically
