@@ -4,7 +4,7 @@
 
 # Welcome to this repository!
 
-This repository stores the [__Epiverse TRACE Blueprints__](index.qmd) for software development. You can:
+This repository stores the [__Epiverse TRACE-Blueprints__](index.qmd) for software development. You can:
 
 * view the blueprints in [quarto / markdown format](index.qmd) on github 
 

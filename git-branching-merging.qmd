@@ -43,7 +43,7 @@ At the time of writing this chapter, the [`@epiverse-trace/lac` team](https://gi
 
 The common feature of both workflows is that new code is added in a feature branch before being submitted as a pull request (PR).
 
-Each branch, and each pull request, should focus on a single feature. This can, for example, be achieved by creating one branch (and subsequently a pull request) per issue. Keep your branches focused on single small features/changes. Make sure to tie individual units of changes in one or more files in a commit. This will lead to small manageable branches and pull requests and ease the code review process.
+Each branch and pull request should focus on a single feature. This can, for example, be achieved by creating one branch (and subsequently a pull request) per issue. Keep your branches focused on single small features/changes. Make sure to tie individual units of changes in one or more files in a commit. This will lead to small manageable branches and pull requests and ease the code review process.
 
 If you want to contribute multiple unrelated changes to the codebase, please open multiple pull requests.
 
