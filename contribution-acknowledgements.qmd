@@ -7,6 +7,19 @@ As part of the development process we want to ensure individuals are properly cr
 Any contributor who matches the criteria described here should feel empowered to add themselves to `DESCRIPTION`.
 However, ultimately, it is the maintainer's responsibility to ensure that no contribution remains neglected and that everyone is credited as required by our guidelines.
 
+## How to add an individual to package `DESCRIPTION`
+
+Persons who want to be acknowledged should add themselves into the `Authors@R` section of the `DESCRIPTION` file.
+
+The basic information they should specify are: first name, last name, and email. In addition, we strongly encourage to add their ORCID in the comment section. For example:
+
+```yaml
+Authors@R: c(
+    person("John", "Doe", , "john.doe@organization.org", role = c("aut", "cre"),
+           comment = c(ORCID = "1234-1234-1234-1234"))
+    )
+```
+
 ## Roles in package `DESCRIPTION`
 
 Roles in `DESCRIPTION` can be chosen from any of those listed in the [MARC Code List](https://www.loc.gov/marc/relators/relacode.html), but we prioritize the [shorter list of roles defined in the R source code](https://github.com/r-devel/r-svn/blob/dc6a7d6cf9582ca401b1fc386c86046974d34901/src/library/utils/R/sysdata.R#L28-L39) as the primary reference for credit attribution:
