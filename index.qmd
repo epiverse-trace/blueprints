@@ -26,8 +26,8 @@ This document was originally written as an attempt to summarize group discussion
 
 * CHAOSS: Community Health Analytics Open Source Software
 * DPG: Digital Public Good
-* OSS: Open Source Software
 * LMIC: Low and Middle Income Country
 * MVP: Minimal Viable Product
+* OSS: Open Source Software
 * PR: Pull Request
 * WIP: Work In Progress
