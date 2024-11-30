@@ -9,11 +9,11 @@ However, ultimately, it is the maintainer's responsibility to ensure that no con
 
 ## How to add an individual to package `DESCRIPTION`
 
-Persons who want to be acknowledged should add themselves into the `Authors@R` section of the `DESCRIPTION` file. 
+Persons who want to be acknowledged should add themselves into the `Authors@R` section of the `DESCRIPTION` file.
 
 The basic information they should specify are: first name, last name, and email. In addition, we strongly encourage to add their ORCID in the comment section. For example:
 
-```
+```yaml
 Authors@R: c(
     person("John", "Doe", , "john.doe@organization.org", role = c("aut", "cre"),
            comment = c(ORCID = "1234-1234-1234-1234"))
