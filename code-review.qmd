@@ -98,7 +98,7 @@ Once reviewer comments and suggestions are received, methods for incorporating c
 
 ### Addressing package reviews
 
-We used two strategies for integrating suggestions in package reviews.
+We use two strategies for integrating suggestions in package reviews.
 
 1. Commit changes to the `review` branch, once all changes have been made the pull request can be [redirected](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-base-branch-of-a-pull-request) to the stable branch and merged.
 
