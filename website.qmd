@@ -5,3 +5,16 @@ Epiverse-TRACE packages use the [`{pkgdown}` package](https://pkgdown.r-lib.org/
 When the package is not yet on CRAN, we use the `unreleased` development mode. In this case, we use a visual element to highlight the package development version in red. An example is the [website for `{superspreading}`](https://epiverse-trace.github.io/superspreading/) and its associated `_pkgdown` [configuration](https://github.com/epiverse-trace/superspreading/blob/main/_pkgdown.yml#L12-L13).
 
 After the package is accepted on CRAN, we switch to `auto` mode, which provides two versions of the website: `release` and `devel`. Here, an example is the `{cfr}`package [website](https://epiverse-trace.github.io/cfr/), which is configured [here](https://github.com/epiverse-trace/cfr/blob/main/_pkgdown.yml#L5-L6). We use this configuration for the CRAN packages because we expect most users to install the package from CRAN and so we direct them to the CRAN site associated with the current release. The additional `devel` option here allows users to manually switch to it (by adding `dev/` to the end of the website URL) if they installed the development version from GitHub. This version of the website will contain updates that are yet to be pushed to the CRAN version.
+
+::: {.callout-tip}
+## Release website after CRAN release
+
+It may be the case that a package has been released on CRAN, the version is incremented to a development version, and then the `development: mode` was updated to `auto`. In this scenario {pkgdown} will not publish the release site, only the dev site.
+
+To retroactively deploy the release site for the previous release see [this {pkgdown} vignette](https://pkgdown.r-lib.org/articles/how-to-update-released-site.html), a brief overview is given in the following steps:
+
+1. Make a git branch from the last commit before incrementing to the development version. For this example, let's call that branch `website`
+2. Ensure the `development: mode` in `_pkgdown.yml` is `auto`
+3. Push the `website` branch to GitHub
+4. Navigate to the `pkgdown` workflows page, for example [here it is for {epichains}](https://github.com/epiverse-trace/epichains/actions/workflows/pkgdown.yaml), then click on the "Run workflow" button and run the workflow from the `website` branch
+:::
