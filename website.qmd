@@ -6,7 +6,7 @@ When the package is not yet on CRAN, we use the `unreleased` development mode. I
 
 After the package is accepted on CRAN, we switch to `auto` mode, which provides two versions of the website: `release` and `devel`. Here, an example is the `{cfr}`package [website](https://epiverse-trace.github.io/cfr/), which is configured [here](https://github.com/epiverse-trace/cfr/blob/main/_pkgdown.yml#L5-L6). We use this configuration for the CRAN packages because we expect most users to install the package from CRAN and so we direct them to the CRAN site associated with the current release. The additional `devel` option here allows users to manually switch to it (by adding `dev/` to the end of the website URL) if they installed the development version from GitHub. This version of the website will contain updates that are yet to be pushed to the CRAN version.
 
-::: {.callout-tip title="Release website after CRAN release"}
+::: {.callout-tip title="Publishing the release website along with the dev site after CRAN release"}
 
 It may be the case that a package has been released on CRAN, the version is incremented to a development version, and then the `development: mode` was updated to `auto`. In this scenario {pkgdown} will not publish the release site, only the dev site.
 
