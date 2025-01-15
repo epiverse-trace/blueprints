@@ -15,5 +15,5 @@ To retroactively deploy the release site for the previous release see [this {pkg
 1. Make a git branch from the last commit before incrementing to the development version. For this example, let's call that branch `website`
 2. Ensure the `development: mode` in `_pkgdown.yml` is `auto`
 3. Push the `website` branch to GitHub
-4. Navigate to the `pkgdown` workflows page, for example [here it is for {epichains}](https://github.com/epiverse-trace/epichains/actions/workflows/pkgdown.yaml), then click on the "Run workflow" button and run the workflow from the `website` branch
+4. Navigate to the `pkgdown` workflows page, for example [here it is for **epichains**](https://github.com/epiverse-trace/epichains/actions/workflows/pkgdown.yaml), then click on the "Run workflow" button and run the workflow from the `website` branch
 :::
