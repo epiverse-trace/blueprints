@@ -87,6 +87,8 @@ By convention, the package maintainer is in charge of merging the pull requests.
 This is indeed often more convenient as they are aware of other ongoing activities in the package that may impact or be impacted with the incoming changes.
 We also have a guarantee that maintainers have sufficient permissions to merge the pull request, and potentially bypass some checks if necessary, which may not be the case of the contributor.
 
+This recommendation remains valid even if the maintainer if the author of the pull request and they request review from a non-maintainer.
+
 As a contributor, if you want to signal your changes are not ready to be merged, you should mark your pull requests as draft.
 
 In all cases, communication is key.
@@ -94,7 +96,7 @@ As a maintainer, if you see a non draft pull request that looks like it might st
 Conversely, if a PR is marked as draft but seems ready to go, you can check in with the contributor if they have additional changes to make or if the PR can be marked as ready for review.
 As a contributor, you can also check in with the maintainer to ensure they have not simply forgotten to merge the changes, especially if they already have approved the PR.
 
-Note that this is only an internal convention and even though we provide reasons why this may be easier, this is not intrinsically better than other conventions.
+Note that this is only an internal convention and even though we provide reasons why this may be easier, this is not intrinsically better than other conventions (e.g., PR author always merges or reviewer always merges).
 The main goal is to clarify expectations to streamline process and avoid uncertainty-induced action paralysis, where everyone is waiting for the others to merge the PR.
 
 ## Deleting merged branches
