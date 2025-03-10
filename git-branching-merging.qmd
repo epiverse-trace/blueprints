@@ -81,6 +81,22 @@ Because of this, we have disabled merge commits in our repositories.
 Instead, we rely on either 'rebase and merge' (preferred option) if commits are grouped logically and have clear error messages, or 'squash and merge' if we don't want to keep the commit history (as a last resort; if the commit history is too messy and impossible to clean, or if there is a merge commit in the history).
 If necessary and in order to make a 'rebase' rather than a 'squash', the PR history can be rewritten & cleaned using a command-line interactive git rebase, and squashing, re-ordering, rewording, etc. as necessary and as described in [this blog post](https://github.blog/2022-06-30-write-better-commits-build-better-projects/).
 
+## Who merges the pull request?
+
+By convention, the package maintainer is in charge of merging the pull requests.
+This is indeed often more convenient as they are aware of other ongoing activities in the package that may impact or be impacted with the incoming changes.
+We also have a guarantee that maintainers have sufficient permissions to merge the pull request, and potentially bypass some checks if necessary, which may not be the case of the contributor.
+
+As a contributor, if you want to signal your changes are not ready to be merged, you should mark your pull requests as draft.
+
+In all cases, communication is key.
+As a maintainer, if you see a non draft pull request that looks like it might still receive additional changes, please check in with the contributor before proceeding with the merge.
+Conversely, if a PR is marked as draft but seems ready to go, you can check in with the contributor if they have additional changes to make or if the PR can be marked as ready for review.
+As a contributor, you can also check in with the maintainer to ensure they have not simply forgotten to merge the changes, especially if they already have approved the PR.
+
+Note that this is only an internal convention and even though we provide reasons why this may be easier, this is not intrinsically better than other conventions.
+The main goal is to clarify expectations to streamline process and avoid uncertainty-induced action paralysis, where everyone is waiting for the others to merge the PR.
+
 ## Deleting merged branches
 
 To avoid confusing situations with diverging histories, we prefer to delete branches.
