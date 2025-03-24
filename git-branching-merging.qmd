@@ -84,12 +84,12 @@ If necessary and in order to make a 'rebase' rather than a 'squash', the PR hist
 ## Who merges the pull request?
 
 By convention, the package maintainer is in charge of merging the pull requests.
-This is indeed often more convenient as they are aware of other ongoing activities in the package that may impact or be impacted with the incoming changes.
+Maintainers are well-placed for this as they are aware of other ongoing activities in the package that may impact or be impacted with the incoming changes.
 We also have a guarantee that maintainers have sufficient permissions to merge the pull request, and potentially bypass some checks if necessary, which may not be the case of the contributor.
 
-This recommendation remains valid even if the maintainer if the author of the pull request and they request review from a non-maintainer.
+This recommendation remains valid even if the maintainer is the author of the pull request and they request review from a non-maintainer.
 
-As a contributor, if you want to signal your changes are not ready to be merged, you should mark your pull requests as draft.
+As a contributor, if you want to signal your changes are not ready to be merged or reviewed, you should mark your pull requests as draft.
 
 In all cases, communication is key.
 As a maintainer, if you see a non draft pull request that looks like it might still receive additional changes, please check in with the contributor before proceeding with the merge.
